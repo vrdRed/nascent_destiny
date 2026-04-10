@@ -27,7 +27,7 @@ const positionsData = {
                     "../img/Mirage_Smoke/connector_mid_tspawn_smoke.png",
                     "../img/Mirage_Smoke/mid_tspawn_pos.png"
                 ],
-                tips: "Левая кнопка мыши."
+                tips: "Левая кнопка мыши, Прыжок."
             },
             {
                 id: 4,
@@ -90,7 +90,7 @@ const positionsData = {
                     "../img/Mirage_Smoke/window_bplant_house_smoke.png",
                     "../img/Mirage_Smoke/bplant_house_pos.png"
                 ],
-                tips: "Левая кнопка мыши. Прыжок."
+                tips: "Левая кнопка мыши, Прыжок."
             },
             {
                 id: 11,
@@ -110,7 +110,7 @@ const positionsData = {
                     "../img/Mirage_Flash/mid_tv_flash.png",
                     "../img/Mirage_Flash/tv_mid_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Разбег до конца платформы, Прыжок."
+                tips: "Левая кнопка мыши, Разбег (до конца платформы), Прыжок."
             },
             {
                 id: 2,
@@ -128,7 +128,7 @@ const positionsData = {
                     "../img/Mirage_Flash/bplant_house_flash.png",
                     "../img/Mirage_Flash/house_bplant_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Разбег до конца платформы, Прыжок."
+                tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
             },
             {
                 id: 4,
@@ -137,7 +137,7 @@ const positionsData = {
                     "../img/Mirage_Flash/mid_ticket_flash.png",
                     "../img/Mirage_Flash/ticket_mid_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Разбег, Прыжок."
+                tips: "Левая кнопка мыши, Разбег (до угла левой стены), Прыжок."
             },
             {
                 id: 5,
@@ -146,7 +146,7 @@ const positionsData = {
                     "../img/Mirage_Flash/mid_firebox_flash.png",
                     "../img/Mirage_Flash/firebox_mid_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Разбег, Прыжок."
+                tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
             },
             {
                 id: 6,
@@ -155,7 +155,7 @@ const positionsData = {
                     "../img/Mirage_Flash/ramp_jungle_flash.png",
                     "../img/Mirage_Flash/jungle_ramp_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Ходьба на shift до конца квадрата, Прыжок."
+                tips: "Левая кнопка мыши, Ходьба на shift (до конца квадрата), Прыжок."
             },
             {
                 id: 7,
