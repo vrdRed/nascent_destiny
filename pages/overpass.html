@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overpass - Гранаты</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/positions-data.js"></script>
+    <script src="../js/positions-loader.js"></script>
+</head>
+<body>
+    <div class="map-page">
+        <h2>Карта: Overpass</h2>
+        
+        <!-- Контейнер для раскидок -->
+        <div id="positions-container" class="positions-container"></div>
+    </div>
+    
+    <script>
+        initMapPage('Overpass', 'overpass');
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const grenadeType = urlParams.get('grenade') || 'smoke';
+    </script>
+</body>
+</html>
