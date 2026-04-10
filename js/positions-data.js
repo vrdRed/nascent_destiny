@@ -170,12 +170,11 @@ const positionsData = {
     },
     dust2: {
         smoke: [
-            /*
             {
                 id: 1,
                 title: "Смок на X-Box Mid (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/mid_tspawn_smoke.png",
                     "../img/Dust_Smoke/mid_tspawn_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -184,7 +183,7 @@ const positionsData = {
                 id: 2,
                 title: "Смок в Doors Mid (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/mid_tspawn_smoke2.png",
                     "../img/Dust_Smoke/mid_tspawn_pos2.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -193,7 +192,7 @@ const positionsData = {
                 id: 3,
                 title: "Смок на Long (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/long_tspawn_smoke.png",
                     "../img/Dust_Smoke/long_tspawn_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -202,25 +201,25 @@ const positionsData = {
                 id: 4,
                 title: "Смок в CT A (Long)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/aplant_long_smoke.png",
                     "../img/Dust_Smoke/aplant_long_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Прыжок."
+                tips: "Левая кнопка мыши."
             },
             {
                 id: 5,
                 title: "Смок в CT Mid (Mid)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/ct_mid_smoke.png",
                     "../img/Dust_Smoke/ct_mid_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Прыжок."
+                tips: "Присесть, Левая кнопка мыши, Прыжок."
             },
             {
                 id: 6,
                 title: "Смок в Doors B (Outside Tunnels)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/door_tunnels_smoke.png",
                     "../img/Dust_Smoke/bplant_tunnels_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -229,7 +228,7 @@ const positionsData = {
                 id: 7,
                 title: "Смок в Window B (Outside Tunnels)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/window_tunnels_smoke.png",
                     "../img/Dust_Smoke/bplant_tunnels_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -238,12 +237,11 @@ const positionsData = {
                 id: 8,
                 title: "Смок на выход B-plant (Outside Tunnels)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Smoke/bplant_tunnels_smoke.png",
                     "../img/Dust_Smoke/bplant_tunnels_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
-            */
         ],
         flash: [
             /*
