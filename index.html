@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nascent Destiny | Раскидки игроков</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Шапка -->
+        <header class="header">
+            <h1>Фишечные раскидки</h1>
+            <p>Выбери карту и тип гранаты</p>
+        </header>
+
+        <!-- Верхние категории: выбор карты -->
+        <div class="categories">
+            <div class="cat-group">
+                <span class="cat-label">🗺️ КАРТА</span>
+                <div class="button-group" id="map-buttons">
+                    <button class="cat-btn" data-map="mirage">Mirage</button>
+                    <button class="cat-btn" data-map="dust2">Dust II</button>
+                    <button class="cat-btn" data-map="anubis">Anubis</button>
+                    <button class="cat-btn" data-map="ancient">Ancient</button>
+                    <button class="cat-btn" data-map="overpass">Overpass</button>
+                    <button class="cat-btn" data-map="nuke">Nuke</button>
+                    <button class="cat-btn" data-map="inferno">Inferno</button>
+                    <button class="cat-btn" data-map="train">Train</button>
+                    <button class="cat-btn" data-map="vertigo">Vertigo</button>
+                </div>
+            </div>
+            <!-- Выбор гранаты -->
+            <div class="cat-group" style="margin-top: 1rem;">
+                <span class="cat-label">💣 ГРАНАТА</span>
+                <div class="button-group" id="grenade-buttons">
+                    <button class="cat-btn" data-grenade="smoke">💨 Smoke (Дым)</button>
+                    <button class="cat-btn" data-grenade="flash">⚡ Flashbang (Флешка)</button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Контентная область -->
+        <div class="content-wrapper">
+            <iframe id="page-frame""></iframe>
+        </div>
+    </div>
+</body>
+</html>
