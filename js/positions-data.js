@@ -22,7 +22,7 @@ const positionsData = {
             },
             {
                 id: 3,
-                title: "Смок в Connector (T-Spawn)",
+                title: "Смок в Connector Mid (T-Spawn)",
                 images: [
                     "../img/Mirage_Smoke/connector_mid_tspawn_smoke.png",
                     "../img/Mirage_Smoke/mid_tspawn_pos.png"
@@ -31,7 +31,7 @@ const positionsData = {
             },
             {
                 id: 4,
-                title: "Смок в Ticket/CT (Ramp)",
+                title: "Смок в Ticket/CT A (Ramp)",
                 images: [
                     "../img/Mirage_Smoke/ct_aplant_ramp_smoke.png",
                     "../img/Mirage_Smoke/aplant_ramp_pos.png"
@@ -40,7 +40,7 @@ const positionsData = {
             },
             {
                 id: 5,
-                title: "Смок в Jungle/Connector (Ramp)",
+                title: "Смок в Jungle/Connector A (Ramp)",
                 images: [
                     "../img/Mirage_Smoke/jungle_aplant_ramp_smoke.png",
                     "../img/Mirage_Smoke/aplant_ramp_pos.png"
@@ -49,7 +49,7 @@ const positionsData = {
             },
             {
                 id: 6,
-                title: "Смок на Stairs (Ramp)",
+                title: "Смок на Stairs A (Ramp)",
                 images: [
                     "../img/Mirage_Smoke/stairs_aplant_ramp_smoke.png",
                     "../img/Mirage_Smoke/aplant_ramp_pos.png"
@@ -58,7 +58,7 @@ const positionsData = {
             },
             {
                 id: 7,
-                title: "Смок на Car (House)",
+                title: "Смок на Car B (House)",
                 images: [
                     "../img/Mirage_Smoke/car_bplant_house_smoke.png",
                     "../img/Mirage_Smoke/bplant_house_pos.png"
@@ -67,7 +67,7 @@ const positionsData = {
             },
             {
                 id: 8,
-                title: "Смок на Forest (House)",
+                title: "Смок на Forest B (House)",
                 images: [
                     "../img/Mirage_Smoke/forest_bplant_house_smoke.png",
                     "../img/Mirage_Smoke/bplant_house_pos.png"
@@ -76,7 +76,7 @@ const positionsData = {
             },
             {
                 id: 9,
-                title: "Смок на Main Kitchen (House)",
+                title: "Смок на Main Kitchen B (House)",
                 images: [
                     "../img/Mirage_Smoke/main_bplant_house_smoke.png",
                     "../img/Mirage_Smoke/bplant_house_pos.png"
@@ -85,7 +85,7 @@ const positionsData = {
             },
             {
                 id: 10,
-                title: "Смок на Window Kitchen (House)",
+                title: "Смок на Window Kitchen B (House)",
                 images: [
                     "../img/Mirage_Smoke/window_bplant_house_smoke.png",
                     "../img/Mirage_Smoke/bplant_house_pos.png"
@@ -94,7 +94,7 @@ const positionsData = {
             },
             {
                 id: 11,
-                title: "Смок на Short (House)",
+                title: "Смок на Short B (House)",
                 images: [
                     "../img/Mirage_Smoke/short_bplant_house_smoke.png",
                     "../img/Mirage_Smoke/bplant_house_pos.png"
@@ -190,7 +190,7 @@ const positionsData = {
             },
             {
                 id: 3,
-                title: "Смок на Long (T-Spawn)",
+                title: "Смок на Long A (T-Spawn)",
                 images: [
                     "../img/Dust_Smoke/long_tspawn_smoke.png",
                     "../img/Dust_Smoke/long_tspawn_pos.png"
@@ -331,12 +331,11 @@ const positionsData = {
     },
     anubis: {
         smoke: [
-            /*
             {
                 id: 1,
                 title: "Смок в Mid (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/mid_tspawn_smoke.png",
                     "../img/Anubis_Smoke/mid_tspawn_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -345,16 +344,16 @@ const positionsData = {
                 id: 2,
                 title: "Смок в Doors Mid (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/door_tspawn_smoke.png",
                     "../img/Anubis_Smoke/mid_tspawn_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Прыжок."
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
             {
                 id: 3,
                 title: "Смок в Connector Water (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/connector_tspawn_smoke.png",
                     "../img/Anubis_Smoke/connector_tspawn_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -363,7 +362,7 @@ const positionsData = {
                 id: 4,
                 title: "Смок на 9 A (Upper/Boat)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/9_upper_smoke.png",
                     "../img/Anubis_Smoke/aplant_upper_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -372,25 +371,25 @@ const positionsData = {
                 id: 5,
                 title: "Смок на 8 A (Upper/Boat)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/8_upper_smoke.png",
                     "../img/Anubis_Smoke/aplant_upper_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Прыжок."
+                tips: "Левая кнопка мыши."
             },
             {
                 id: 6,
                 title: "Смок в Camera A (Upper/Boat)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/camera_upper_smoke.png",
                     "../img/Anubis_Smoke/aplant_upper_pos.png"
                 ],
-                tips: "Левая кнопка мыши, Прыжок."
+                tips: "Левая кнопка мыши."
             },
             {
                 id: 7,
                 title: "Смок в CT B (Long)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/ct_long_smoke.png",
                     "../img/Anubis_Smoke/bplant_long_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -399,7 +398,7 @@ const positionsData = {
                 id: 8,
                 title: "Смок в Ninja B (Long)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/ninja_long_smoke.png",
                     "../img/Anubis_Smoke/bplant_long_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -408,12 +407,11 @@ const positionsData = {
                 id: 9,
                 title: "Смок в Connector B (Long)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Anubis_Smoke/connector_long_smoke.png",
                     "../img/Anubis_Smoke/bplant_long_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
-            */
         ],
         flash: [
 
