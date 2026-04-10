@@ -419,12 +419,11 @@ const positionsData = {
     },
     ancient: {
         smoke: [
-            /*
             {
                 id: 1,
                 title: "Смок в Red Room Mid (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/redroom_tspawn_smoke.png",
                     "../img/Ancient_Smoke/mid_tspawn_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -433,7 +432,7 @@ const positionsData = {
                 id: 2,
                 title: "Смок на 9 Mid (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/9_tspawn_smoke.png",
                     "../img/Ancient_Smoke/mid_tspawn_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -442,7 +441,7 @@ const positionsData = {
                 id: 3,
                 title: "Смок в Donut Mid (T-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/donut_tspawn_smoke.png",
                     "../img/Ancient_Smoke/mid_tspawn_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -451,7 +450,7 @@ const positionsData = {
                 id: 4,
                 title: "Смок в Светлую B (Ruins)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/svet_ruins_smoke.png",
                     "../img/Ancient_Smoke/bplant_ruins_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -460,7 +459,7 @@ const positionsData = {
                 id: 5,
                 title: "Смок в Тёмную B (Ruins)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/dark_ruins_smoke.png",
                     "../img/Ancient_Smoke/bplant_ruins_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -469,7 +468,7 @@ const positionsData = {
                 id: 6,
                 title: "Смок в Cave B (Ruins)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/cave_ruins_smoke.png",
                     "../img/Ancient_Smoke/bplant_ruins_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -478,7 +477,7 @@ const positionsData = {
                 id: 7,
                 title: "Смок в Donut A (Jungle)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/donut_jungle_smoke.png",
                     "../img/Ancient_Smoke/aplant_jungle_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -487,7 +486,7 @@ const positionsData = {
                 id: 8,
                 title: "Смок в CT A (Jungle)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/ct_jungle_smoke.png",
                     "../img/Ancient_Smoke/aplant_jungle_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -496,12 +495,11 @@ const positionsData = {
                 id: 9,
                 title: "Смок в Temple A (Jungle)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Ancient_Smoke/temple_jungle_smoke.png",
                     "../img/Ancient_Smoke/aplant_jungle_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
-                */
         ],
         flash: [
 
