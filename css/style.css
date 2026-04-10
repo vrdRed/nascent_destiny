@@ -278,19 +278,31 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    align-items: start;
 }
 
 .image-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .image-item img {
     width: 100%;
-    height: auto;
+    height: 300px; 
+    object-fit: cover; 
+    object-position: center; 
     border-radius: 1rem;
     border: 2px solid rgba(240,165,0,0.3);
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    background: #1a1f2e;
+}
+
+.image-item img.contain-fit {
+    object-fit: contain;
+    background: #0f1219;
 }
 
 .image-item img:hover {
@@ -497,6 +509,10 @@ body {
         grid-template-columns: 1fr;
         gap: 1.2rem;
     }
+
+    .image-item img {
+        height: 200px;
+    }
     
     .image-label {
         font-size: 0.85rem;
@@ -552,6 +568,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .image-item img {
+        height: 180px;
+    }
+
     .position-header {
         flex-direction: column;
         text-align: center;
