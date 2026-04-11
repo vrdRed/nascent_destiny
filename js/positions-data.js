@@ -31,7 +31,7 @@ const positionsData = {
             },
             {
                 id: 4,
-                title: "Смок в Ticket/CT A (Ramp)",
+                title: "Смок в Ticket/CT-Spawn A (Ramp)",
                 images: [
                     "../img/Mirage_Smoke/ct_aplant_ramp_smoke.png",
                     "../img/Mirage_Smoke/aplant_ramp_pos.png"
@@ -199,7 +199,7 @@ const positionsData = {
             },
             {
                 id: 4,
-                title: "Смок в CT A (Long)",
+                title: "Смок в CT-Spawn A (Long)",
                 images: [
                     "../img/Dust_Smoke/aplant_long_smoke.png",
                     "../img/Dust_Smoke/aplant_long_pos.png"
@@ -208,7 +208,7 @@ const positionsData = {
             },
             {
                 id: 5,
-                title: "Смок в CT Mid (Mid)",
+                title: "Смок в CT-Spawn Mid (Mid)",
                 images: [
                     "../img/Dust_Smoke/ct_mid_smoke.png",
                     "../img/Dust_Smoke/ct_mid_pos.png"
@@ -244,12 +244,11 @@ const positionsData = {
             }
         ],
         flash: [
-            /*
             {
                 id: 1,
                 title: "Флешка на выход Long за T-сторону (Outside Box)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Flash/long_box_flash.png",
                     "../img/Dust_Flash/long_box_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -258,7 +257,7 @@ const positionsData = {
                 id: 2,
                 title: "Флешка на выход B-plant за T-сторону (Upper)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Flash/bplant_tunnels_flash.png",
                     "../img/Dust_Flash/bplant_tunnels_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -267,7 +266,7 @@ const positionsData = {
                 id: 3,
                 title: "Флешка под выход на B-plant за CT-сторону (B-plant)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Flash/bplant_box_flash.png",
                     "../img/Dust_Flash/bplant_box_pos.png"
                 ],
                 tips: "Правая кнопка мыши."
@@ -276,7 +275,7 @@ const positionsData = {
                 id: 4,
                 title: "Флешка под выход на B-plant за CT-сторону (Car B)",
                 images: [
-                    "../img/prosto_tak.jpg",
+                    "../img/Dust_Flash/bplant_car_flash.png",
                     "../img/Dust_Flash/bplant_car_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
@@ -285,17 +284,17 @@ const positionsData = {
                 id: 5,
                 title: "Флешка на выход на B-plant в Doors за CT-сторону (Doors)",
                 images: [
-                    "../img/prosto_tak.jpg",
-                    "../img/prosto_tak.jpg"
+                    "../img/Dust_Flash/bplant_ct_flash.png",
+                    "../img/Dust_Flash/bplant_ct_pos.png"
                 ],
                 tips: "Правая кнопка мыши, Прыжок."
             },
             {
                 id: 6,
-                title: "Флешка под выход из Box Long за CT-сторону (Long)",
+                title: "Флешка на Mid за CT-сторону (CT-Spawn)",
                 images: [
-                    "../img/prosto_tak.jpg",
-                    "../img/prosto_tak.jpg"
+                    "../img/Dust_Flash/mid_ct_flash.png",
+                    "../img/Dust_Flash/mid_ct_pos.png"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -303,30 +302,38 @@ const positionsData = {
                 id: 7,
                 title: "Флешка под выход из Box Long за CT-сторону (Long)",
                 images: [
-                    "../img/prosto_tak.jpg",
-                    "../img/prosto_tak.jpg"
+                    "../img/Dust_Flash/long_ct_flash.png",
+                    "../img/Dust_Flash/long_ct_pos.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 8,
+                title: "Флешка под выход из Box Long за CT-сторону (Long)",
+                images: [
+                    "../img/Dust_Flash/long_ct_flash2.png",
+                    "../img/Dust_Flash/long_ct_pos.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
             {
-                id: 8,
+                id: 9,
                 title: "Флешка на Long за CT-сторону (Car A)",
                 images: [
-                    "../img/prosto_tak.jpg",
-                    "../img/prosto_tak.jpg"
+                    "../img/Dust_Flash/long_car_flash.png",
+                    "../img/Dust_Flash/long_car_pos.png"
                 ],
-                tips: "Левая кнопка мыши ."
+                tips: "Левая кнопка мыши."
             },
             {
-                id: 9,
+                id: 10,
                 title: "Флешка на A-plant за CT-сторону (Ramp)",
                 images: [
-                    "../img/prosto_tak.jpg",
-                    "../img/prosto_tak.jpg"
+                    "../img/Dust_Flash/aplant_ramp_flash.png",
+                    "../img/Dust_Flash/aplant_ramp_pos.png"
                 ],
                 tips: "Левая кнопка мыши."
             }
-            */
         ]
     },
     anubis: {
@@ -387,7 +394,7 @@ const positionsData = {
             },
             {
                 id: 7,
-                title: "Смок в CT B (Long)",
+                title: "Смок в CT-Spawn B (Long)",
                 images: [
                     "../img/Anubis_Smoke/ct_long_smoke.png",
                     "../img/Anubis_Smoke/bplant_long_pos.png"
@@ -484,7 +491,7 @@ const positionsData = {
             },
             {
                 id: 8,
-                title: "Смок в CT A (Jungle)",
+                title: "Смок в CT-Spawn A (Jungle)",
                 images: [
                     "../img/Ancient_Smoke/ct_jungle_smoke.png",
                     "../img/Ancient_Smoke/aplant_jungle_pos.png"
