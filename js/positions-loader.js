@@ -51,7 +51,7 @@
     }
     
     // Функция для отображения одной раскидки по индексу
-    function renderSinglePosition(position, index, total) {
+    function renderSinglePosition(position) {
         const container = document.getElementById('positions-container');
         if (!container) return;
         
@@ -65,25 +65,43 @@
             return;
         }
         
+        // Определяем количество изображений
+        const imageCount = position.images.length;
+        
+        // Функция для генерации HTML изображений
+        const generateImagesHtml = () => {
+            let imagesHtml = '';
+            
+            // Стандартные подписи для 2 или 3 картинок
+            const labels = imageCount === 3 
+                ? ['Прицел', 'Позиция', 'Результат']
+                : ['Прицел', 'Позиция'];
+                
+            for (let i = 0; i < imageCount; i++) {
+                imagesHtml += `
+                    <div class="image-item">
+                        <img src="${position.images[i]}" alt="${position.title} - шаг ${i + 1}" onerror="this.src='../img/placeholder.jpg'">
+                        <span class="image-label">${labels[i]}</span>
+                    </div>
+                `;
+            }
+            return imagesHtml;
+        };
+        
+        // Определяем класс для сетки: если 3 картинки, добавляем модификатор
+        const gridClass = imageCount === 3 ? 'image-row image-row--three' : 'image-row';
+        
         let html = `
             <div class="position-card" data-id="${position.id}">
                 <div class="position-header">
                     <h3>${position.title}</h3>
                     <div class="position-nav">
-                        <span class="position-counter">${index + 1} / ${total}</span>
                         <span class="position-badge">${getGrenadeTypeName(currentGrenadeType)}</span>
                     </div>
                 </div>
                 <div class="position-images">
-                    <div class="image-row">
-                        <div class="image-item">
-                            <img src="${position.images[0]}" alt="${position.title} - шаг 1" onerror="this.src='../img/placeholder.jpg'">
-                            <span class="image-label">Сюда кидать</span>
-                        </div>
-                        <div class="image-item">
-                            <img src="${position.images[1]}" alt="${position.title} - шаг 2" onerror="this.src='../img/placeholder.jpg'">
-                            <span class="image-label">Здесь вставать</span>
-                        </div>
+                    <div class="${gridClass}">
+                        ${generateImagesHtml()}
                     </div>
                 </div>
                 <div class="position-tips">
@@ -107,7 +125,7 @@
         if (index >= currentPositions.length) index = currentPositions.length - 1;
         
         currentIndex = index;
-        renderSinglePosition(currentPositions[currentIndex], currentIndex, currentPositions.length);
+        renderSinglePosition(currentPositions[currentIndex]);
         updateParentPagination();
     }
     
@@ -133,7 +151,7 @@
             return;
         }
         
-        renderSinglePosition(currentPositions[0], 0, currentPositions.length);
+        renderSinglePosition(currentPositions[0]);
         updateParentPagination();
     }
     
