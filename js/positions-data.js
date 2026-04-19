@@ -207,8 +207,9 @@ const positionsData = {
                 shortTitle: "X-Box Mid",
                 title: "Смок на X-Box Mid (T-Spawn)",
                 images: [
-                    "../img/Dust_Smoke/mid_tspawn_smoke.png",
-                    "../img/Dust_Smoke/mid_tspawn_pos.png"
+                    "../img/Dust_Smoke/Metka/mid_tspawn_metka.png",
+                    "../img/Dust_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/mid_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -217,8 +218,9 @@ const positionsData = {
                 shortTitle: "Doors Mid",
                 title: "Смок в Doors Mid (T-Spawn)",
                 images: [
-                    "../img/Dust_Smoke/mid_tspawn_smoke2.png",
-                    "../img/Dust_Smoke/mid_tspawn_pos2.png"
+                    "../img/Dust_Smoke/Metka/mid_tspawn_metka2.png",
+                    "../img/Dust_Smoke/Pos/mid_tspawn_pos2.png",
+                    "../img/Dust_Smoke/Smoke/mid_tspawn_smoke2.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -227,8 +229,9 @@ const positionsData = {
                 shortTitle: "Long A",
                 title: "Смок на Long A (T-Spawn)",
                 images: [
-                    "../img/Dust_Smoke/long_tspawn_smoke.png",
-                    "../img/Dust_Smoke/long_tspawn_pos.png"
+                    "../img/Dust_Smoke/Metka/long_tspawn_metka.png",
+                    "../img/Dust_Smoke/Pos/long_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/long_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -237,8 +240,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn A",
                 title: "Смок в CT-Spawn A (Long)",
                 images: [
-                    "../img/Dust_Smoke/aplant_long_smoke.png",
-                    "../img/Dust_Smoke/aplant_long_pos.png"
+                    "../img/Dust_Smoke/Metka/aplant_long_metka.png",
+                    "../img/Dust_Smoke/Pos/aplant_long_pos.png",
+                    "../img/Dust_Smoke/Smoke/aplant_long_smoke.png"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -247,8 +251,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn Mid",
                 title: "Смок в CT-Spawn Mid (Mid)",
                 images: [
-                    "../img/Dust_Smoke/ct_mid_smoke.png",
-                    "../img/Dust_Smoke/ct_mid_pos.png"
+                    "../img/Dust_Smoke/Metka/ct_mid_metka.png",
+                    "../img/Dust_Smoke/Pos/ct_mid_pos.png",
+                    "../img/Dust_Smoke/Smoke/ct_mid_smoke.png"
                 ],
                 tips: "Присесть, Левая кнопка мыши, Прыжок."
             },
@@ -257,8 +262,9 @@ const positionsData = {
                 shortTitle: "Doors B",
                 title: "Смок в Doors B (Outside Tunnels)",
                 images: [
-                    "../img/Dust_Smoke/door_tunnels_smoke.png",
-                    "../img/Dust_Smoke/bplant_tunnels_pos.png"
+                    "../img/Dust_Smoke/Metka/door_tunnels_metka.png",
+                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.png",
+                    "../img/Dust_Smoke/Smoke/door_tunnels_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -267,8 +273,9 @@ const positionsData = {
                 shortTitle: "Window B",
                 title: "Смок в Window B (Outside Tunnels)",
                 images: [
-                    "../img/Dust_Smoke/window_tunnels_smoke.png",
-                    "../img/Dust_Smoke/bplant_tunnels_pos.png"
+                    "../img/Dust_Smoke/Metka/window_tunnels_metka.png",
+                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.png",
+                    "../img/Dust_Smoke/Smoke/window_tunnels_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -277,8 +284,9 @@ const positionsData = {
                 shortTitle: "B-Plant",
                 title: "Смок на выход B-Plant (Outside Tunnels)",
                 images: [
-                    "../img/Dust_Smoke/bplant_tunnels_smoke.png",
-                    "../img/Dust_Smoke/bplant_tunnels_pos.png"
+                    "../img/Dust_Smoke/Metka/bplant_tunnels_metka.png",
+                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.png",
+                    "../img/Dust_Smoke/Smoke/bplant_tunnels_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
