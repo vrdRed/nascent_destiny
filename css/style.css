@@ -642,3 +642,48 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* Стили для трех изображений: первые два в ряд, третье снизу по центру */
+.image-row--three {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* Центрирование элементов при переносе */
+}
+
+/* Первые два изображения (оба будут в одном ряду) */
+.image-row--three .image-item:nth-child(1),
+.image-row--three .image-item:nth-child(2) {
+    flex: 1 1 calc(50% - 1.5rem); /* Каждое занимает половину ширины минус отступ */
+    min-width: 250px; /* Минимальная ширина для адаптивности */
+}
+
+/* Третье изображение — на новой строке и по центру */
+.image-row--three .image-item:nth-child(3) {
+    flex: 0 1 auto; /* Не растягивается, ширина по контенту */
+    width: 50%; /* Занимает половину ширины контейнера */
+    max-width: 100%; /* Не вылезает за пределы */
+    margin: 0 auto; /* Горизонтальное центрирование */
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 900px) {
+    .image-row--three .image-item:nth-child(3) {
+        width: 66.66%; /* Чуть шире на планшетах */
+    }
+}
+
+/* Адаптивность для телефонов — всё в колонку */
+@media (max-width: 600px) {
+    .image-row--three {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-row--three .image-item:nth-child(1),
+    .image-row--three .image-item:nth-child(2),
+    .image-row--three .image-item:nth-child(3) {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+}
