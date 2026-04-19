@@ -404,8 +404,9 @@ const positionsData = {
                 shortTitle: "Mid",
                 title: "Смок в Mid (T-Spawn)",
                 images: [
-                    "../img/Anubis_Smoke/mid_tspawn_smoke.png",
-                    "../img/Anubis_Smoke/mid_tspawn_pos.png"
+                    "../img/Anubis_Smoke/Metka/mid_tspawn_metka.png",
+                    "../img/Anubis_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Anubis_Smoke/Smoke/mid_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -414,8 +415,9 @@ const positionsData = {
                 shortTitle: "Doors Mid",
                 title: "Смок в Doors Mid (T-Spawn)",
                 images: [
-                    "../img/Anubis_Smoke/door_tspawn_smoke.png",
-                    "../img/Anubis_Smoke/mid_tspawn_pos.png"
+                    "../img/Anubis_Smoke/Metka/door_tspawn_metka.png",
+                    "../img/Anubis_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Anubis_Smoke/Smoke/door_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -424,8 +426,9 @@ const positionsData = {
                 shortTitle: "Connector Water",
                 title: "Смок в Connector Water (T-Spawn)",
                 images: [
-                    "../img/Anubis_Smoke/connector_tspawn_smoke.png",
-                    "../img/Anubis_Smoke/connector_tspawn_pos.png"
+                    "../img/Anubis_Smoke/Metka/connector_tspawn_metka.png",
+                    "../img/Anubis_Smoke/Pos/connector_tspawn_pos.png",
+                    "../img/Anubis_Smoke/Smoke/connector_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -434,8 +437,9 @@ const positionsData = {
                 shortTitle: "9 A",
                 title: "Смок на 9 A (Upper/Boat)",
                 images: [
-                    "../img/Anubis_Smoke/9_upper_smoke.png",
-                    "../img/Anubis_Smoke/aplant_upper_pos.png"
+                    "../img/Anubis_Smoke/Metka/9_upper_metka.png",
+                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
+                    "../img/Anubis_Smoke/Smoke/9_upper_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -444,8 +448,9 @@ const positionsData = {
                 shortTitle: "8 A",
                 title: "Смок на 8 A (Upper/Boat)",
                 images: [
-                    "../img/Anubis_Smoke/8_upper_smoke.png",
-                    "../img/Anubis_Smoke/aplant_upper_pos.png"
+                    "../img/Anubis_Smoke/Metka/8_upper_metka.png",
+                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
+                    "../img/Anubis_Smoke/Smoke/8_upper_smoke.png"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -454,8 +459,9 @@ const positionsData = {
                 shortTitle: "Camera A",
                 title: "Смок в Camera A (Upper/Boat)",
                 images: [
-                    "../img/Anubis_Smoke/camera_upper_smoke.png",
-                    "../img/Anubis_Smoke/aplant_upper_pos.png"
+                    "../img/Anubis_Smoke/Metka/camera_upper_metka.png",
+                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
+                    "../img/Anubis_Smoke/Smoke/camera_upper_smoke.png"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -464,8 +470,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn B",
                 title: "Смок в CT-Spawn B (Long)",
                 images: [
-                    "../img/Anubis_Smoke/ct_long_smoke.png",
-                    "../img/Anubis_Smoke/bplant_long_pos.png"
+                    "../img/Anubis_Smoke/Metka/ct_long_metka.png",
+                    "../img/Anubis_Smoke/Pos/bplant_long_pos.png",
+                    "../img/Anubis_Smoke/Smoke/ct_long_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -474,8 +481,9 @@ const positionsData = {
                 shortTitle: "Ninja B",
                 title: "Смок в Ninja B (Long)",
                 images: [
-                    "../img/Anubis_Smoke/ninja_long_smoke.png",
-                    "../img/Anubis_Smoke/bplant_long_pos.png"
+                    "../img/Anubis_Smoke/Metka/ninja_long_metka.png",
+                    "../img/Anubis_Smoke/Pos/bplant_long_pos.png",
+                    "../img/Anubis_Smoke/Smoke/ninja_long_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -484,8 +492,9 @@ const positionsData = {
                 shortTitle: "Connector B",
                 title: "Смок в Connector B (Long)",
                 images: [
-                    "../img/Anubis_Smoke/connector_long_smoke.png",
-                    "../img/Anubis_Smoke/bplant_long_pos.png"
+                    "../img/Anubis_Smoke/Metka/connector_long_metka.png",
+                    "../img/Anubis_Smoke/Pos/bplant_long_pos.png",
+                    "../img/Anubis_Smoke/Smoke/connector_long_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
