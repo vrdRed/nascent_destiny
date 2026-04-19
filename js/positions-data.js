@@ -504,8 +504,9 @@ const positionsData = {
                 shortTitle: "Red Room Mid",
                 title: "Смок в Red Room Mid (T-Spawn)",
                 images: [
-                    "../img/Ancient_Smoke/redroom_tspawn_smoke.png",
-                    "../img/Ancient_Smoke/mid_tspawn_pos.png"
+                    "../img/Ancient_Smoke/Metka/redroom_tspawn_metka.png",
+                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/redroom_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -514,8 +515,9 @@ const positionsData = {
                 shortTitle: "9 Mid",
                 title: "Смок на 9 Mid (T-Spawn)",
                 images: [
-                    "../img/Ancient_Smoke/9_tspawn_smoke.png",
-                    "../img/Ancient_Smoke/mid_tspawn_pos.png"
+                    "../img/Ancient_Smoke/Metka/9_tspawn_metka.png",
+                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/9_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -524,8 +526,9 @@ const positionsData = {
                 shortTitle: "Donut Mid",
                 title: "Смок в Donut Mid (T-Spawn)",
                 images: [
-                    "../img/Ancient_Smoke/donut_tspawn_smoke.png",
-                    "../img/Ancient_Smoke/mid_tspawn_pos.png"
+                    "../img/Ancient_Smoke/Metka/donut_tspawn_metka.png",
+                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/donut_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -534,8 +537,9 @@ const positionsData = {
                 shortTitle: "Светлая B",
                 title: "Смок в Светлую B (Ruins)",
                 images: [
-                    "../img/Ancient_Smoke/svet_ruins_smoke.png",
-                    "../img/Ancient_Smoke/bplant_ruins_pos.png"
+                    "../img/Ancient_Smoke/Metka/svet_ruins_metka.png",
+                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.png",
+                    "../img/Ancient_Smoke/Smoke/svet_ruins_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -544,8 +548,9 @@ const positionsData = {
                 shortTitle: "Тёмная B",
                 title: "Смок в Тёмную B (Ruins)",
                 images: [
-                    "../img/Ancient_Smoke/dark_ruins_smoke.png",
-                    "../img/Ancient_Smoke/bplant_ruins_pos.png"
+                    "../img/Ancient_Smoke/Metka/dark_ruins_metka.png",
+                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.png",
+                    "../img/Ancient_Smoke/Smoke/dark_ruins_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -554,8 +559,9 @@ const positionsData = {
                 shortTitle: "Cave B",
                 title: "Смок в Cave B (Ruins)",
                 images: [
-                    "../img/Ancient_Smoke/cave_ruins_smoke.png",
-                    "../img/Ancient_Smoke/bplant_ruins_pos.png"
+                    "../img/Ancient_Smoke/Metka/cave_ruins_metka.png",
+                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.png",
+                    "../img/Ancient_Smoke/Smoke/cave_ruins_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -564,8 +570,9 @@ const positionsData = {
                 shortTitle: "Donut A",
                 title: "Смок в Donut A (Jungle)",
                 images: [
-                    "../img/Ancient_Smoke/donut_jungle_smoke.png",
-                    "../img/Ancient_Smoke/aplant_jungle_pos.png"
+                    "../img/Ancient_Smoke/Metka/donut_jungle_metka.png",
+                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.png",
+                    "../img/Ancient_Smoke/Smoke/donut_jungle_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -574,8 +581,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn A",
                 title: "Смок в CT-Spawn A (Jungle)",
                 images: [
-                    "../img/Ancient_Smoke/ct_jungle_smoke.png",
-                    "../img/Ancient_Smoke/aplant_jungle_pos.png"
+                    "../img/Ancient_Smoke/Metka/ct_jungle_metka.png",
+                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.png",
+                    "../img/Ancient_Smoke/Smoke/ct_jungle_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -584,8 +592,9 @@ const positionsData = {
                 shortTitle: "Temple A",
                 title: "Смок в Temple A (Jungle)",
                 images: [
-                    "../img/Ancient_Smoke/temple_jungle_smoke.png",
-                    "../img/Ancient_Smoke/aplant_jungle_pos.png"
+                    "../img/Ancient_Smoke/Metka/temple_jungle_metka.png",
+                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.png",
+                    "../img/Ancient_Smoke/Smoke/temple_jungle_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
@@ -597,7 +606,6 @@ const positionsData = {
             
         ]
     },
-    // Остальные карты пока оставляем как есть, но при добавлении данных нужно будет также указать shortTitle
     overpass: {
         smoke: [
         ],
