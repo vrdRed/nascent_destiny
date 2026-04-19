@@ -7,8 +7,9 @@ const positionsData = {
                 shortTitle: "Window Mid",
                 title: "Смок в Window Mid (T-Spawn)",
                 images: [
-                    "../img/Mirage_Smoke/window_mid_tspawn_smoke.png",
-                    "../img/Mirage_Smoke/mid_tspawn_pos.png",
+                    "../img/Mirage_Smoke/Metka/window_mid_tspawn_metka.png",
+                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Mirage_Smoke/Smoke/window_mid_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -17,8 +18,9 @@ const positionsData = {
                 shortTitle: "Start Mid",
                 title: "Смок на Start Mid (T-Spawn)",
                 images: [
-                    "../img/Mirage_Smoke/start_mid_tspawn_smoke.png",
-                    "../img/Mirage_Smoke/mid_tspawn_pos2.png"
+                    "../img/Mirage_Smoke/Metka/start_mid_tspawn_metka.png",
+                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos2.png",
+                    "../img/Mirage_Smoke/Smoke/start_mid_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -27,8 +29,9 @@ const positionsData = {
                 shortTitle: "Connector Mid",
                 title: "Смок в Connector Mid (T-Spawn)",
                 images: [
-                    "../img/Mirage_Smoke/connector_mid_tspawn_smoke.png",
-                    "../img/Mirage_Smoke/mid_tspawn_pos.png"
+                    "../img/Mirage_Smoke/Metka/connector_mid_tspawn_metka.png",
+                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Mirage_Smoke/Smoke/connector_mid_tspawn_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -37,8 +40,9 @@ const positionsData = {
                 shortTitle: "Ticket A",
                 title: "Смок в Ticket/CT-Spawn A (Ramp)",
                 images: [
-                    "../img/Mirage_Smoke/ct_aplant_ramp_smoke.png",
-                    "../img/Mirage_Smoke/aplant_ramp_pos.png"
+                    "../img/Mirage_Smoke/Metka/ct_aplant_ramp_metka.png",
+                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.png",
+                    "../img/Mirage_Smoke/Smoke/ct_aplant_ramp_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -47,8 +51,9 @@ const positionsData = {
                 shortTitle: "Jungle A",
                 title: "Смок в Jungle/Connector A (Ramp)",
                 images: [
-                    "../img/Mirage_Smoke/jungle_aplant_ramp_smoke.png",
-                    "../img/Mirage_Smoke/aplant_ramp_pos.png"
+                    "../img/Mirage_Smoke/Metka/jungle_aplant_ramp_metka.png",
+                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.png",
+                    "../img/Mirage_Smoke/Smoke/jungle_aplant_ramp_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -57,8 +62,9 @@ const positionsData = {
                 shortTitle: "Stairs A",
                 title: "Смок на Stairs A (Ramp)",
                 images: [
-                    "../img/Mirage_Smoke/stairs_aplant_ramp_smoke.png",
-                    "../img/Mirage_Smoke/aplant_ramp_pos.png"
+                    "../img/Mirage_Smoke/Metka/stairs_aplant_ramp_metka.png",
+                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.png",
+                    "../img/Mirage_Smoke/Smoke/stairs_aplant_ramp_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -67,8 +73,9 @@ const positionsData = {
                 shortTitle: "Car B",
                 title: "Смок на Car B (House)",
                 images: [
-                    "../img/Mirage_Smoke/car_bplant_house_smoke.png",
-                    "../img/Mirage_Smoke/bplant_house_pos.png"
+                    "../img/Mirage_Smoke/Metka/car_bplant_house_metka.png",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
+                    "../img/Mirage_Smoke/Smoke/car_bplant_house_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -77,8 +84,9 @@ const positionsData = {
                 shortTitle: "Forest B",
                 title: "Смок на Forest B (House)",
                 images: [
-                    "../img/Mirage_Smoke/forest_bplant_house_smoke.png",
-                    "../img/Mirage_Smoke/bplant_house_pos.png"
+                    "../img/Mirage_Smoke/Metka/forest_bplant_house_metka.png",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
+                    "../img/Mirage_Smoke/Smoke/forest_bplant_house_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -87,8 +95,9 @@ const positionsData = {
                 shortTitle: "Kitchen Main B",
                 title: "Смок на Main Kitchen B (House)",
                 images: [
-                    "../img/Mirage_Smoke/main_bplant_house_smoke.png",
-                    "../img/Mirage_Smoke/bplant_house_pos.png"
+                    "../img/Mirage_Smoke/Metka/main_bplant_house_metka.png",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
+                    "../img/Mirage_Smoke/Smoke/main_bplant_house_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -97,8 +106,9 @@ const positionsData = {
                 shortTitle: "Kitchen Window B",
                 title: "Смок на Window Kitchen B (House)",
                 images: [
-                    "../img/Mirage_Smoke/window_bplant_house_smoke.png",
-                    "../img/Mirage_Smoke/bplant_house_pos.png"
+                    "../img/Mirage_Smoke/Metka/window_bplant_house_metka.png",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
+                    "../img/Mirage_Smoke/Smoke/window_bplant_house_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -107,8 +117,9 @@ const positionsData = {
                 shortTitle: "Short B",
                 title: "Смок на Short B (House)",
                 images: [
-                    "../img/Mirage_Smoke/short_bplant_house_smoke.png",
-                    "../img/Mirage_Smoke/bplant_house_pos.png"
+                    "../img/Mirage_Smoke/Metka/short_bplant_house_metka.png",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
+                    "../img/Mirage_Smoke/Smoke/short_bplant_house_smoke.png"
                 ],
                 tips: "Левая кнопка мыши."
             },
