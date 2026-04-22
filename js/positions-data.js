@@ -197,6 +197,96 @@ const positionsData = {
             }
         ],
         molotov: [
+            {
+                id: 1,
+                shortTitle: "Stairs A",
+                title: "Молик на Stairs (Ramp)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/stairs_ramp_metka.png",
+                    "../img/Mirage_Molotov/Pos/stairs_ramp_pos.png",
+                    "../img/Mirage_Molotov/Molotov/stairs_ramp_molotov.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 2,
+                shortTitle: "Under Palace A (Ramp)",
+                title: "Молик в Under Palace (Ramp)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/underpalace_ramp_metka.png",
+                    "../img/Mirage_Molotov/Pos/underpalace_ramp_pos.png",
+                    "../img/Mirage_Molotov/Molotov/underpalace_ramp_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (2 шага)."
+            },
+            {
+                id: 3,
+                shortTitle: "FireBox A",
+                title: "Молик за FireBox (Tetris)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/firebox_tetris_metka.png",
+                    "../img/Mirage_Molotov/Pos/firebox_tetris_pos.png",
+                    "../img/Mirage_Molotov/Molotov/firebox_tetris_molotov.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 4,
+                shortTitle: "Under Palace A (Palace)",
+                title: "Молик в Under Palace (Palace)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/underpalace_palace_metka.png",
+                    "../img/Mirage_Molotov/Pos/underpalace_palace_pos.png",
+                    "../img/Mirage_Molotov/Molotov/underpalace_palace_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до конца правой колонны)."
+            },
+            {
+                id: 5,
+                shortTitle: "Balcony A",
+                title: "Молик на Balcony (Palace)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/balcony_palace_metka.png",
+                    "../img/Mirage_Molotov/Pos/balcony_palace_pos.png",
+                    "../img/Mirage_Molotov/Molotov/balcony_palace_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Ходьба на shift (с Позиции 1 до Позиции 2)."
+            },
+            {
+                id: 6,
+                shortTitle: "Car B",
+                title: "Молик на Car (Apartments)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/car_apartments_metka.png",
+                    "../img/Mirage_Molotov/Pos/car_apartments_pos.png",
+                    "../img/Mirage_Molotov/Molotov/car_apartments_molotov.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 7,
+                shortTitle: "Forest B",
+                title: "Молик в Forest (Apartments)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/forest_apartments_metka.png",
+                    "../img/Mirage_Molotov/Pos/forest_apartments_pos.png",
+                    "../img/Mirage_Molotov/Molotov/forest_apartments_molotov.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 8,
+                shortTitle: "Edward B",
+                title: "Молик на Edward (Apartments)",
+                images: [
+                    "../img/Mirage_Molotov/Metka/edward_apartments_metka.png",
+                    "../img/Mirage_Molotov/Pos/edward_apartments_pos.png",
+                    "../img/Mirage_Molotov/Molotov/edward_apartments_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд)."
+            },
+        ],
+        he:[
 
         ]
     },
@@ -395,6 +485,9 @@ const positionsData = {
         ],
         molotov: [
 
+        ],
+        he:[
+            
         ]
     },
     anubis: {
@@ -434,8 +527,8 @@ const positionsData = {
             },
             {
                 id: 4,
-                shortTitle: "9 A",
-                title: "Смок на 9 A (Upper/Boat)",
+                shortTitle: "Heaven A",
+                title: "Смок на Heaven A (Upper/Boat)",
                 images: [
                     "../img/Anubis_Smoke/Metka/9_upper_metka.png",
                     "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
@@ -504,6 +597,9 @@ const positionsData = {
         ],
         molotov: [
             
+        ],
+        he:[
+            
         ]
     },
     ancient: {
@@ -521,8 +617,8 @@ const positionsData = {
             },
             {
                 id: 2,
-                shortTitle: "9 Mid",
-                title: "Смок на 9 Mid (T-Spawn)",
+                shortTitle: "Heaven Mid",
+                title: "Смок на Heaven Mid (T-Spawn)",
                 images: [
                     "../img/Ancient_Smoke/Metka/9_tspawn_metka.png",
                     "../img/Ancient_Smoke/Pos/mid_tspawn_pos.png",
@@ -613,6 +709,9 @@ const positionsData = {
         ],
         molotov: [
             
+        ],
+        he:[
+            
         ]
     },
     overpass: {
@@ -621,6 +720,8 @@ const positionsData = {
         flash: [
         ],
         molotov: [
+        ],
+        he:[
         ]
     },
     nuke: {
@@ -629,6 +730,8 @@ const positionsData = {
         flash: [
         ],
         molotov: [
+        ],
+        he:[ 
         ]
     },
     inferno: {
@@ -637,6 +740,8 @@ const positionsData = {
         flash: [
         ],
         molotov: [
+        ],
+        he:[
         ]
     },
     train: {
@@ -645,6 +750,8 @@ const positionsData = {
         flash: [
         ],
         molotov: [
+        ],
+        he:[
         ]
     },
     vertigo: {
@@ -653,6 +760,8 @@ const positionsData = {
         flash: [
         ],
         molotov: [
+        ],
+        he:[
         ]
     }
 };
