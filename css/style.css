@@ -666,6 +666,7 @@ body {
     margin: 0 auto; /* Горизонтальное центрирование */
 }
 
+
 /* Адаптивность для планшетов */
 @media (max-width: 900px) {
     .image-row--three .image-item:nth-child(3) {
