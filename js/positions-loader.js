@@ -17,7 +17,8 @@
         const typeNames = {
             'smoke': '💨 Дым',
             'flash': '⚡ Флешка',
-            'molotov': '🔥 Молотов'
+            'molotov': '🔥 Молотов',
+            'he': '💥 HE (Осколочная)'
         };
         return typeNames[grenadeType] || grenadeType;
     }
