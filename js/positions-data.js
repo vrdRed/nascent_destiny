@@ -284,7 +284,7 @@ const positionsData = {
                     "../img/Mirage_Molotov/Molotov/edward_apartments_molotov.png"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд)."
-            },
+            }
         ],
         he:[
 
@@ -484,7 +484,83 @@ const positionsData = {
             }
         ],
         molotov: [
-
+            {
+                id: 1,
+                shortTitle: "Car A",
+                title: "Молик на Car A (Long)",
+                images: [
+                    "../img/Dust_Molotov/Metka/car_long_metka.png",
+                    "../img/Dust_Molotov/Pos/car_long_pos.png",
+                    "../img/Dust_Molotov/Molotov/car_long_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок"
+            },
+            {
+                id: 2,
+                shortTitle: "Short A",
+                title: "Молик на Short (Catwalk)",
+                images: [
+                    "../img/Dust_Molotov/Metka/short_catwalk_metka.png",
+                    "../img/Dust_Molotov/Pos/short_catwalk_pos.png",
+                    "../img/Dust_Molotov/Molotov/short_catwalk_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до козырька на прицеле), Прыжок"
+            },
+            {
+                id: 3,
+                shortTitle: "Goose A",
+                title: "Молик на Goose (Short)",
+                images: [
+                    "../img/Dust_Molotov/Metka/goose_short_metka.png",
+                    "../img/Dust_Molotov/Pos/goose_short_pos.png",
+                    "../img/Dust_Molotov/Molotov/goose_short_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 4,
+                shortTitle: "A-Plant",
+                title: "Молик на A-Plant (CT-Spawn)",
+                images: [
+                    "../img/Dust_Molotov/Metka/aplant_ct_metka.png",
+                    "../img/Dust_Molotov/Pos/aplant_ct_pos.png",
+                    "../img/Dust_Molotov/Molotov/aplant_ct_molotov.png"
+                ],
+                tips: "Правая кнопка мыши, Прыжок."
+            },
+            {
+                id: 5,
+                shortTitle: "B-Plant",
+                title: "Молик на B-Plant (Window)",
+                images: [
+                    "../img/Dust_Molotov/Metka/bplant_window_metka.png",
+                    "../img/Dust_Molotov/Pos/bplant_window_pos.png",
+                    "../img/Dust_Molotov/Molotov/bplant_window_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 6,
+                shortTitle: "Car B",
+                title: "Молик за Car (Doors B)",
+                images: [
+                    "../img/Dust_Molotov/Metka/car_doors_metka.png",
+                    "../img/Dust_Molotov/Pos/car_doors_pos.png",
+                    "../img/Dust_Molotov/Molotov/car_doors_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (1.5 шага), Прыжок."
+            },
+            {
+                id: 7,
+                shortTitle: "Дальний B",
+                title: "Молик за Дальний (Doors B)",
+                images: [
+                    "../img/Dust_Molotov/Metka/dal_doors_metka.png",
+                    "../img/Dust_Molotov/Pos/dal_doors_pos.png",
+                    "../img/Dust_Molotov/Molotov/dal_doors_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            }
         ],
         he:[
             
