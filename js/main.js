@@ -6,20 +6,71 @@ document.addEventListener('DOMContentLoaded', () => {
     const paginationContainer = document.getElementById('positions-pagination');
     const paginationButtons = document.getElementById('pagination-buttons');
     const paginationCounter = document.getElementById('pagination-counter');
+    const paginationTabs = document.getElementById('pagination-tabs');
     
     let currentMap = 'mirage';
     let currentGrenade = 'smoke';
     let currentPositionsCount = 0;
     let currentIndex = 0;
-    // Добавляем массив для хранения кратких названий, полученных из iframe
     let currentShortTitles = [];
+    let isSmoke = false;
+    let currentSmokeTab = 'regular';
+    let smokeTabButtons = [];
     
-    // Функция для создания кнопок пагинации
+    function createSmokeTabs() {
+        if (!paginationTabs) return;
+        
+        paginationTabs.style.display = 'flex';
+        paginationTabs.innerHTML = `
+            <button class="pagination-tab active" data-tab="regular">Обычные</button>
+            <button class="pagination-tab" data-tab="instant">Instant (Инста)</button>
+        `;
+        
+        smokeTabButtons = document.querySelectorAll('.pagination-tab');
+        smokeTabButtons.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabType = tab.getAttribute('data-tab');
+                
+                // Обновляем активную вкладку
+                smokeTabButtons.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                currentSmokeTab = tabType;
+                
+                // Сбрасываем индекс
+                currentIndex = 0;
+                
+                // Отправляем сообщение в iframe о смене вкладки
+                if (pageFrame && pageFrame.contentWindow) {
+                    pageFrame.contentWindow.postMessage({
+                        type: 'changeSmokeTab',
+                        tab: tabType
+                    }, '*');
+                }
+            });
+        });
+    }
+    
+    function removeSmokeTabs() {
+        if (paginationTabs) {
+            paginationTabs.style.display = 'none';
+            paginationTabs.innerHTML = '';
+            smokeTabButtons = [];
+        }
+    }
+    
     function renderPaginationButtons(count, activeIndex, titles = []) {
         if (!paginationButtons) return;
         
         if (count === 0) {
-            paginationContainer.style.display = 'none';
+            // Не скрываем всю панель, только кнопки
+            paginationButtons.innerHTML = '';
+            paginationCounter.textContent = '0 раскидок';
+            
+            // Вкладки оставляем видимыми если это смоки
+            if (!isSmoke) {
+                paginationContainer.style.display = 'none';
+            }
             return;
         }
         
@@ -29,19 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let html = '';
         for (let i = 0; i < count; i++) {
             const isActive = i === activeIndex;
-            // Используем shortTitle если он есть, иначе fallback на номер
             const buttonText = (titles && titles[i]) ? titles[i] : (i + 1).toString();
             html += `<button class="pagination-btn ${isActive ? 'active' : ''}" data-index="${i}">${buttonText}</button>`;
         }
         paginationButtons.innerHTML = html;
         
-        // Добавляем обработчики на кнопки
+        // Добавляем обработчики кликов
         document.querySelectorAll('.pagination-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const index = parseInt(btn.getAttribute('data-index'));
                 currentIndex = index;
                 
-                // Обновляем активную кнопку
                 document.querySelectorAll('.pagination-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
@@ -62,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'раскидок';
     }
     
-    // Функция для подстройки высоты iframe под содержимое
     function adjustIframeHeight() {
         if (pageFrame && pageFrame.contentWindow && pageFrame.contentDocument) {
             try {
@@ -76,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // Функция загрузки страницы карты с параметром гранаты
     function loadPage() {
         let url = '';
         switch(currentMap) {
@@ -89,26 +136,28 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'inferno': url = `pages/inferno.html?grenade=${currentGrenade}`; break;
             case 'train': url = `pages/train.html?grenade=${currentGrenade}`; break;
             case 'vertigo': url = `pages/vertigo.html?grenade=${currentGrenade}`; break;
+            case 'cache': url = `pages/cache.html?grenade=${currentGrenade}`; break;
             default: url = `pages/mirage.html?grenade=${currentGrenade}`;
         }
         
         currentIndex = 0;
-        currentShortTitles = []; // Сбрасываем заголовки при загрузке новой страницы
+        currentShortTitles = [];
+        currentSmokeTab = 'regular';
+        
+        // Убираем вкладки при загрузке новой страницы
+        removeSmokeTabs();
         
         if (pageFrame) {
             pageFrame.style.opacity = '0.5';
             pageFrame.src = url;
             pageFrame.onload = () => {
                 pageFrame.style.opacity = '1';
-                // Даём немного времени на рендеринг внутри iframe
                 setTimeout(adjustIframeHeight, 50);
-                // Периодически проверяем высоту на случай изменений
                 setTimeout(adjustIframeHeight, 300);
             };
         }
     }
     
-    // Обновление активных кнопок карт
     function updateActiveMapButtons() {
         mapButtons.forEach(btn => {
             if (btn.getAttribute('data-map') === currentMap) {
@@ -119,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Обновление активных кнопок гранат
     function updateActiveGrenadeButtons() {
         grenadeButtons.forEach(btn => {
             if (btn.getAttribute('data-grenade') === currentGrenade) {
@@ -132,61 +180,98 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Обработчик сообщений от iframe
     window.addEventListener('message', (event) => {
-        if (event.data && event.data.type === 'updatePagination') {
-            currentPositionsCount = event.data.positionsCount;
-            currentIndex = event.data.currentIndex;
-            // Сохраняем полученные заголовки
-            if (event.data.titles) {
-                currentShortTitles = event.data.titles;
-            }
-            renderPaginationButtons(currentPositionsCount, currentIndex, currentShortTitles);
-            
-            // После обновления данных подстраиваем высоту
-            setTimeout(adjustIframeHeight, 50);
-        } else if (event.data && event.data.type === 'contentHeight') {
-            // Получаем высоту содержимого из iframe
-            if (pageFrame && event.data.height) {
-                pageFrame.style.height = event.data.height + 'px';
-            }
+        if (!event.data || !event.data.type) return;
+        
+        switch(event.data.type) {
+            case 'updatePagination':
+                currentPositionsCount = event.data.positionsCount;
+                currentIndex = event.data.currentIndex;
+                isSmoke = event.data.isSmoke || false;
+                
+                if (event.data.titles) {
+                    currentShortTitles = event.data.titles;
+                }
+                
+                // Управление видимостью вкладок
+                if (isSmoke) {
+                    // Показываем вкладки только для смоков
+                    if (smokeTabButtons.length === 0) {
+                        createSmokeTabs();
+                    } else {
+                        paginationTabs.style.display = 'flex';
+                    }
+                    
+                    // Обновляем активную вкладку
+                    smokeTabButtons.forEach(tab => {
+                        if (tab.getAttribute('data-tab') === currentSmokeTab) {
+                            tab.classList.add('active');
+                        } else {
+                            tab.classList.remove('active');
+                        }
+                    });
+                    
+                    // Всегда показываем панель для смоков, даже если нет раскидок
+                    paginationContainer.style.display = 'block';
+                } else {
+                    // Скрываем вкладки для других типов гранат
+                    removeSmokeTabs();
+                }
+                
+                renderPaginationButtons(currentPositionsCount, currentIndex, currentShortTitles);
+                setTimeout(adjustIframeHeight, 50);
+                break;
+                
+            case 'contentHeight':
+                if (pageFrame && event.data.height) {
+                    pageFrame.style.height = event.data.height + 'px';
+                }
+                break;
         }
     });
     
-    // Обработчики для карт
+    // Обработчики кликов по кнопкам карт
     mapButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            currentMap = btn.getAttribute('data-map');
-            updateActiveMapButtons();
-            loadPage();
+            const newMap = btn.getAttribute('data-map');
+            if (newMap !== currentMap) {
+                currentMap = newMap;
+                updateActiveMapButtons();
+                loadPage();
+            }
         });
     });
     
-    // Обработчики для гранат
+    // Обработчики кликов по кнопкам гранат
     grenadeButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            currentGrenade = btn.getAttribute('data-grenade');
-            updateActiveGrenadeButtons();
-            
-            // Отправляем сообщение в iframe о смене гранаты
-            if (pageFrame && pageFrame.contentWindow) {
-                pageFrame.contentWindow.postMessage({
-                    type: 'changeGrenade',
-                    grenade: currentGrenade
-                }, '*');
+            const newGrenade = btn.getAttribute('data-grenade');
+            if (newGrenade !== currentGrenade) {
+                currentGrenade = newGrenade;
+                updateActiveGrenadeButtons();
+                
+                // Сбрасываем вкладку смоков
+                currentSmokeTab = 'regular';
+                
+                // Отправляем сообщение в iframe о смене гранаты
+                if (pageFrame && pageFrame.contentWindow) {
+                    pageFrame.contentWindow.postMessage({
+                        type: 'changeGrenade',
+                        grenade: currentGrenade
+                    }, '*');
+                }
+                
+                loadPage();
             }
-            
-            loadPage();
         });
     });
     
-    // Устанавливаем начальные активные кнопки
+    // Инициализация
     updateActiveMapButtons();
     updateActiveGrenadeButtons();
-    
-    // Загружаем начальную страницу
     loadPage();
 });
 
-// Функция для открытия изображения на весь экран
+// Функции для полноэкранного просмотра изображений
 function openFullscreen(imageSrc, imageAlt) {
     const modal = document.createElement('div');
     modal.className = 'fullscreen-modal';
