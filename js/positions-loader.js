@@ -5,14 +5,14 @@
     let currentGrenadeType = 'smoke';
     let currentMapKey = '';
     let currentMapName = '';
+    let currentSmokeType = 'regular'; // По умолчанию показываем обычные смоки
+    let allSmokePositions = []; // Храним все смоки для фильтрации
     
-    // Функция для получения параметров из URL
     function getUrlParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     }
     
-    // Функция для получения названия типа гранаты
     function getGrenadeTypeName(grenadeType) {
         const typeNames = {
             'smoke': '💨 Дым',
@@ -23,11 +23,37 @@
         return typeNames[grenadeType] || grenadeType;
     }
     
-    // Функция для обновления пагинации в родительском окне
+    function filterSmokesByType(positions, smokeType) {
+        if (!positions || positions.length === 0) return [];
+        
+        // Проверяем, есть ли у позиций поле smokeType
+        const hasSmokeType = positions.some(pos => pos.smokeType !== undefined);
+        
+        if (!hasSmokeType) {
+            // Если нет поля smokeType, все смоки считаются обычными
+            return smokeType === 'regular' ? positions : [];
+        }
+        
+        // Фильтруем по типу
+        return positions.filter(pos => {
+            const type = pos.smokeType || 'regular';
+            return type === smokeType;
+        });
+    }
+    
     function updateParentPagination() {
         if (window.parent && window.parent !== window) {
-            // Собираем массив кратких названий
             const titles = currentPositions.map(p => p.shortTitle || p.title.substring(0, 15) + '...');
+            
+            // Определяем доступные типы смоков
+            let smokeTypes = [];
+            if (currentGrenadeType === 'smoke' && allSmokePositions.length > 0) {
+                const types = new Set();
+                allSmokePositions.forEach(pos => {
+                    types.add(pos.smokeType || 'regular');
+                });
+                smokeTypes = Array.from(types);
+            }
             
             window.parent.postMessage({
                 type: 'updatePagination',
@@ -35,12 +61,13 @@
                 currentIndex: currentIndex,
                 mapKey: currentMapKey,
                 grenadeType: currentGrenadeType,
-                titles: titles // <-- ОТПРАВЛЯЕМ МАССИВ НАЗВАНИЙ
+                titles: titles,
+                isSmoke: currentGrenadeType === 'smoke',
+                smokeTypes: smokeTypes
             }, '*');
         }
     }
     
-    // Функция для отправки высоты содержимого родительскому окну
     function sendContentHeight() {
         if (window.parent && window.parent !== window) {
             const height = document.body.scrollHeight;
@@ -51,7 +78,6 @@
         }
     }
     
-    // Функция для отображения одной раскидки по индексу
     function renderSinglePosition(position) {
         const container = document.getElementById('positions-container');
         if (!container) return;
@@ -66,14 +92,11 @@
             return;
         }
         
-        // Определяем количество изображений
         const imageCount = position.images.length;
         
-        // Функция для генерации HTML изображений
         const generateImagesHtml = () => {
             let imagesHtml = '';
             
-            // Стандартные подписи для 2 или 3 картинок
             const labels = imageCount === 3 
                 ? ['Прицел', 'Позиция', 'Результат']
                 : ['Прицел', 'Позиция'];
@@ -89,14 +112,20 @@
             return imagesHtml;
         };
         
-        // Определяем класс для сетки: если 3 картинки, добавляем модификатор
         const gridClass = imageCount === 3 ? 'image-row image-row--three' : 'image-row';
+        
+        // Добавляем бейдж типа смока если есть smokeType
+        let smokeTypeBadge = '';
+        if (position.smokeType === 'instant') {
+            smokeTypeBadge = '<span class="position-badge instant-badge">⚡ Instant</span>';
+        }
         
         let html = `
             <div class="position-card" data-id="${position.id}">
                 <div class="position-header">
                     <h3>${position.title}</h3>
                     <div class="position-nav">
+                        ${smokeTypeBadge}
                         <span class="position-badge">${getGrenadeTypeName(currentGrenadeType)}</span>
                     </div>
                 </div>
@@ -114,11 +143,9 @@
         
         container.innerHTML = html;
         
-        // Отправляем высоту после рендеринга
         setTimeout(sendContentHeight, 50);
     }
     
-    // Функция для переключения на конкретную раскидку
     function showPosition(index) {
         if (currentPositions.length === 0) return;
         
@@ -130,9 +157,7 @@
         updateParentPagination();
     }
     
-    // Функция для загрузки всех раскидок
     function loadPositions(positions, mapName, grenadeType, mapKey) {
-        currentPositions = positions || [];
         currentGrenadeType = grenadeType;
         currentMapName = mapName;
         currentMapKey = mapKey;
@@ -141,22 +166,36 @@
         const container = document.getElementById('positions-container');
         if (!container) return;
         
+        if (grenadeType === 'smoke') {
+            // Сохраняем все смоки
+            allSmokePositions = positions || [];
+            // Фильтруем по типу
+            currentPositions = filterSmokesByType(allSmokePositions, currentSmokeType);
+        } else {
+            allSmokePositions = [];
+            currentPositions = positions || [];
+        }
+        
+        // Всегда отправляем обновление пагинации, даже если нет позиций
+        updateParentPagination();
+        
         if (currentPositions.length === 0) {
+            let message = '😕 Нет доступных раскидок для этой гранаты';
+            if (grenadeType === 'smoke' && currentSmokeType === 'instant') {
+                message = '😕 Нет Instant смоков для этой карты';
+            }
             container.innerHTML = `
                 <div class="no-positions">
-                    <p>😕 Нет доступных раскидок для этой гранаты</p>
+                    <p>${message}</p>
                 </div>
             `;
-            updateParentPagination();
             sendContentHeight();
             return;
         }
         
         renderSinglePosition(currentPositions[0]);
-        updateParentPagination();
     }
     
-    // Инициализация страницы
     function initMapPage(mapName, mapKey) {
         const grenadeType = getUrlParam('grenade') || 'smoke';
         const container = document.getElementById('positions-container');
@@ -169,12 +208,11 @@
         currentMapKey = mapKey;
         currentMapName = mapName;
         currentGrenadeType = grenadeType;
+        currentSmokeType = 'regular';
         
-        // Показываем загрузку
         container.innerHTML = '<div class="loading-positions">Загрузка раскидок...</div>';
         sendContentHeight();
         
-        // Получаем данные из глобального объекта
         if (typeof positionsData !== 'undefined' && positionsData[mapKey] && positionsData[mapKey][grenadeType]) {
             const positions = positionsData[mapKey][grenadeType];
             loadPositions(positions, mapName, grenadeType, mapKey);
@@ -185,37 +223,80 @@
                 </div>
             `;
             currentPositions = [];
+            allSmokePositions = [];
             updateParentPagination();
             sendContentHeight();
         }
         
-        // Слушаем сообщения от родительского окна
+        // Обработчик сообщений от родительского окна
         window.addEventListener('message', function(event) {
-            if (event.data && event.data.type === 'changePosition') {
-                showPosition(event.data.index);
-            } else if (event.data && event.data.type === 'changeGrenade') {
-                const newGrenade = event.data.grenade;
-                currentGrenadeType = newGrenade;
-                
-                if (positionsData[currentMapKey] && positionsData[currentMapKey][newGrenade]) {
-                    loadPositions(positionsData[currentMapKey][newGrenade], currentMapName, newGrenade, currentMapKey);
-                }
+            if (!event.data || !event.data.type) return;
+            
+            switch(event.data.type) {
+                case 'changePosition':
+                    showPosition(event.data.index);
+                    break;
+                    
+                case 'changeGrenade':
+                    const newGrenade = event.data.grenade;
+                    currentGrenadeType = newGrenade;
+                    currentSmokeType = 'regular';
+                    
+                    if (positionsData[currentMapKey] && positionsData[currentMapKey][newGrenade]) {
+                        loadPositions(
+                            positionsData[currentMapKey][newGrenade], 
+                            currentMapName, 
+                            newGrenade, 
+                            currentMapKey
+                        );
+                    } else {
+                        currentPositions = [];
+                        allSmokePositions = [];
+                        document.getElementById('positions-container').innerHTML = `
+                            <div class="no-positions">
+                                <p>😕 Нет доступных раскидок для этой гранаты</p>
+                            </div>
+                        `;
+                        updateParentPagination();
+                        sendContentHeight();
+                    }
+                    break;
+                    
+                case 'changeSmokeTab':
+                    currentSmokeType = event.data.tab;
+                    if (currentGrenadeType === 'smoke' && allSmokePositions.length > 0) {
+                        currentPositions = filterSmokesByType(allSmokePositions, currentSmokeType);
+                        currentIndex = 0;
+                        
+                        if (currentPositions.length > 0) {
+                            renderSinglePosition(currentPositions[0]);
+                        } else {
+                            document.getElementById('positions-container').innerHTML = `
+                                <div class="no-positions">
+                                    <p>😕 Нет ${currentSmokeType === 'instant' ? 'Instant' : 'обычных'} смоков для этой карты</p>
+                                </div>
+                            `;
+                        }
+                        // Обновляем пагинацию даже если нет позиций
+                        updateParentPagination();
+                        sendContentHeight();
+                    }
+                    break;
             }
         });
         
-        // Отправляем начальную высоту после полной загрузки
+        // Отправляем начальную высоту после загрузки
         window.addEventListener('load', function() {
             sendContentHeight();
         });
         
-        // Наблюдаем за изменениями размера
+        // Наблюдаем за изменением размеров
         const observer = new ResizeObserver(() => {
             sendContentHeight();
         });
         observer.observe(document.body);
     }
     
-    // Функция для открытия изображения на весь экран
     function openFullscreen(imageSrc, imageAlt) {
         const modal = document.createElement('div');
         modal.className = 'fullscreen-modal';
@@ -295,11 +376,13 @@
         });
     }
     
+    // Экспортируем функции в глобальную область видимости
     window.initMapPage = initMapPage;
     window.openFullscreen = openFullscreen;
     window.closeFullscreen = closeFullscreen;
     window.showPosition = showPosition;
     
+    // Инициализация обработчиков кликов по изображениям
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', setupImageClickHandlers);
     } else {
