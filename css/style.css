@@ -9,7 +9,7 @@ body {
     background: linear-gradient(145deg, #0a0c12 0%, #0f1219 100%);
     min-height: 100vh;
     color: #eef2ff;
-    padding: 1.5rem 1.5rem;
+    padding: 1rem 1rem;
 }
 
 .app {
@@ -17,38 +17,38 @@ body {
     margin: 0 auto;
 }
 
-/* Шапка */
+/* Шапка - компактнее */
 .header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .header h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     background: linear-gradient(135deg, #e6b422, #ff7e5e);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: -0.5px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     text-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .header p {
     color: #8d99ae;
-    font-size: 1rem;
+    font-size: 0.85rem;
     border-top: 1px solid rgba(255,255,255,0.08);
     display: inline-block;
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
 }
 
-/* Панель категорий */
+/* Панель категорий - компактнее */
 .categories {
     background: rgba(18, 22, 35, 0.75);
     backdrop-filter: blur(8px);
-    border-radius: 2rem;
-    padding: 1.2rem 1.8rem;
-    margin-bottom: 1.2rem;
+    border-radius: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 0.8rem;
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
@@ -57,34 +57,34 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 1rem;
+    gap: 0.5rem;
     justify-content: center;
 }
 
 .cat-label {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     color: #b9c7d9;
     background: rgba(0,0,0,0.4);
-    padding: 0.3rem 0.8rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 30px;
 }
 
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.7rem;
+    gap: 0.4rem;
 }
 
 .cat-btn {
     background: #1e2438;
     border: none;
-    padding: 0.5rem 1.2rem;
+    padding: 0.35rem 0.9rem;
     border-radius: 2rem;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: #ccd6f0;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -105,61 +105,70 @@ body {
     border: 1px solid rgba(255,215,100,0.6);
 }
 
-/* Панель пагинации с номерами раскидок */
+/* Панель пагинации - компактнее */
 .positions-pagination {
     background: rgba(18, 22, 35, 0.75);
     backdrop-filter: blur(8px);
-    border-radius: 2rem;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.2rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 0.8rem;
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
 }
 
 .pagination-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
+    padding-top: 0.2rem;
+}
+
+.pagination-tabs + .pagination-header {
+    border-top: 2px solid rgba(240, 165, 0, 0.2);
+    padding-top: 0.8rem;
+    margin-top: -1px;
 }
 
 .pagination-label {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     color: #b9c7d9;
     background: rgba(0,0,0,0.4);
-    padding: 0.3rem 0.8rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 30px;
 }
 
 .pagination-counter {
     color: #f0a500;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     background: rgba(0,0,0,0.3);
-    padding: 0.3rem 1rem;
+    padding: 0.2rem 0.8rem;
     border-radius: 30px;
 }
 
 .pagination-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem;
+    gap: 0.4rem;
     justify-content: center;
 }
 
 .pagination-btn {
-    min-width: 70px; /* Было 40px, увеличим для текста */
-    height: 40px;
+    min-width: 60px;
+    height: 32px;
     background: #1e2438;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     font-weight: 700;
-    font-size: 0.9rem; /* Немного уменьшим шрифт */
+    font-size: 0.8rem;
     color: #ccd6f0;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -170,9 +179,9 @@ body {
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255,255,255,0.05);
-    padding-left: 12px;  /* Добавим отступы */
-    padding-right: 12px;
-    white-space: nowrap; /* Запретим перенос текста */
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
 }
 
 .pagination-btn:hover {
@@ -189,10 +198,10 @@ body {
     transform: scale(1.05);
 }
 
-/* Контентный фрейм */
+/* Контентный фрейм - компактнее */
 .content-wrapper {
     background: rgba(12, 15, 24, 0.5);
-    border-radius: 1.5rem;
+    border-radius: 1.2rem;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 20px 35px -10px black;
@@ -206,26 +215,25 @@ body {
     background: #0f1219;
     transition: opacity 0.2s;
     display: block;
-    /* Высота будет устанавливаться динамически через JS */
-    height: 600px; /* начальная высота, потом переопределится */
-    overflow: hidden; /* убираем прокрутку внутри iframe */
+    height: 500px;
+    overflow: hidden;
 }
 
-/* Стили для страниц карт */
+/* Стили для страниц карт - компактнее */
 .map-page {
-    padding: 1.5rem;
+    padding: 1rem;
     font-family: inherit;
     background: #0f1219;
     color: #eef2ff;
     min-height: 100%;
 }
 
-/* Заголовок карты */
+/* Заголовок карты - компактнее */
 .map-page h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 3px solid rgba(240, 165, 0, 0.3);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(240, 165, 0, 0.3);
     display: inline-block;
 }
 
@@ -233,20 +241,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 3px solid rgba(240,165,0,0.3);
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(240,165,0,0.3);
 }
 
 .map-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    border-left: 5px solid #f0a500;
-    padding-left: 1.2rem;
+    gap: 0.5rem;
+    border-left: 4px solid #f0a500;
+    padding-left: 0.8rem;
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
@@ -254,11 +262,11 @@ body {
 
 .grenade-indicator {
     background: linear-gradient(105deg, #f0a500, #e07c2c);
-    padding: 0.5rem 1.2rem;
+    padding: 0.3rem 0.8rem;
     border-radius: 2rem;
     font-weight: bold;
     color: #0a0c12;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 /* Контейнер для позиций */
@@ -267,11 +275,11 @@ body {
     margin-top: 0;
 }
 
-/* Карточка позиции - теперь показывается одна */
+/* Карточка позиции - компактнее */
 .position-card {
     background: rgba(20, 25, 40, 0.85);
     backdrop-filter: blur(4px);
-    border-radius: 1.5rem;
+    border-radius: 1.2rem;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -282,58 +290,58 @@ body {
 }
 
 .position-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     border-color: rgba(240,165,0,0.5);
 }
 
 .position-header {
-    padding: 1.2rem 1.5rem;
+    padding: 0.8rem 1.2rem;
     background: rgba(0,0,0,0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .position-header h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #f0a500;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .position-badge {
     background: #2d3748;
-    padding: 0.3rem 0.8rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 600;
 }
 
 .position-nav {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .position-counter {
     color: #8d99ae;
-    font-size: 0.9rem;
-    margin-right: 0.8rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
 }
 
-/* Изображения */
+/* Изображения - компактнее но сохраняем пропорции */
 .position-images {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .image-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: start;
 }
 
@@ -346,10 +354,10 @@ body {
 
 .image-item img {
     width: 100%;
-    height: 300px; 
-    object-fit: cover; 
-    object-position: center; 
-    border-radius: 1rem;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8rem;
     border: 2px solid rgba(240,165,0,0.3);
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
@@ -362,49 +370,49 @@ body {
 }
 
 .image-item img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(240, 165, 0, 0.2);
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(240, 165, 0, 0.2);
     border-color: rgba(240,165,0,0.8);
 }
 
 .image-label {
     display: block;
-    margin-top: 0.75rem;
-    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
     color: #8d99ae;
     font-weight: 500;
 }
 
-/* Советы */
+/* Советы - компактнее */
 .position-tips {
-    padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+    padding: 0.8rem 1.2rem 1rem 1.2rem;
     border-top: 1px solid rgba(255,255,255,0.05);
     background: rgba(0,0,0,0.2);
 }
 
 .position-tips h4 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     color: #f0a500;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 .position-tips p {
     color: #b9c7d9;
     font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    line-height: 1.3;
 }
 
-/* Загрузка и ошибки */
+/* Загрузка и ошибки - компактнее */
 .loading-positions,
 .error-positions,
 .no-positions {
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
     background: rgba(0,0,0,0.3);
-    border-radius: 1.2rem;
+    border-radius: 1rem;
     color: #8d99ae;
-    font-size: 1rem;
+    font-size: 0.9rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -414,7 +422,7 @@ body {
     color: #ff6b6b;
 }
 
-/* Модальное окно для полноэкранного просмотра изображений */
+/* Модальное окно */
 .fullscreen-modal {
     position: fixed;
     top: 0;
@@ -459,19 +467,19 @@ body {
     max-width: 100%;
     max-height: 90vh;
     object-fit: contain;
-    border-radius: 1.2rem;
+    border-radius: 1rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    border: 3px solid rgba(240, 165, 0, 0.6);
+    border: 2px solid rgba(240, 165, 0, 0.6);
     cursor: pointer;
 }
 
 .fullscreen-caption {
-    margin-top: 1.2rem;
-    padding: 0.7rem 1.5rem;
+    margin-top: 0.8rem;
+    padding: 0.5rem 1.2rem;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 2rem;
     color: #f0a500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
     max-width: 80%;
     backdrop-filter: blur(5px);
@@ -479,15 +487,15 @@ body {
 
 .fullscreen-close {
     position: absolute;
-    top: 25px;
-    right: 35px;
-    width: 55px;
-    height: 55px;
+    top: 20px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid rgba(240, 165, 0, 0.6);
     color: #f0a500;
-    font-size: 32px;
+    font-size: 28px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -504,69 +512,205 @@ body {
     border-color: transparent;
 }
 
+/* Стили для трех изображений */
+.image-row--three {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.image-row--three .image-item:nth-child(1),
+.image-row--three .image-item:nth-child(2) {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 250px;
+}
+
+.image-row--three .image-item:nth-child(3) {
+    flex: 0 1 auto;
+    width: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Вкладки для смоков - компактнее */
+.pagination-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    top: -1px;
+    z-index: 2;
+}
+
+.pagination-tab {
+    background: rgba(30, 36, 56, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #8892b0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+    position: relative;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+}
+
+.pagination-tab:first-child {
+    border-radius: 1rem 0 0 0;
+    border-right: none;
+}
+
+.pagination-tab:last-child {
+    border-radius: 0 1rem 0 0;
+    border-left: none;
+}
+
+.pagination-tab:hover {
+    background: rgba(42, 50, 75, 0.9);
+    color: #a0aec0;
+    transform: translateY(-2px);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pagination-tab.active {
+    background: linear-gradient(180deg, 
+        rgba(240, 165, 0, 0.2) 0%, 
+        rgba(240, 165, 0, 0.1) 50%,
+        rgba(18, 22, 35, 0.95) 100%
+    );
+    color: #f0a500;
+    box-shadow: 0 -4px 15px rgba(240, 165, 0, 0.2), 
+                inset 0 2px 0 rgba(240, 165, 0, 0.5);
+    border-color: rgba(240, 165, 0, 0.4);
+    transform: translateY(-1px);
+    text-shadow: 0 0 10px rgba(240, 165, 0, 0.3);
+}
+
+.pagination-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #f0a500 20%, 
+        #f0a500 80%, 
+        transparent 100%
+    );
+}
+
+@keyframes tabGlow {
+    0% {
+        box-shadow: 0 -4px 15px rgba(240, 165, 0, 0.2), 
+                   inset 0 2px 0 rgba(240, 165, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 -4px 20px rgba(240, 165, 0, 0.3), 
+                   inset 0 2px 0 rgba(240, 165, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 -4px 15px rgba(240, 165, 0, 0.2), 
+                   inset 0 2px 0 rgba(240, 165, 0, 0.3);
+    }
+}
+
+.pagination-tab.active {
+    animation: tabGlow 3s ease-in-out infinite;
+}
+
+/* Бейдж для Instant смоков */
+.instant-badge {
+    background: linear-gradient(105deg, #ff6b6b, #ee5a24) !important;
+    color: white !important;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(238, 90, 36, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(238, 90, 36, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(238, 90, 36, 0);
+    }
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
     body {
-        padding: 1rem;
+        padding: 0.8rem;
     }
     
     .header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .header p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .categories {
-        padding: 1rem;
+        padding: 0.7rem;
     }
     
     .cat-btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.85rem;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
     }
     
     .positions-pagination {
-        padding: 0.8rem 1rem;
+        padding: 0.7rem 0.8rem;
     }
     
     .pagination-btn {
-        min-width: 60px;
-        height: 35px;
-        font-size: 0.8rem;
+        min-width: 50px;
+        height: 30px;
+        font-size: 0.75rem;
         padding-left: 8px;
         padding-right: 8px;
     }
     
     #page-frame {
-        min-height: 500px;
+        min-height: 400px;
     }
     
     .map-page {
-        padding: 1rem;
+        padding: 0.8rem;
     }
     
     .map-page h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.2rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
     }
     
     .position-header {
-        padding: 1rem 1.2rem;
+        padding: 0.7rem 1rem;
     }
     
     .position-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .position-images {
-        padding: 1.2rem;
+        padding: 0.8rem;
     }
     
     .image-row {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 0.8rem;
     }
 
     .image-item img {
@@ -574,36 +718,54 @@ body {
     }
     
     .image-label {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
     
     .position-tips {
-        padding: 1rem 1.2rem 1.2rem 1.2rem;
+        padding: 0.7rem 1rem 0.8rem 1rem;
     }
     
     .position-tips h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .position-tips p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
     
     .fullscreen-close {
-        top: 15px;
-        right: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 28px;
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
     }
     
     .fullscreen-caption {
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
     
     .fullscreen-image {
         max-height: 85vh;
+    }
+    
+    .pagination-tab {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+    
+    .pagination-tab:first-child {
+        border-radius: 0.7rem 0 0 0;
+    }
+    
+    .pagination-tab:last-child {
+        border-radius: 0 0.7rem 0 0;
+    }
+    
+    .positions-pagination {
+        padding: 0.8rem 0.8rem 0.8rem 0.8rem;
     }
 }
 
@@ -618,63 +780,53 @@ body {
     }
     
     .position-header h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .position-badge {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     
     .position-tips p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     
     .loading-positions,
     .error-positions,
     .no-positions {
-        padding: 2rem;
-        font-size: 0.9rem;
+        padding: 1.5rem;
+        font-size: 0.85rem;
     }
     
     .pagination-btn {
-        min-width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
+        min-width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .pagination-tab {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.75rem;
+        min-width: 80px;
+    }
+    
+    .pagination-tab:first-child {
+        border-radius: 0.5rem 0 0 0;
+    }
+    
+    .pagination-tab:last-child {
+        border-radius: 0 0.5rem 0 0;
     }
 }
-
-/* Стили для трех изображений: первые два в ряд, третье снизу по центру */
-.image-row--three {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center; /* Центрирование элементов при переносе */
-}
-
-/* Первые два изображения (оба будут в одном ряду) */
-.image-row--three .image-item:nth-child(1),
-.image-row--three .image-item:nth-child(2) {
-    flex: 1 1 calc(50% - 1.5rem); /* Каждое занимает половину ширины минус отступ */
-    min-width: 250px; /* Минимальная ширина для адаптивности */
-}
-
-/* Третье изображение — на новой строке и по центру */
-.image-row--three .image-item:nth-child(3) {
-    flex: 0 1 auto; /* Не растягивается, ширина по контенту */
-    width: 50%; /* Занимает половину ширины контейнера */
-    max-width: 100%; /* Не вылезает за пределы */
-    margin: 0 auto; /* Горизонтальное центрирование */
-}
-
 
 /* Адаптивность для планшетов */
 @media (max-width: 900px) {
     .image-row--three .image-item:nth-child(3) {
-        width: 66.66%; /* Чуть шире на планшетах */
+        width: 66.66%;
     }
 }
 
-/* Адаптивность для телефонов — всё в колонку */
+/* Адаптивность для телефонов */
 @media (max-width: 600px) {
     .image-row--three {
         flex-direction: column;
