@@ -518,7 +518,139 @@ const positionsData = {
                     "../img/Dust_Smoke/Smoke/bplant_tunnels_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
-            }
+            },
+            {
+                id: 9,
+                smokeType: "instant",
+                shortTitle: "X-Box (Поз. 1)",
+                title: "Инста Смок на X-Box Mid (Позиция 1)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka1.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke1.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 10,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 2)",
+                title: "Инста Смок в Doors Mid (Позиция 2)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka2.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke2.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 11,
+                smokeType: "instant",
+                shortTitle: "X-Box (Поз. 2)",
+                title: "Инста Смок на X-Box Mid (Позиция 2)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka2.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke2.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 12,
+                smokeType: "instant",
+                shortTitle: "Long (Поз. 2)",
+                title: "Инста Смок на Long A (Позиция 2)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka2.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke2.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 13,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 3)",
+                title: "Инста Смок в Doors Mid (Позиция 3)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka3.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke3.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок"
+            },
+            {
+                id: 14,
+                smokeType: "instant",
+                shortTitle: "X-Box (Поз. 3)",
+                title: "Инста Смок на X-Box Mid (Позиция 3)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka3.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke3.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 15,
+                smokeType: "instant",
+                shortTitle: "Long (Поз. 3)",
+                title: "Инста Смок на Long A (Позиция 3)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka3.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke3.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 16,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 4)",
+                title: "Инста Смок в Doors Mid (Позиция 4)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka4.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke4.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 17,
+                smokeType: "instant",
+                shortTitle: "X-Box (Поз. 4)",
+                title: "Инста Смок на X-Box Mid (Позиция 4)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka4.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke4.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 18,
+                smokeType: "instant",
+                shortTitle: "Long (Поз. 4)",
+                title: "Инста Смок на Long A (Позиция 4)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka4.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke4.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 19,
+                smokeType: "instant",
+                shortTitle: "Long (Поз. 5)",
+                title: "Инста Смок на Long A (Позиция 5)",
+                images: [
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka5.png",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke5.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
         ],
         flash: [
             {
