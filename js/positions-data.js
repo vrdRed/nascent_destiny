@@ -1131,6 +1131,102 @@ const positionsData = {
     },
     cache: {
         smoke: [
+            {
+                id: 1,
+                smokeType: "regular",
+                shortTitle: "Connector Mid",
+                title: "Смок в Connector Mid (T-Spawn)",
+                images: [
+                    "../img/Cache_Smoke/Metka/connector_tspawn_metka.png",
+                    "../img/Cache_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Cache_Smoke/Smoke/connector_tspawn_smoke.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 2,
+                smokeType: "regular",
+                shortTitle: "Catwalk Mid",
+                title: "Смок на Catwalk Mid (T-Spawn)",
+                images: [
+                    "../img/Cache_Smoke/Metka/catwalk_tspawn_metka.png",
+                    "../img/Cache_Smoke/Pos/mid_tspawn_pos.png",
+                    "../img/Cache_Smoke/Smoke/catwalk_tspawn_smoke.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 3,
+                smokeType: "regular",
+                shortTitle: "CT-Spawn A",
+                title: "Смок в CT-Spawn A (Long)",
+                images: [
+                    "../img/Cache_Smoke/Metka/ct_long_metka.png",
+                    "../img/Cache_Smoke/Pos/aplant_long_pos.png",
+                    "../img/Cache_Smoke/Smoke/ct_long_smoke.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 4,
+                smokeType: "regular",
+                shortTitle: "Catwalk A",
+                title: "Смок на Catwalk A (Long)",
+                images: [
+                    "../img/Cache_Smoke/Metka/catwalk_long_metka.png",
+                    "../img/Cache_Smoke/Pos/aplant_long_pos.png",
+                    "../img/Cache_Smoke/Smoke/catwalk_long_smoke.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 5,
+                smokeType: "regular",
+                shortTitle: "A-Plant",
+                title: "Смок за контейнер на A-Plant (Garage)",
+                images: [
+                    "../img/Cache_Smoke/Metka/aplant_garage_metka.png",
+                    "../img/Cache_Smoke/Pos/aplant_garage_pos.png",
+                    "../img/Cache_Smoke/Smoke/aplant_garage_smoke.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 6,
+                smokeType: "regular",
+                shortTitle: "Погрузчик A",
+                title: "Смок на Погрузчик A (Garage)",
+                images: [
+                    "../img/Cache_Smoke/Metka/pogruz_garage_metka.png",
+                    "../img/Cache_Smoke/Pos/aplant_garage_pos.png",
+                    "../img/Cache_Smoke/Smoke/pogruz_garage_smoke.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 7,
+                smokeType: "regular",
+                shortTitle: "Hell B",
+                title: "Смок в Hell B (Toxic)",
+                images: [
+                    "../img/Cache_Smoke/Metka/hell_toxic_metka.png",
+                    "../img/Cache_Smoke/Pos/bplant_toxic_pos.png",
+                    "../img/Cache_Smoke/Smoke/hell_toxic_smoke.png"
+                ],
+                tips: "Левая + Правая кнопка мыши, Прыжок."
+            },
+            {
+                id: 8,
+                smokeType: "regular",
+                shortTitle: "Heaven B",
+                title: "Смок на Heaven B (Toxic)",
+                images: [
+                    "../img/Cache_Smoke/Metka/heaven_toxic_metka.png",
+                    "../img/Cache_Smoke/Pos/bplant_toxic_pos.png",
+                    "../img/Cache_Smoke/Smoke/heaven_toxic_smoke.png"
+                ],
+                tips: "Левая кнопка мыши."
+            }
         ],
         flash: [
         ],
