@@ -1,12 +1,11 @@
-// positions-loader.js — скрипт для загрузки и отображения раскидок гранат с пагинацией
 (function() {
     let currentPositions = [];
     let currentIndex = 0;
     let currentGrenadeType = 'smoke';
     let currentMapKey = '';
     let currentMapName = '';
-    let currentSmokeType = 'regular'; // По умолчанию показываем обычные смоки
-    let allSmokePositions = []; // Храним все смоки для фильтрации
+    let currentSmokeType = 'regular';
+    let allSmokePositions = [];
     
     function getUrlParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -15,26 +14,54 @@
     
     function getGrenadeTypeName(grenadeType) {
         const typeNames = {
-            'smoke': '💨 Дым',
-            'flash': '⚡ Флешка',
-            'molotov': '🔥 Молотов',
-            'he': '💥 HE (Осколочная)'
+            'smoke': '💨 Smoke',
+            'flash': '⚡ Flashbang',
+            'molotov': '🔥 Molotov',
+            'he': '💥 HE'
         };
         return typeNames[grenadeType] || grenadeType;
+    }
+    
+    function updateGrenadeIndicator(grenadeType) {
+        const indicator = document.getElementById('grenade-indicator');
+        if (indicator) {
+            indicator.textContent = getGrenadeTypeName(grenadeType);
+        }
+    }
+    
+    function getIconName(mapKey) {
+        const iconMap = {
+            'mirage': 'mirage_icon.png',
+            'dust2': 'dust_icon.png',
+            'anubis': 'anubis_icon.png',
+            'ancient': 'ancient_icon.png',
+            'overpass': 'overpass_icon.png',
+            'nuke': 'nuke_icon.png',
+            'inferno': 'inferno_icon.png',
+            'train': 'train_icon.png',
+            'vertigo': 'vertigo_icon.png',
+            'cache': 'cache_icon.png'
+        };
+        return iconMap[mapKey] || `${mapKey}_icon.png`;
+    }
+    
+    function loadMapIcon(mapKey) {
+        const mapIcon = document.querySelector('.map-title-icon');
+        if (mapIcon) {
+            const iconName = getIconName(mapKey);
+            mapIcon.src = `../img/icon/${iconName}`;
+        }
     }
     
     function filterSmokesByType(positions, smokeType) {
         if (!positions || positions.length === 0) return [];
         
-        // Проверяем, есть ли у позиций поле smokeType
         const hasSmokeType = positions.some(pos => pos.smokeType !== undefined);
         
         if (!hasSmokeType) {
-            // Если нет поля smokeType, все смоки считаются обычными
             return smokeType === 'regular' ? positions : [];
         }
         
-        // Фильтруем по типу
         return positions.filter(pos => {
             const type = pos.smokeType || 'regular';
             return type === smokeType;
@@ -45,7 +72,6 @@
         if (window.parent && window.parent !== window) {
             const titles = currentPositions.map(p => p.shortTitle || p.title.substring(0, 15) + '...');
             
-            // Определяем доступные типы смоков
             let smokeTypes = [];
             if (currentGrenadeType === 'smoke' && allSmokePositions.length > 0) {
                 const types = new Set();
@@ -114,7 +140,6 @@
         
         const gridClass = imageCount === 3 ? 'image-row image-row--three' : 'image-row';
         
-        // Добавляем бейдж типа смока если есть smokeType
         let smokeTypeBadge = '';
         if (position.smokeType === 'instant') {
             smokeTypeBadge = '<span class="position-badge instant-badge">⚡ Instant</span>';
@@ -163,20 +188,20 @@
         currentMapKey = mapKey;
         currentIndex = 0;
         
+        updateGrenadeIndicator(grenadeType);
+        loadMapIcon(mapKey);
+        
         const container = document.getElementById('positions-container');
         if (!container) return;
         
         if (grenadeType === 'smoke') {
-            // Сохраняем все смоки
             allSmokePositions = positions || [];
-            // Фильтруем по типу
             currentPositions = filterSmokesByType(allSmokePositions, currentSmokeType);
         } else {
             allSmokePositions = [];
             currentPositions = positions || [];
         }
         
-        // Всегда отправляем обновление пагинации, даже если нет позиций
         updateParentPagination();
         
         if (currentPositions.length === 0) {
@@ -210,6 +235,9 @@
         currentGrenadeType = grenadeType;
         currentSmokeType = 'regular';
         
+        updateGrenadeIndicator(grenadeType);
+        loadMapIcon(mapKey);
+        
         container.innerHTML = '<div class="loading-positions">Загрузка раскидок...</div>';
         sendContentHeight();
         
@@ -228,7 +256,6 @@
             sendContentHeight();
         }
         
-        // Обработчик сообщений от родительского окна
         window.addEventListener('message', function(event) {
             if (!event.data || !event.data.type) return;
             
@@ -241,6 +268,8 @@
                     const newGrenade = event.data.grenade;
                     currentGrenadeType = newGrenade;
                     currentSmokeType = 'regular';
+                    
+                    updateGrenadeIndicator(newGrenade);
                     
                     if (positionsData[currentMapKey] && positionsData[currentMapKey][newGrenade]) {
                         loadPositions(
@@ -277,7 +306,6 @@
                                 </div>
                             `;
                         }
-                        // Обновляем пагинацию даже если нет позиций
                         updateParentPagination();
                         sendContentHeight();
                     }
@@ -285,12 +313,10 @@
             }
         });
         
-        // Отправляем начальную высоту после загрузки
         window.addEventListener('load', function() {
             sendContentHeight();
         });
         
-        // Наблюдаем за изменением размеров
         const observer = new ResizeObserver(() => {
             sendContentHeight();
         });
@@ -376,13 +402,11 @@
         });
     }
     
-    // Экспортируем функции в глобальную область видимости
     window.initMapPage = initMapPage;
     window.openFullscreen = openFullscreen;
     window.closeFullscreen = closeFullscreen;
     window.showPosition = showPosition;
     
-    // Инициализация обработчиков кликов по изображениям
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', setupImageClickHandlers);
     } else {
