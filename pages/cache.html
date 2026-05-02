@@ -9,10 +9,14 @@
     <script src="../js/positions-loader.js"></script>
 </head>
 <body>
-    <div class="map-page">
-        <h2>Карта: Cache</h2>
+    <div class="map-page" id="map-page">
+        <div class="map-header">
+            <h2>
+                Карта: <img src="../img/icon/cache_icon.png" alt="Cache" class="map-title-icon" onerror="this.style.display='none'">Cache
+            </h2>
+            <span class="grenade-indicator" id="grenade-indicator">💨 Дым</span>
+        </div>
         
-        <!-- Контейнер для раскидок -->
         <div id="positions-container" class="positions-container"></div>
     </div>
     
