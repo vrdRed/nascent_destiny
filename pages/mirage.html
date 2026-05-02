@@ -10,17 +10,19 @@
 </head>
 <body>
     <div class="map-page" id="map-page">
-        <h2>Карта: Mirage</h2>
+        <div class="map-header">
+            <h2>
+                Карта: <img src="../img/icon/mirage_icon.png" alt="Mirage" class="map-title-icon" onerror="this.style.display='none'"> Mirage
+            </h2>
+            <span class="grenade-indicator" id="grenade-indicator">💨 Дым</span>
+        </div>
         
-        <!-- Контейнер для раскидок -->
         <div id="positions-container" class="positions-container"></div>
     </div>
     
     <script>
-        // Инициализируем страницу с данными карты
         initMapPage('Mirage', 'mirage');
         
-        // Получаем начальный тип гранаты из URL
         const urlParams = new URLSearchParams(window.location.search);
         const grenadeType = urlParams.get('grenade') || 'smoke';
     </script>
