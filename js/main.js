@@ -1,7 +1,6 @@
-// main.js — управление iframe, картами, гранатами и пагинацией
 document.addEventListener('DOMContentLoaded', () => {
-    const mapButtons = document.querySelectorAll('[data-map]');
-    const grenadeButtons = document.querySelectorAll('[data-grenade]');
+    const mapSelect = document.getElementById('map-select');
+    const grenadeSelect = document.getElementById('grenade-select');
     const pageFrame = document.getElementById('page-frame');
     const paginationContainer = document.getElementById('positions-pagination');
     const paginationButtons = document.getElementById('pagination-buttons');
@@ -17,6 +16,153 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSmokeTab = 'regular';
     let smokeTabButtons = [];
     
+    function createCustomSelect(wrapperId, nativeSelect, iconMap) {
+        const selectWrapper = document.getElementById(wrapperId);
+        if (!selectWrapper) return;
+        
+        const options = [];
+        const optionElements = nativeSelect.querySelectorAll('option');
+        optionElements.forEach(option => {
+            options.push({
+                value: option.value,
+                text: option.textContent,
+                icon: iconMap ? (option.getAttribute('data-icon') || '') : ''
+            });
+        });
+        
+        const customWrapper = document.createElement('div');
+        customWrapper.className = 'custom-select-wrapper';
+        customWrapper.id = `custom-${wrapperId}`;
+        
+        const trigger = document.createElement('div');
+        trigger.className = 'custom-select-trigger';
+        trigger.id = `custom-${wrapperId}-trigger`;
+        
+        const triggerIcon = document.createElement('img');
+        triggerIcon.className = 'map-icon';
+        if (iconMap) {
+            triggerIcon.src = options[0].icon;
+            triggerIcon.alt = '';
+            triggerIcon.onerror = function() {
+                this.style.display = 'none';
+            };
+        } else {
+            triggerIcon.style.display = 'none';
+        }
+        
+        const triggerText = document.createElement('span');
+        triggerText.className = 'trigger-text';
+        triggerText.textContent = options[0].text;
+        
+        trigger.appendChild(triggerIcon);
+        trigger.appendChild(triggerText);
+        
+        const dropdown = document.createElement('div');
+        dropdown.className = 'custom-select-dropdown';
+        dropdown.id = `custom-${wrapperId}-dropdown`;
+        
+        options.forEach((option, index) => {
+            const optionEl = document.createElement('div');
+            optionEl.className = 'custom-select-option';
+            optionEl.setAttribute('data-value', option.value);
+            
+            if (index === 0) {
+                optionEl.classList.add('selected');
+            }
+            
+            const optionIcon = document.createElement('img');
+            optionIcon.className = 'map-icon';
+            if (iconMap) {
+                optionIcon.src = option.icon;
+                optionIcon.alt = '';
+                optionIcon.onerror = function() {
+                    this.style.display = 'none';
+                };
+            } else {
+                optionIcon.style.display = 'none';
+            }
+            
+            const optionText = document.createElement('span');
+            optionText.className = 'trigger-text';
+            optionText.textContent = option.text;
+            
+            optionEl.appendChild(optionIcon);
+            optionEl.appendChild(optionText);
+            
+            optionEl.addEventListener('click', () => {
+                const value = optionEl.getAttribute('data-value');
+                
+                dropdown.querySelectorAll('.custom-select-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                optionEl.classList.add('selected');
+                
+                if (iconMap) {
+                    triggerIcon.src = option.icon;
+                    triggerIcon.onerror = function() {
+                        this.style.display = 'none';
+                    };
+                    triggerIcon.style.display = '';
+                }
+                triggerText.textContent = option.text;
+                
+                dropdown.classList.remove('open');
+                
+                nativeSelect.value = value;
+                
+                if (nativeSelect === mapSelect && value !== currentMap) {
+                    currentMap = value;
+                    loadPage();
+                } else if (nativeSelect === grenadeSelect && value !== currentGrenade) {
+                    currentGrenade = value;
+                    currentSmokeTab = 'regular';
+                    
+                    if (pageFrame && pageFrame.contentWindow) {
+                        pageFrame.contentWindow.postMessage({
+                            type: 'changeGrenade',
+                            grenade: currentGrenade
+                        }, '*');
+                    }
+                    
+                    loadPage();
+                }
+            });
+            
+            dropdown.appendChild(optionEl);
+        });
+        
+        customWrapper.appendChild(trigger);
+        customWrapper.appendChild(dropdown);
+        
+        nativeSelect.classList.add('hidden-native-select');
+        selectWrapper.appendChild(customWrapper);
+        
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.querySelectorAll('.custom-select-dropdown.open').forEach(d => {
+                if (d !== dropdown) d.classList.remove('open');
+            });
+            dropdown.classList.toggle('open');
+        });
+        
+        document.addEventListener('click', (e) => {
+            if (!customWrapper.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+        
+        return {
+            wrapper: customWrapper,
+            trigger: trigger,
+            triggerIcon: triggerIcon,
+            triggerText: triggerText,
+            dropdown: dropdown
+        };
+    }
+    
+    const mapCustomSelect = createCustomSelect('map-select-wrapper', mapSelect, true);
+    const grenadeCustomSelect = createCustomSelect('grenade-select-wrapper', grenadeSelect, false);
+    
     function createSmokeTabs() {
         if (!paginationTabs) return;
         
@@ -31,16 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.addEventListener('click', () => {
                 const tabType = tab.getAttribute('data-tab');
                 
-                // Обновляем активную вкладку
                 smokeTabButtons.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
                 
                 currentSmokeTab = tabType;
-                
-                // Сбрасываем индекс
                 currentIndex = 0;
                 
-                // Отправляем сообщение в iframe о смене вкладки
                 if (pageFrame && pageFrame.contentWindow) {
                     pageFrame.contentWindow.postMessage({
                         type: 'changeSmokeTab',
@@ -63,11 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!paginationButtons) return;
         
         if (count === 0) {
-            // Не скрываем всю панель, только кнопки
             paginationButtons.innerHTML = '';
             paginationCounter.textContent = '0 раскидок';
             
-            // Вкладки оставляем видимыми если это смоки
             if (!isSmoke) {
                 paginationContainer.style.display = 'none';
             }
@@ -85,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         paginationButtons.innerHTML = html;
         
-        // Добавляем обработчики кликов
         document.querySelectorAll('.pagination-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const index = parseInt(btn.getAttribute('data-index'));
@@ -94,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.pagination-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
-                // Отправляем сообщение в iframe
                 if (pageFrame && pageFrame.contentWindow) {
                     pageFrame.contentWindow.postMessage({
                         type: 'changePosition',
@@ -144,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentShortTitles = [];
         currentSmokeTab = 'regular';
         
-        // Убираем вкладки при загрузке новой страницы
         removeSmokeTabs();
         
         if (pageFrame) {
@@ -158,27 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    function updateActiveMapButtons() {
-        mapButtons.forEach(btn => {
-            if (btn.getAttribute('data-map') === currentMap) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
-    }
-    
-    function updateActiveGrenadeButtons() {
-        grenadeButtons.forEach(btn => {
-            if (btn.getAttribute('data-grenade') === currentGrenade) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
-    }
-    
-    // Обработчик сообщений от iframe
     window.addEventListener('message', (event) => {
         if (!event.data || !event.data.type) return;
         
@@ -192,16 +308,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     currentShortTitles = event.data.titles;
                 }
                 
-                // Управление видимостью вкладок
                 if (isSmoke) {
-                    // Показываем вкладки только для смоков
                     if (smokeTabButtons.length === 0) {
                         createSmokeTabs();
                     } else {
                         paginationTabs.style.display = 'flex';
                     }
                     
-                    // Обновляем активную вкладку
                     smokeTabButtons.forEach(tab => {
                         if (tab.getAttribute('data-tab') === currentSmokeTab) {
                             tab.classList.add('active');
@@ -210,10 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                     
-                    // Всегда показываем панель для смоков, даже если нет раскидок
                     paginationContainer.style.display = 'block';
                 } else {
-                    // Скрываем вкладки для других типов гранат
                     removeSmokeTabs();
                 }
                 
@@ -229,49 +340,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Обработчики кликов по кнопкам карт
-    mapButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const newMap = btn.getAttribute('data-map');
-            if (newMap !== currentMap) {
-                currentMap = newMap;
-                updateActiveMapButtons();
-                loadPage();
-            }
-        });
-    });
-    
-    // Обработчики кликов по кнопкам гранат
-    grenadeButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const newGrenade = btn.getAttribute('data-grenade');
-            if (newGrenade !== currentGrenade) {
-                currentGrenade = newGrenade;
-                updateActiveGrenadeButtons();
-                
-                // Сбрасываем вкладку смоков
-                currentSmokeTab = 'regular';
-                
-                // Отправляем сообщение в iframe о смене гранаты
-                if (pageFrame && pageFrame.contentWindow) {
-                    pageFrame.contentWindow.postMessage({
-                        type: 'changeGrenade',
-                        grenade: currentGrenade
-                    }, '*');
-                }
-                
-                loadPage();
-            }
-        });
-    });
-    
-    // Инициализация
-    updateActiveMapButtons();
-    updateActiveGrenadeButtons();
     loadPage();
 });
 
-// Функции для полноэкранного просмотра изображений
 function openFullscreen(imageSrc, imageAlt) {
     const modal = document.createElement('div');
     modal.className = 'fullscreen-modal';
