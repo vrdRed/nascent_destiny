@@ -9,44 +9,41 @@
 </head>
 <body>
     <div class="app">
-        <!-- Шапка -->
         <header class="header">
             <h1>Фишечные раскидки</h1>
             <p>Выбери карту и тип гранаты</p>
         </header>
 
-        <!-- Верхние категории: выбор карты -->
         <div class="categories">
             <div class="cat-group">
                 <span class="cat-label">🗺️ КАРТА</span>
-                <div class="button-group" id="map-buttons">
-                    <button class="cat-btn" data-map="mirage">Mirage</button>
-                    <button class="cat-btn" data-map="dust2">Dust II</button>
-                    <button class="cat-btn" data-map="anubis">Anubis</button>
-                    <button class="cat-btn" data-map="ancient">Ancient</button>
-                    <button class="cat-btn" data-map="overpass">Overpass</button>
-                    <button class="cat-btn" data-map="nuke">Nuke</button>
-                    <button class="cat-btn" data-map="inferno">Inferno</button>
-                    <button class="cat-btn" data-map="train">Train</button>
-                    <button class="cat-btn" data-map="vertigo">Vertigo</button>
-                    <button class="cat-btn" data-map="cache">Cache</button>
+                <div class="select-wrapper" id="map-select-wrapper">
+                    <select id="map-select" class="cat-select">
+                        <option value="mirage" data-icon="img/icon/mirage_icon.png">Mirage</option>
+                        <option value="dust2" data-icon="img/icon/dust_icon.png">Dust II</option>
+                        <option value="anubis" data-icon="img/icon/anubis_icon.png">Anubis</option>
+                        <option value="ancient" data-icon="img/icon/ancient_icon.png">Ancient</option>
+                        <option value="overpass" data-icon="img/icon/overpass_icon.png">Overpass</option>
+                        <option value="nuke" data-icon="img/icon/nuke_icon.png">Nuke</option>
+                        <option value="inferno" data-icon="img/icon/inferno_icon.png">Inferno</option>
+                        <option value="train" data-icon="img/icon/train_icon.png">Train</option>
+                        <option value="vertigo" data-icon="img/icon/vertigo_icon.png">Vertigo</option>
+                        <option value="cache" data-icon="img/icon/cache_icon.png">Cache</option>
+                    </select>
                 </div>
-            </div>
-            <!-- Выбор гранаты -->
-            <div class="cat-group" style="margin-top: 1rem;">
                 <span class="cat-label">💣 ГРАНАТА</span>
-                <div class="button-group" id="grenade-buttons">
-                    <button class="cat-btn" data-grenade="smoke">💨 Smoke (Дым)</button>
-                    <button class="cat-btn" data-grenade="flash">⚡ Flashbang (Флешка)</button>
-                    <button class="cat-btn" data-grenade="molotov">🔥 Molotov (Молик)</button>
-                    <button class="cat-btn" data-grenade="he">💥 HE (Осколочная)</button>
+                <div class="select-wrapper" id="grenade-select-wrapper">
+                    <select id="grenade-select" class="cat-select">
+                        <option value="smoke">💨 Smoke (Дым)</option>
+                        <option value="flash">⚡ Flashbang (Флешка)</option>
+                        <option value="molotov">🔥 Molotov (Молик)</option>
+                        <option value="he">💥 HE (Осколочная)</option>
+                    </select>
                 </div>
             </div>
         </div>
 
-        <!-- Панель с номерами раскидок (будет заполняться динамически) -->
         <div class="positions-pagination" id="positions-pagination" style="display: none;">
-            <!-- Вкладки для смоков - теперь сверху -->
             <div class="pagination-tabs" id="pagination-tabs" style="display: none;">
                 <button class="pagination-tab active" data-tab="regular">Обычные</button>
                 <button class="pagination-tab" data-tab="instant">Instant (Инста)</button>
@@ -58,11 +55,9 @@
             </div>
             
             <div class="pagination-buttons" id="pagination-buttons">
-                <!-- Кнопки с номерами будут добавляться здесь -->
             </div>
         </div>
 
-         <!-- Контентная область -->
         <div class="content-wrapper">
             <iframe id="page-frame""></iframe>
         </div>
