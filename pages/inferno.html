@@ -9,10 +9,14 @@
     <script src="../js/positions-loader.js"></script>
 </head>
 <body>
-    <div class="map-page">
-        <h2>Карта: Inferno</h2>
+    <div class="map-page" id="map-page">
+        <div class="map-header">
+            <h2>
+                Карта: <img src="../img/icon/inferno_icon.png" alt="Inferno" class="map-title-icon" onerror="this.style.display='none'"> Inferno
+            </h2>
+            <span class="grenade-indicator" id="grenade-indicator">💨 Дым</span>
+        </div>
         
-        <!-- Контейнер для раскидок -->
         <div id="positions-container" class="positions-container"></div>
     </div>
     
