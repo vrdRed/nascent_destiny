@@ -977,7 +977,7 @@ const positionsData = {
                     "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
                     "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke1.png"
                 ],
-                tips: "Левая кнопка мыши."
+                tips: "Левая кнопка мыши, Прыжок."
             },
             {
                 id: 11,
@@ -989,7 +989,7 @@ const positionsData = {
                     "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
                     "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke2.png"
                 ],
-                tips: "Левая кнопка мыши."
+                tips: "Левая кнопка мыши, Прыжок."
             },
             {
                 id: 12,
@@ -1001,7 +1001,7 @@ const positionsData = {
                     "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
                     "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke3.png"
                 ],
-                tips: "Левая кнопка мыши."
+                tips: "Левая кнопка мыши, Прыжок."
             },
             {
                 id: 13,
@@ -1013,7 +1013,7 @@ const positionsData = {
                     "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
                     "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke4.png"
                 ],
-                tips: "Левая кнопка мыши."
+                tips: "Левая кнопка мыши, Прыжок."
             }
         ],
         flash: [
@@ -1135,7 +1135,211 @@ const positionsData = {
                     "../img/Ancient_Smoke/Smoke/temple_jungle_smoke.png"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
-            }
+            },
+            {
+                id: 10,
+                smokeType: "instant",
+                shortTitle: "Red Room (Поз. 1)",
+                title: "Инста Смок в Red Room Mid (Позиция 1)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka1.png",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke1.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 11,
+                smokeType: "instant",
+                shortTitle: "Heaven (Поз. 1)",
+                title: "Инста Смок на Heaven Mid (Позиция 1)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_heaven_tspawn_metka1.png",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_heaven_tspawn_smoke1.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 12,
+                smokeType: "instant",
+                shortTitle: "Red Room (Поз. 2)",
+                title: "Инста Смок в Red Room Mid (Позиция 2)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka2.png",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke2.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 13,
+                smokeType: "instant",
+                shortTitle: "Heaven (Поз. 2)",
+                title: "Инста Смок на Heaven Mid (Позиция 2)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_heaven_tspawn_metka2.png",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_heaven_tspawn_smoke2.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 14,
+                smokeType: "instant",
+                shortTitle: "Red Room (Поз. 3)",
+                title: "Инста Смок в Red Room Mid (Позиция 3)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka3.png",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke3.png"
+                ],
+                tips: "Левая кнопка мыши, Пройти вправо до точки, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 15,
+                smokeType: "instant",
+                shortTitle: "Red Room (Поз. 4)",
+                title: "Инста Смок в Red Room Mid (Позиция 4)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka4.png",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke4.png"
+                ],
+                tips: "Левая кнопка мыши, Пройти влево до точки, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 16,
+                smokeType: "instant",
+                shortTitle: "Red Room (Поз. 5)",
+                title: "Инста Смок в Red Room Mid (Позиция 5)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka5.png",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke5.png"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 17,
+                smokeType: "instant",
+                shortTitle: "Start (Поз. 1)",
+                title: "Инста Смок на Start Mid (Позиция 1)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka1.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke1.png"
+                ],
+                tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
+            },
+            {
+                id: 18,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 1)",
+                title: "Инста Смок на Doors Ruins (Позиция 1)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka1.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke1.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до нижнего угла камня на прицеле), Прыжок."
+            },
+            {
+                id: 19,
+                smokeType: "instant",
+                shortTitle: "Start (Поз. 2)",
+                title: "Инста Смок на Start Mid (Позиция 2)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka2.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke2.png"
+                ],
+                tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
+            },
+            {
+                id: 20,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 2)",
+                title: "Инста Смок на Doors Ruins (Позиция 2)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka2.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke2.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до листа на прицеле), Прыжок."
+            },
+            {
+                id: 21,
+                smokeType: "instant",
+                shortTitle: "Start (Поз. 3)",
+                title: "Инста Смок на Start Mid (Позиция 3)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka3.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke3.png"
+                ],
+                tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
+            },
+            {
+                id: 22,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 3)",
+                title: "Инста Смок на Doors Ruins (Позиция 3)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka3.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke3.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
+            },
+            {
+                id: 23,
+                smokeType: "instant",
+                shortTitle: "Start (Поз. 4)",
+                title: "Инста Смок на Start Mid (Позиция 4)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka4.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke4.png"
+                ],
+                tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
+            },
+            {
+                id: 24,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 4)",
+                title: "Инста Смок на Doors Ruins (Позиция 4)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka4.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke4.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до карниза на прицеле), Прыжок."
+            },
+            {
+                id: 25,
+                smokeType: "instant",
+                shortTitle: "Start (Поз. 5)",
+                title: "Инста Смок на Start Mid (Позиция 5)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka5.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke5.png"
+                ],
+                tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
+            },
+            {
+                id: 26,
+                smokeType: "instant",
+                shortTitle: "Doors (Поз. 5)",
+                title: "Инста Смок на Doors Ruins (Позиция 5)",
+                images: [
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka5.png",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke5.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до карниза на прицеле), Прыжок."
+            },
         ],
         flash: [
 
