@@ -925,7 +925,7 @@ const positionsData = {
                 shortTitle: "Heaven A",
                 title: "Смок на Heaven A (Upper/Boat)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/9_upper_metka.png",
+                    "../img/Anubis_Smoke/Metka/heaven_upper_metka.png",
                     "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
                     "../img/Anubis_Smoke/Smoke/9_upper_smoke.png"
                 ],
@@ -1041,7 +1041,106 @@ const positionsData = {
             }
         ],
         flash: [
-
+            {
+                id: 1,
+                shortTitle: "Main A (Upper)",
+                title: "Флешка на выход Main A за T-сторону (Upper)",
+                images: [
+                    "../img/Anubis_Flash/Metka/main_upper_metka.png",
+                    "../img/Anubis_Flash/Pos/main_upper_pos.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 2,
+                shortTitle: "A-Plant (Boat)",
+                title: "Флешка на выход A-Plant за T-сторону (Boat)",
+                images: [
+                    "../img/Anubis_Flash/Metka/aplant_boat_metka.png",
+                    "../img/Anubis_Flash/Pos/aplant_boat_pos.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 3,
+                shortTitle: "B-Plant (Main B)",
+                title: "Флешка на выход B-Plant за T-сторону (Main B)",
+                images: [
+                    "../img/Anubis_Flash/Metka/bplant_main_metka.png",
+                    "../img/Anubis_Flash/Pos/bplant_main_pos.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 4,
+                shortTitle: "Mid (T-Spawn/Mid)",
+                title: "Флешка на Mid за T-сторону (T-Spawn/Mid)",
+                images: [
+                    "../img/Anubis_Flash/Metka/mid_tspawn_metka.png",
+                    "../img/Anubis_Flash/Pos/mid_tspawn_pos.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 5,
+                shortTitle: "Connector (Water)",
+                title: "Флешка в Connector за T-сторону (Water)",
+                images: [
+                    "../img/Anubis_Flash/Metka/connector_water_metka.png",
+                    "../img/Anubis_Flash/Pos/connector_water_pos.png"
+                ],
+                tips: "Левая кнопка мыши, Ходьба на shift (2 шага)."
+            },
+            {
+                id: 6,
+                shortTitle: "A-Plant (Heaven)",
+                title: "Флешка на A-Plant за СT-сторону (Heaven)",
+                images: [
+                    "../img/Anubis_Flash/Metka/aplant_heaven_metka.png",
+                    "../img/Anubis_Flash/Pos/aplant_heaven_pos.png"
+                ],
+                tips: "Правая кнопка мыши, Прыжок."
+            },
+            {
+                id: 7,
+                shortTitle: "Boat (A-Plant)",
+                title: "Флешка на Boat за СT-сторону (A-Plant)",
+                images: [
+                    "../img/Anubis_Flash/Metka/boat_aplant_metka.png",
+                    "../img/Anubis_Flash/Pos/boat_aplant_pos.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 8,
+                shortTitle: "Main B (B-Plant)",
+                title: "Флешка в Main B за СT-сторону (B-Plant)",
+                images: [
+                    "../img/Anubis_Flash/Metka/main_bplant_metka.png",
+                    "../img/Anubis_Flash/Pos/main_bplant_pos.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 9,
+                shortTitle: "Mid (Camera)",
+                title: "Флешка на Mid за СT-сторону (Camera)",
+                images: [
+                    "../img/Anubis_Flash/Metka/mid_camera_metka.png",
+                    "../img/Anubis_Flash/Pos/mid_camera_pos.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 10,
+                shortTitle: "Water (Connector)",
+                title: "Флешка на Water за СT-сторону (Connector)",
+                images: [
+                    "../img/Anubis_Flash/Metka/water_connector_metka.png",
+                    "../img/Anubis_Flash/Pos/water_connector_pos.png"
+                ],
+                tips: "Правая кнопка мыши, Прыжок."
+            }
         ],
         molotov: [
             
