@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSmokeTab = 'regular';
     let smokeTabButtons = [];
     
+    // Кэш для быстрого переключения (не перезагружаем iframe если не нужно)
+    let lastLoadedUrl = '';
+    
     function createCustomSelect(wrapperId, nativeSelect, iconMap) {
         const selectWrapper = document.getElementById(wrapperId);
         if (!selectWrapper) return;
@@ -40,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const triggerIcon = document.createElement('img');
         triggerIcon.className = 'map-icon';
+        triggerIcon.loading = 'lazy';
+        triggerIcon.decoding = 'async';
         if (iconMap) {
             triggerIcon.src = options[0].icon;
             triggerIcon.alt = '';
-            triggerIcon.onerror = function() {
-                this.style.display = 'none';
-            };
+            triggerIcon.onerror = function() { this.style.display = 'none'; };
         } else {
             triggerIcon.style.display = 'none';
         }
@@ -61,23 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdown.className = 'custom-select-dropdown';
         dropdown.id = `custom-${wrapperId}-dropdown`;
         
+        const fragment = document.createDocumentFragment();
+        
         options.forEach((option, index) => {
             const optionEl = document.createElement('div');
             optionEl.className = 'custom-select-option';
             optionEl.setAttribute('data-value', option.value);
             
-            if (index === 0) {
-                optionEl.classList.add('selected');
-            }
+            if (index === 0) optionEl.classList.add('selected');
             
             const optionIcon = document.createElement('img');
             optionIcon.className = 'map-icon';
+            optionIcon.loading = 'lazy';
+            optionIcon.decoding = 'async';
             if (iconMap) {
                 optionIcon.src = option.icon;
                 optionIcon.alt = '';
-                optionIcon.onerror = function() {
-                    this.style.display = 'none';
-                };
+                optionIcon.onerror = function() { this.style.display = 'none'; };
             } else {
                 optionIcon.style.display = 'none';
             }
@@ -99,15 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (iconMap) {
                     triggerIcon.src = option.icon;
-                    triggerIcon.onerror = function() {
-                        this.style.display = 'none';
-                    };
                     triggerIcon.style.display = '';
                 }
                 triggerText.textContent = option.text;
                 
                 dropdown.classList.remove('open');
-                
                 nativeSelect.value = value;
                 
                 if (nativeSelect === mapSelect && value !== currentMap) {
@@ -128,8 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             
-            dropdown.appendChild(optionEl);
+            fragment.appendChild(optionEl);
         });
+        
+        dropdown.appendChild(fragment);
         
         customWrapper.appendChild(trigger);
         customWrapper.appendChild(dropdown);
@@ -151,13 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        return {
-            wrapper: customWrapper,
-            trigger: trigger,
-            triggerIcon: triggerIcon,
-            triggerText: triggerText,
-            dropdown: dropdown
-        };
+        return { wrapper: customWrapper, trigger, triggerIcon, triggerText, dropdown };
     }
     
     const mapCustomSelect = createCustomSelect('map-select-wrapper', mapSelect, true);
@@ -165,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function createSmokeTabs() {
         if (!paginationTabs) return;
-        
         paginationTabs.style.display = 'flex';
         paginationTabs.innerHTML = `
             <button class="pagination-tab active" data-tab="regular">Обычные</button>
@@ -176,10 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
         smokeTabButtons.forEach(tab => {
             tab.addEventListener('click', () => {
                 const tabType = tab.getAttribute('data-tab');
-                
                 smokeTabButtons.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
-                
                 currentSmokeTab = tabType;
                 currentIndex = 0;
                 
@@ -207,30 +199,31 @@ document.addEventListener('DOMContentLoaded', () => {
         if (count === 0) {
             paginationButtons.innerHTML = '';
             paginationCounter.textContent = '0 раскидок';
-            
-            if (!isSmoke) {
-                paginationContainer.style.display = 'none';
-            }
+            if (!isSmoke) paginationContainer.style.display = 'none';
             return;
         }
         
         paginationContainer.style.display = 'block';
         paginationCounter.textContent = `${count} ${getGrenadeWord(count)}`;
         
-        let html = '';
+        const fragment = document.createDocumentFragment();
         for (let i = 0; i < count; i++) {
             const isActive = i === activeIndex;
             const buttonText = (titles && titles[i]) ? titles[i] : (i + 1).toString();
-            html += `<button class="pagination-btn ${isActive ? 'active' : ''}" data-index="${i}">${buttonText}</button>`;
+            const btn = document.createElement('button');
+            btn.className = `pagination-btn${isActive ? ' active' : ''}`;
+            btn.setAttribute('data-index', i);
+            btn.textContent = buttonText;
+            fragment.appendChild(btn);
         }
-        paginationButtons.innerHTML = html;
+        paginationButtons.innerHTML = '';
+        paginationButtons.appendChild(fragment);
         
-        document.querySelectorAll('.pagination-btn').forEach(btn => {
+        paginationButtons.querySelectorAll('.pagination-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const index = parseInt(btn.getAttribute('data-index'));
                 currentIndex = index;
-                
-                document.querySelectorAll('.pagination-btn').forEach(b => b.classList.remove('active'));
+                paginationButtons.querySelectorAll('.pagination-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
                 if (pageFrame && pageFrame.contentWindow) {
@@ -249,19 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'раскидок';
     }
     
-    function adjustIframeHeight() {
-        if (pageFrame && pageFrame.contentWindow && pageFrame.contentDocument) {
-            try {
-                const contentHeight = pageFrame.contentDocument.body.scrollHeight;
-                if (contentHeight > 0) {
-                    pageFrame.style.height = contentHeight + 'px';
-                }
-            } catch (e) {
-                console.warn('Не удалось получить высоту содержимого iframe', e);
-            }
-        }
-    }
-    
     function loadPage() {
         let url = '';
         switch(currentMap) {
@@ -278,6 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
             default: url = `pages/mirage.html?grenade=${currentGrenade}`;
         }
         
+        if (url === lastLoadedUrl) return;
+        lastLoadedUrl = url;
+        
         currentIndex = 0;
         currentShortTitles = [];
         currentSmokeTab = 'regular';
@@ -289,8 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
             pageFrame.src = url;
             pageFrame.onload = () => {
                 pageFrame.style.opacity = '1';
-                setTimeout(adjustIframeHeight, 50);
-                setTimeout(adjustIframeHeight, 300);
             };
         }
     }
@@ -304,9 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIndex = event.data.currentIndex;
                 isSmoke = event.data.isSmoke || false;
                 
-                if (event.data.titles) {
-                    currentShortTitles = event.data.titles;
-                }
+                if (event.data.titles) currentShortTitles = event.data.titles;
                 
                 if (isSmoke) {
                     if (smokeTabButtons.length === 0) {
@@ -316,11 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     
                     smokeTabButtons.forEach(tab => {
-                        if (tab.getAttribute('data-tab') === currentSmokeTab) {
-                            tab.classList.add('active');
-                        } else {
-                            tab.classList.remove('active');
-                        }
+                        tab.classList.toggle('active', tab.getAttribute('data-tab') === currentSmokeTab);
                     });
                     
                     paginationContainer.style.display = 'block';
@@ -329,7 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 renderPaginationButtons(currentPositionsCount, currentIndex, currentShortTitles);
-                setTimeout(adjustIframeHeight, 50);
                 break;
                 
             case 'contentHeight':
@@ -342,66 +316,3 @@ document.addEventListener('DOMContentLoaded', () => {
     
     loadPage();
 });
-
-function openFullscreen(imageSrc, imageAlt) {
-    const modal = document.createElement('div');
-    modal.className = 'fullscreen-modal';
-    
-    const modalContent = document.createElement('div');
-    modalContent.className = 'fullscreen-content';
-    
-    const img = document.createElement('img');
-    img.src = imageSrc;
-    img.alt = imageAlt || 'Полноэкранное изображение';
-    img.className = 'fullscreen-image';
-    
-    const closeBtn = document.createElement('button');
-    closeBtn.className = 'fullscreen-close';
-    closeBtn.innerHTML = '✕';
-    closeBtn.title = 'Закрыть (ESC)';
-    
-    const caption = document.createElement('div');
-    caption.className = 'fullscreen-caption';
-    caption.textContent = imageAlt || '';
-    
-    modalContent.appendChild(img);
-    modalContent.appendChild(caption);
-    modal.appendChild(closeBtn);
-    modal.appendChild(modalContent);
-    
-    document.body.appendChild(modal);
-    document.body.style.overflow = 'hidden';
-    
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal || e.target === closeBtn) {
-            closeFullscreen(modal);
-        }
-    });
-    
-    const escHandler = (e) => {
-        if (e.key === 'Escape') {
-            closeFullscreen(modal);
-            document.removeEventListener('keydown', escHandler);
-        }
-    };
-    document.addEventListener('keydown', escHandler);
-    
-    setTimeout(() => {
-        modal.classList.add('active');
-    }, 10);
-    
-    return modal;
-}
-
-function closeFullscreen(modal) {
-    if (!modal) return;
-    
-    modal.classList.remove('active');
-    
-    setTimeout(() => {
-        if (modal.parentNode) {
-            modal.parentNode.removeChild(modal);
-        }
-        document.body.style.overflow = '';
-    }, 300);
-}
