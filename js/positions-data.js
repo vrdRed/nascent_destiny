@@ -1073,6 +1073,16 @@ const positionsData = {
             },
             {
                 id: 4,
+                shortTitle: "B-Plant (Main B)",
+                title: "Флешка на выход B-Plant за T-сторону (Main B)",
+                images: [
+                    "../img/Anubis_Flash/Metka/bplant_main_metka2.png",
+                    "../img/Anubis_Flash/Pos/bplant_main_pos2.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 5,
                 shortTitle: "Mid (T-Spawn/Mid)",
                 title: "Флешка на Mid за T-сторону (T-Spawn/Mid)",
                 images: [
@@ -1082,7 +1092,7 @@ const positionsData = {
                 tips: "Левая кнопка мыши."
             },
             {
-                id: 5,
+                id: 6,
                 shortTitle: "Connector (Water)",
                 title: "Флешка в Connector за T-сторону (Water)",
                 images: [
@@ -1092,7 +1102,7 @@ const positionsData = {
                 tips: "Левая кнопка мыши, Ходьба на shift (2 шага)."
             },
             {
-                id: 6,
+                id: 7,
                 shortTitle: "A-Plant (Heaven)",
                 title: "Флешка на A-Plant за СT-сторону (Heaven)",
                 images: [
@@ -1102,7 +1112,7 @@ const positionsData = {
                 tips: "Правая кнопка мыши, Прыжок."
             },
             {
-                id: 7,
+                id: 8,
                 shortTitle: "Boat (A-Plant)",
                 title: "Флешка на Boat за СT-сторону (A-Plant)",
                 images: [
@@ -1112,7 +1122,7 @@ const positionsData = {
                 tips: "Левая кнопка мыши, Прыжок."
             },
             {
-                id: 8,
+                id: 9,
                 shortTitle: "Main B (B-Plant)",
                 title: "Флешка в Main B за СT-сторону (B-Plant)",
                 images: [
@@ -1122,7 +1132,7 @@ const positionsData = {
                 tips: "Левая кнопка мыши, Прыжок."
             },
             {
-                id: 9,
+                id: 10,
                 shortTitle: "Mid (Camera)",
                 title: "Флешка на Mid за СT-сторону (Camera)",
                 images: [
@@ -1132,7 +1142,7 @@ const positionsData = {
                 tips: "Левая кнопка мыши, Прыжок."
             },
             {
-                id: 10,
+                id: 11,
                 shortTitle: "Water (Connector)",
                 title: "Флешка на Water за СT-сторону (Connector)",
                 images: [
@@ -1143,7 +1153,138 @@ const positionsData = {
             }
         ],
         molotov: [
-            
+            {
+                id: 1,
+                shortTitle: "Camera A",
+                title: "Молик в Camera A (Upper)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/camera_upper_metka.png",
+                    "../img/Anubis_Molotov/Pos/camera_upper_pos.png",
+                    "../img/Anubis_Molotov/Molotov/camera_upper_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 2,
+                shortTitle: "A-Plant (Boat)",
+                title: "Молик в A-Plant (Boat)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/aplant_boat_metka.png",
+                    "../img/Anubis_Molotov/Pos/aplant_boat_pos.png",
+                    "../img/Anubis_Molotov/Molotov/aplant_boat_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 3,
+                shortTitle: "8 A (Boat)",
+                title: "Молик на 8 A (Boat)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/8_boat_metka.png",
+                    "../img/Anubis_Molotov/Pos/8_boat_pos.png",
+                    "../img/Anubis_Molotov/Molotov/8_boat_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 4,
+                shortTitle: "8 A (Main A)",
+                title: "Молик на 8 A (Main A)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/8_main_metka.png",
+                    "../img/Anubis_Molotov/Pos/8_main_pos.png",
+                    "../img/Anubis_Molotov/Molotov/8_main_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до угла левой стены), Прыжок."
+            },
+            {
+                id: 5,
+                shortTitle: "A-Plant (Heaven)",
+                title: "Молик в A-Plant (Heaven)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/aplant_heaven_metka.png",
+                    "../img/Anubis_Molotov/Pos/aplant_heaven_pos.png",
+                    "../img/Anubis_Molotov/Molotov/aplant_heaven_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 6,
+                shortTitle: "Connector B",
+                title: "Молик в Connector B (Main B)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/connector_main_metka.png",
+                    "../img/Anubis_Molotov/Pos/connector_main_pos.png",
+                    "../img/Anubis_Molotov/Molotov/connector_main_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 7,
+                shortTitle: "Connector B",
+                title: "Молик глубоко в Connector B (Main B)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/connector_main_metka2.png",
+                    "../img/Anubis_Molotov/Pos/connector_main_pos2.png",
+                    "../img/Anubis_Molotov/Molotov/connector_main_molotov2.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 8,
+                shortTitle: "Ninja B",
+                title: "Молик в Ninja B (Connector B)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/ninja_connector_metka.png",
+                    "../img/Anubis_Molotov/Pos/ninja_connector_pos.png",
+                    "../img/Anubis_Molotov/Molotov/ninja_connector_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 9,
+                shortTitle: "Window Mid (T-Spawn)",
+                title: "Молик в Window Mid (T-Spawn)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/window_tspawn_metka.png",
+                    "../img/Anubis_Molotov/Pos/window_tspawn_pos.png",
+                    "../img/Anubis_Molotov/Molotov/window_tspawn_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (до подъёма по ступенькам)."
+            },
+            {
+                id: 10,
+                shortTitle: "Window Mid (T-Spawn/Mid)",
+                title: "Молик в Window Mid (T-Spawn/Mid)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/window_tspawn_metka2.png",
+                    "../img/Anubis_Molotov/Pos/window_tspawn_pos2.png",
+                    "../img/Anubis_Molotov/Molotov/window_tspawn_molotov2.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 11,
+                shortTitle: "Mid",
+                title: "Молик в Mid (T-Spawn/Mid)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/mid_tspawn_metka.png",
+                    "../img/Anubis_Molotov/Pos/mid_tspawn_pos.png",
+                    "../img/Anubis_Molotov/Molotov/mid_tspawn_molotov.png"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 12,
+                shortTitle: "Window Mid (Stairs)",
+                title: "Молик в Window Mid (Stairs)",
+                images: [
+                    "../img/Anubis_Molotov/Metka/window_stairs_metka.png",
+                    "../img/Anubis_Molotov/Pos/window_stairs_pos.png",
+                    "../img/Anubis_Molotov/Molotov/window_stairs_molotov.png"
+                ],
+                tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
+            },
         ],
         he:[
             
@@ -1725,6 +1866,7 @@ const positionsData = {
                 ],
                 tips: "Левая кнопка мыши."
             },
+            /*
             {
                 id: 11,
                 smokeType: "instant",
@@ -1784,7 +1926,7 @@ const positionsData = {
                     "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke5.png"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
-            },
+            },*/
         ],
         flash: [
         ],
