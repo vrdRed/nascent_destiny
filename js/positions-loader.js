@@ -7,9 +7,12 @@
     let currentSmokeType = 'regular';
     let allSmokePositions = [];
     
+    // Throttle для sendContentHeight
+    let heightSendScheduled = false;
+    let lastSentHeight = 0;
+    
     function getUrlParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
+        return new URLSearchParams(window.location.search).get(param);
     }
     
     function getGrenadeTypeName(grenadeType) {
@@ -24,9 +27,7 @@
     
     function updateGrenadeIndicator(grenadeType) {
         const indicator = document.getElementById('grenade-indicator');
-        if (indicator) {
-            indicator.textContent = getGrenadeTypeName(grenadeType);
-        }
+        if (indicator) indicator.textContent = getGrenadeTypeName(grenadeType);
     }
     
     function getIconName(mapKey) {
@@ -48,24 +49,17 @@
     function loadMapIcon(mapKey) {
         const mapIcon = document.querySelector('.map-title-icon');
         if (mapIcon) {
-            const iconName = getIconName(mapKey);
-            mapIcon.src = `../img/icon/${iconName}`;
+            mapIcon.src = `../img/icon/${getIconName(mapKey)}`;
         }
     }
     
     function filterSmokesByType(positions, smokeType) {
         if (!positions || positions.length === 0) return [];
-        
         const hasSmokeType = positions.some(pos => pos.smokeType !== undefined);
-        
         if (!hasSmokeType) {
             return smokeType === 'regular' ? positions : [];
         }
-        
-        return positions.filter(pos => {
-            const type = pos.smokeType || 'regular';
-            return type === smokeType;
-        });
+        return positions.filter(pos => (pos.smokeType || 'regular') === smokeType);
     }
     
     function updateParentPagination() {
@@ -94,14 +88,24 @@
         }
     }
     
+    // Throttled отправка высоты
     function sendContentHeight() {
-        if (window.parent && window.parent !== window) {
-            const height = document.body.scrollHeight;
-            window.parent.postMessage({
-                type: 'contentHeight',
-                height: height
-            }, '*');
-        }
+        if (heightSendScheduled) return;
+        heightSendScheduled = true;
+        
+        requestAnimationFrame(() => {
+            heightSendScheduled = false;
+            if (window.parent && window.parent !== window) {
+                const height = document.body.scrollHeight;
+                if (Math.abs(height - lastSentHeight) > 2) {
+                    lastSentHeight = height;
+                    window.parent.postMessage({
+                        type: 'contentHeight',
+                        height: height
+                    }, '*');
+                }
+            }
+        });
     }
     
     function renderSinglePosition(position) {
@@ -119,24 +123,29 @@
         }
         
         const imageCount = position.images.length;
+        const labels = imageCount === 3 
+            ? ['Прицел', 'Позиция', 'Результат']
+            : ['Прицел', 'Позиция'];
         
-        const generateImagesHtml = () => {
-            let imagesHtml = '';
+        let imagesHtml = '';
+        for (let i = 0; i < imageCount; i++) {
+            // Первое изображение (прицел) — eager + high priority, остальные lazy
+            const isFirst = i === 0;
+            const loading = isFirst ? 'eager' : 'lazy';
+            const fetchpriority = isFirst ? 'high' : 'low';
             
-            const labels = imageCount === 3 
-                ? ['Прицел', 'Позиция', 'Результат']
-                : ['Прицел', 'Позиция'];
-                
-            for (let i = 0; i < imageCount; i++) {
-                imagesHtml += `
-                    <div class="image-item">
-                        <img src="${position.images[i]}" alt="${position.title} - шаг ${i + 1}" onerror="this.src='../img/placeholder.jpg'">
-                        <span class="image-label">${labels[i]}</span>
-                    </div>
-                `;
-            }
-            return imagesHtml;
-        };
+            imagesHtml += `
+                <div class="image-item">
+                    <img src="${position.images[i]}" 
+                         alt="${position.title} - шаг ${i + 1}" 
+                         loading="${loading}"
+                         decoding="async"
+                         fetchpriority="${fetchpriority}"
+                         onerror="this.src='../img/placeholder.jpg'">
+                    <span class="image-label">${labels[i]}</span>
+                </div>
+            `;
+        }
         
         const gridClass = imageCount === 3 ? 'image-row image-row--three' : 'image-row';
         
@@ -145,7 +154,7 @@
             smokeTypeBadge = '<span class="position-badge instant-badge">⚡ Instant</span>';
         }
         
-        let html = `
+        container.innerHTML = `
             <div class="position-card" data-id="${position.id}">
                 <div class="position-header">
                     <h3>${position.title}</h3>
@@ -156,7 +165,7 @@
                 </div>
                 <div class="position-images">
                     <div class="${gridClass}">
-                        ${generateImagesHtml()}
+                        ${imagesHtml}
                     </div>
                 </div>
                 <div class="position-tips">
@@ -166,14 +175,11 @@
             </div>
         `;
         
-        container.innerHTML = html;
-        
-        setTimeout(sendContentHeight, 50);
+        sendContentHeight();
     }
     
     function showPosition(index) {
         if (currentPositions.length === 0) return;
-        
         if (index < 0) index = 0;
         if (index >= currentPositions.length) index = currentPositions.length - 1;
         
@@ -209,11 +215,7 @@
             if (grenadeType === 'smoke' && currentSmokeType === 'instant') {
                 message = '😕 Нет Instant смоков для этой карты';
             }
-            container.innerHTML = `
-                <div class="no-positions">
-                    <p>${message}</p>
-                </div>
-            `;
+            container.innerHTML = `<div class="no-positions"><p>${message}</p></div>`;
             sendContentHeight();
             return;
         }
@@ -242,8 +244,7 @@
         sendContentHeight();
         
         if (typeof positionsData !== 'undefined' && positionsData[mapKey] && positionsData[mapKey][grenadeType]) {
-            const positions = positionsData[mapKey][grenadeType];
-            loadPositions(positions, mapName, grenadeType, mapKey);
+            loadPositions(positionsData[mapKey][grenadeType], mapName, grenadeType, mapKey);
         } else {
             container.innerHTML = `
                 <div class="error-positions">
@@ -268,7 +269,6 @@
                     const newGrenade = event.data.grenade;
                     currentGrenadeType = newGrenade;
                     currentSmokeType = 'regular';
-                    
                     updateGrenadeIndicator(newGrenade);
                     
                     if (positionsData[currentMapKey] && positionsData[currentMapKey][newGrenade]) {
@@ -281,11 +281,7 @@
                     } else {
                         currentPositions = [];
                         allSmokePositions = [];
-                        document.getElementById('positions-container').innerHTML = `
-                            <div class="no-positions">
-                                <p>😕 Нет доступных раскидок для этой гранаты</p>
-                            </div>
-                        `;
+                        container.innerHTML = `<div class="no-positions"><p>😕 Нет доступных раскидок для этой гранаты</p></div>`;
                         updateParentPagination();
                         sendContentHeight();
                     }
@@ -300,7 +296,7 @@
                         if (currentPositions.length > 0) {
                             renderSinglePosition(currentPositions[0]);
                         } else {
-                            document.getElementById('positions-container').innerHTML = `
+                            container.innerHTML = `
                                 <div class="no-positions">
                                     <p>😕 Нет ${currentSmokeType === 'instant' ? 'Instant' : 'обычных'} смоков для этой карты</p>
                                 </div>
@@ -313,44 +309,36 @@
             }
         });
         
-        window.addEventListener('load', function() {
-            sendContentHeight();
-        });
-        
-        const observer = new ResizeObserver(() => {
-            sendContentHeight();
-        });
-        observer.observe(document.body);
+        // Обсервер только на контейнере, а не на body
+        if (window.ResizeObserver) {
+            const resizeObserver = new ResizeObserver(() => {
+                sendContentHeight();
+            });
+            const positionsContainer = document.getElementById('positions-container');
+            if (positionsContainer) {
+                resizeObserver.observe(positionsContainer);
+            }
+        }
     }
     
+    // Убираем дублирование fullscreen — используем версию из main.js,
+    // но оставляем fallback для прямого открытия страницы карты
     function openFullscreen(imageSrc, imageAlt) {
         const modal = document.createElement('div');
         modal.className = 'fullscreen-modal';
         
-        const modalContent = document.createElement('div');
-        modalContent.className = 'fullscreen-content';
-        
-        const img = document.createElement('img');
-        img.src = imageSrc;
-        img.alt = imageAlt || 'Полноэкранное изображение';
-        img.className = 'fullscreen-image';
-        
-        const closeBtn = document.createElement('button');
-        closeBtn.className = 'fullscreen-close';
-        closeBtn.innerHTML = '✕';
-        closeBtn.title = 'Закрыть (ESC)';
-        
-        const caption = document.createElement('div');
-        caption.className = 'fullscreen-caption';
-        caption.textContent = imageAlt || '';
-        
-        modalContent.appendChild(img);
-        modalContent.appendChild(caption);
-        modal.appendChild(closeBtn);
-        modal.appendChild(modalContent);
+        modal.innerHTML = `
+            <button class="fullscreen-close" title="Закрыть (ESC)">✕</button>
+            <div class="fullscreen-content">
+                <img src="${imageSrc}" alt="${imageAlt || 'Изображение'}" class="fullscreen-image" decoding="async">
+                <div class="fullscreen-caption">${imageAlt || ''}</div>
+            </div>
+        `;
         
         document.body.appendChild(modal);
         document.body.style.overflow = 'hidden';
+        
+        const closeBtn = modal.querySelector('.fullscreen-close');
         
         modal.addEventListener('click', (e) => {
             if (e.target === modal || e.target === closeBtn) {
@@ -366,22 +354,15 @@
         };
         document.addEventListener('keydown', escHandler);
         
-        setTimeout(() => {
-            modal.classList.add('active');
-        }, 10);
-        
+        requestAnimationFrame(() => modal.classList.add('active'));
         return modal;
     }
     
     function closeFullscreen(modal) {
         if (!modal) return;
-        
         modal.classList.remove('active');
-        
         setTimeout(() => {
-            if (modal.parentNode) {
-                modal.parentNode.removeChild(modal);
-            }
+            if (modal.parentNode) modal.parentNode.removeChild(modal);
             document.body.style.overflow = '';
         }, 300);
     }
