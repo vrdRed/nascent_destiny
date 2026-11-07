@@ -7,6 +7,9 @@
     let currentSmokeType = 'regular';
     let allSmokePositions = [];
     
+    let mapPositionsData = null;
+    let isDataReceived = false;
+    
     let heightSendScheduled = false;
     let lastSentHeight = 0;
     
@@ -80,7 +83,6 @@
     }
     
     function preloadFirstImage(position) {
-        // Удаляем все прошлые preload-теги, которые мы добавили
         document.querySelectorAll('link[data-img-preload]').forEach(el => el.remove());
         
         if (!position || !position.images || !position.images[0]) return;
@@ -159,7 +161,6 @@
         
         let imagesHtml = '';
         for (let i = 0; i < imageCount; i++) {
-            // Первое изображение (прицел) — eager + high priority, остальные lazy
             const isFirst = i === 0;
             const loading = isFirst ? 'eager' : 'lazy';
             const fetchpriority = isFirst ? 'high' : 'low';
@@ -253,20 +254,56 @@
         }
         
         renderSinglePosition(currentPositions[0]);
-        
         preloadPositionImages(currentPositions);
         
         if (grenadeType === 'smoke' && allSmokePositions.length > 0) {
             const otherTab = currentSmokeType === 'regular' ? 'instant' : 'regular';
             const otherPositions = filterSmokesByType(allSmokePositions, otherTab);
             if (otherPositions.length > 0) {
-                // Отложенная предзагрузка — не конкурирует с текущими картинками за канал
                 if ('requestIdleCallback' in window) {
                     requestIdleCallback(() => preloadPositionImages(otherPositions), { timeout: 3000 });
                 } else {
                     setTimeout(() => preloadPositionImages(otherPositions), 1500);
                 }
             }
+        }
+    }
+    
+    function applyReceivedData(payload) {
+        isDataReceived = true;
+        mapPositionsData = payload.data || {};
+        currentMapKey = payload.mapKey || currentMapKey;
+        currentMapName = payload.mapName || currentMapName;
+        
+        if (payload.grenade) {
+            currentGrenadeType = payload.grenade;
+        }
+        
+        const mapTitleIcon = document.querySelector('.map-title-icon');
+        if (mapTitleIcon) {
+            // Название карты рядом с иконкой уже прописано в HTML страницы карты,
+            // но на всякий случай — можно не трогать, у вас в pages/*.html оно статичное.
+        }
+        
+        loadMapIcon(currentMapKey);
+        updateGrenadeIndicator(currentGrenadeType);
+        
+        const container = document.getElementById('positions-container');
+        if (!container) return;
+        
+        if (mapPositionsData && mapPositionsData[currentGrenadeType]) {
+            loadPositions(
+                mapPositionsData[currentGrenadeType],
+                currentMapName,
+                currentGrenadeType,
+                currentMapKey
+            );
+        } else {
+            currentPositions = [];
+            allSmokePositions = [];
+            container.innerHTML = `<div class="no-positions"><p>😕 Нет доступных раскидок для этой гранаты</p></div>`;
+            updateParentPagination();
+            sendContentHeight();
         }
     }
     
@@ -290,35 +327,19 @@
         container.innerHTML = '<div class="loading-positions">Загрузка раскидок...</div>';
         sendContentHeight();
         
-        if (typeof positionsData !== 'undefined' && positionsData[mapKey] && positionsData[mapKey][grenadeType]) {
-            loadPositions(positionsData[mapKey][grenadeType], mapName, grenadeType, mapKey);
-        } else {
-            container.innerHTML = `
-                <div class="error-positions">
-                    <p>❌ Ошибка загрузки данных для карты ${mapName}</p>
-                </div>
-            `;
-            currentPositions = [];
-            allSmokePositions = [];
-            updateParentPagination();
-            sendContentHeight();
-        }
-        
-        // Сообщаем родителю, что iframe загрузился и готов принимать postMessage
-        if (window.parent && window.parent !== window) {
-            window.parent.postMessage({ type: 'frameReady' }, '*');
-        }
-        
         window.addEventListener('message', function(event) {
             if (!event.data || !event.data.type) return;
             
             switch(event.data.type) {
+                case 'setPositionsData':
+                    applyReceivedData(event.data);
+                    break;
+                    
                 case 'changePosition':
                     showPosition(event.data.index);
                     break;
                     
                 case 'preloadTab':
-                    // Предзагрузка картинок таба, на который пользователь собирается переключиться
                     if (currentGrenadeType === 'smoke' && allSmokePositions.length > 0) {
                         const tabPositions = filterSmokesByType(allSmokePositions, event.data.tab);
                         preloadPositionImages(tabPositions);
@@ -331,11 +352,11 @@
                     currentSmokeType = 'regular';
                     updateGrenadeIndicator(newGrenade);
                     
-                    if (positionsData[currentMapKey] && positionsData[currentMapKey][newGrenade]) {
+                    if (mapPositionsData && mapPositionsData[newGrenade]) {
                         loadPositions(
-                            positionsData[currentMapKey][newGrenade], 
-                            currentMapName, 
-                            newGrenade, 
+                            mapPositionsData[newGrenade],
+                            currentMapName,
+                            newGrenade,
                             currentMapKey
                         );
                     } else {
@@ -355,7 +376,6 @@
                         
                         if (currentPositions.length > 0) {
                             renderSinglePosition(currentPositions[0]);
-                            // На всякий случай догружаем (вдруг preloadTab не успел)
                             preloadPositionImages(currentPositions);
                         } else {
                             container.innerHTML = `
@@ -371,7 +391,26 @@
             }
         });
         
-        // Обсервер только на контейнере, а не на body
+        if (window.parent === window) {
+            if (typeof positionsData !== 'undefined' && positionsData[mapKey]) {
+                applyReceivedData({
+                    mapKey: mapKey,
+                    mapName: mapName,
+                    data: positionsData[mapKey],
+                    grenade: grenadeType
+                });
+            } else {
+                container.innerHTML = `
+                    <div class="error-positions">
+                        <p>❌ Ошибка загрузки данных для карты ${mapName}</p>
+                    </div>
+                `;
+                sendContentHeight();
+            }
+        } else {
+            window.parent.postMessage({ type: 'frameReady' }, '*');
+        }
+        
         if (window.ResizeObserver) {
             const resizeObserver = new ResizeObserver(() => {
                 sendContentHeight();
