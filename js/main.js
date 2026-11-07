@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSmokeTab = 'regular';
     let smokeTabButtons = [];
     
-    // Кэш для быстрого переключения (не перезагружаем iframe если не нужно)
     let lastLoadedUrl = '';
+    let frameReady = false;
     
     function createCustomSelect(wrapperId, nativeSelect, iconMap) {
         const selectWrapper = document.getElementById(wrapperId);
@@ -111,19 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (nativeSelect === mapSelect && value !== currentMap) {
                     currentMap = value;
-                    loadPage();
+                    frameReady = false;
+                    loadPage(true);
                 } else if (nativeSelect === grenadeSelect && value !== currentGrenade) {
                     currentGrenade = value;
                     currentSmokeTab = 'regular';
                     
-                    if (pageFrame && pageFrame.contentWindow) {
+                    if (pageFrame && pageFrame.contentWindow && frameReady) {
                         pageFrame.contentWindow.postMessage({
                             type: 'changeGrenade',
                             grenade: currentGrenade
                         }, '*');
+                        lastLoadedUrl = buildPageUrl(currentMap, currentGrenade);
+                    } else {
+                        frameReady = false;
+                        loadPage(true);
                     }
-                    
-                    loadPage();
                 }
             });
             
@@ -175,7 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentSmokeTab = tabType;
                 currentIndex = 0;
                 
-                if (pageFrame && pageFrame.contentWindow) {
+                if (pageFrame && pageFrame.contentWindow && frameReady) {
+                    pageFrame.contentWindow.postMessage({
+                        type: 'preloadTab',
+                        tab: tabType
+                    }, '*');
+                    
                     pageFrame.contentWindow.postMessage({
                         type: 'changeSmokeTab',
                         tab: tabType
@@ -226,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 paginationButtons.querySelectorAll('.pagination-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
-                if (pageFrame && pageFrame.contentWindow) {
+                if (pageFrame && pageFrame.contentWindow && frameReady) {
                     pageFrame.contentWindow.postMessage({
                         type: 'changePosition',
                         index: index
@@ -242,28 +250,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'раскидок';
     }
     
-    function loadPage() {
-        let url = '';
-        switch(currentMap) {
-            case 'mirage': url = `pages/mirage.html?grenade=${currentGrenade}`; break;
-            case 'dust2': url = `pages/dust2.html?grenade=${currentGrenade}`; break;
-            case 'anubis': url = `pages/anubis.html?grenade=${currentGrenade}`; break;
-            case 'ancient': url = `pages/ancient.html?grenade=${currentGrenade}`; break;
-            case 'overpass': url = `pages/overpass.html?grenade=${currentGrenade}`; break;
-            case 'nuke': url = `pages/nuke.html?grenade=${currentGrenade}`; break;
-            case 'inferno': url = `pages/inferno.html?grenade=${currentGrenade}`; break;
-            case 'train': url = `pages/train.html?grenade=${currentGrenade}`; break;
-            case 'vertigo': url = `pages/vertigo.html?grenade=${currentGrenade}`; break;
-            case 'cache': url = `pages/cache.html?grenade=${currentGrenade}`; break;
-            default: url = `pages/mirage.html?grenade=${currentGrenade}`;
-        }
+    function buildPageUrl(map, grenade) {
+        return `pages/${map}.html?grenade=${grenade}`;
+    }
+    
+    function loadPage(forceReload = false) {
+        const url = buildPageUrl(currentMap, currentGrenade);
         
-        if (url === lastLoadedUrl) return;
+        if (!forceReload && url === lastLoadedUrl) return;
         lastLoadedUrl = url;
         
         currentIndex = 0;
         currentShortTitles = [];
         currentSmokeTab = 'regular';
+        frameReady = false;
         
         removeSmokeTabs();
         
@@ -272,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pageFrame.src = url;
             pageFrame.onload = () => {
                 pageFrame.style.opacity = '1';
+                frameReady = true;
             };
         }
     }
@@ -304,6 +305,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 renderPaginationButtons(currentPositionsCount, currentIndex, currentShortTitles);
+                break;
+                
+            case 'frameReady':
+                frameReady = true;
                 break;
                 
             case 'contentHeight':
