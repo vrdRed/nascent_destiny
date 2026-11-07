@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Nascent Destiny | Раскидки игроков</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Уровень 2: данные раскидок грузятся ОДИН РАЗ в родителе -->
+    <script src="js/positions-data.js"></script>
+    
+    <!-- Уровень 1: prefetch страниц всех карт (кроме стартовой mirage), -->
+    <!-- чтобы при клике на карту её HTML уже был в кэше браузера -->
+    <link rel="prefetch" href="pages/dust2.html?grenade=smoke">
+    <link rel="prefetch" href="pages/anubis.html?grenade=smoke">
+    <link rel="prefetch" href="pages/ancient.html?grenade=smoke">
+    <link rel="prefetch" href="pages/overpass.html?grenade=smoke">
+    <link rel="prefetch" href="pages/nuke.html?grenade=smoke">
+    <link rel="prefetch" href="pages/inferno.html?grenade=smoke">
+    <link rel="prefetch" href="pages/train.html?grenade=smoke">
+    <link rel="prefetch" href="pages/vertigo.html?grenade=smoke">
+    <link rel="prefetch" href="pages/cache.html?grenade=smoke">
+    
     <script src="js/main.js"></script>
 </head>
 <body>
