@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastLoadedUrl = '';
     let frameReady = false;
     
+    const mapDisplayNames = {
+        mirage: 'Mirage', dust2: 'Dust II', anubis: 'Anubis', ancient: 'Ancient',
+        overpass: 'Overpass', nuke: 'Nuke', inferno: 'Inferno',
+        train: 'Train', vertigo: 'Vertigo', cache: 'Cache'
+    };
+    
     function createCustomSelect(wrapperId, nativeSelect, iconMap) {
         const selectWrapper = document.getElementById(wrapperId);
         if (!selectWrapper) return;
@@ -92,6 +98,32 @@ document.addEventListener('DOMContentLoaded', () => {
             optionEl.appendChild(optionIcon);
             optionEl.appendChild(optionText);
             
+            if (nativeSelect === mapSelect) {
+                optionEl.addEventListener('mouseenter', () => {
+                    const mapKey = optionEl.getAttribute('data-value');
+                    const grenadeKey = currentGrenade;
+                    
+                    if (typeof positionsData === 'undefined') return;
+                    const mapData = positionsData[mapKey];
+                    if (!mapData || !mapData[grenadeKey]) return;
+                    
+                    const arr = mapData[grenadeKey];
+                    if (arr.length === 0) return;
+                    
+                    let pos = arr[0];
+                    if (grenadeKey === 'smoke') {
+                        const regular = arr.find(p => (p.smokeType || 'regular') === 'regular');
+                        if (regular) pos = regular;
+                    }
+                    
+                    if (pos && pos.images && pos.images[0]) {
+                        const img = new Image();
+                        img.decoding = 'async';
+                        img.src = pos.images[0];
+                    }
+                });
+            }
+            
             optionEl.addEventListener('click', () => {
                 const value = optionEl.getAttribute('data-value');
                 
@@ -122,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             type: 'changeGrenade',
                             grenade: currentGrenade
                         }, '*');
-                        lastLoadedUrl = buildPageUrl(currentMap, currentGrenade);
                     } else {
                         frameReady = false;
                         loadPage(true);
@@ -254,6 +285,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return `pages/${map}.html?grenade=${grenade}`;
     }
     
+    function sendMapDataToFrame() {
+        if (!pageFrame || !pageFrame.contentWindow) return;
+        
+        const mapData = (typeof positionsData !== 'undefined' && positionsData[currentMap])
+            ? positionsData[currentMap]
+            : {};
+        
+        pageFrame.contentWindow.postMessage({
+            type: 'setPositionsData',
+            mapKey: currentMap,
+            mapName: mapDisplayNames[currentMap] || currentMap,
+            data: mapData,
+            grenade: currentGrenade
+        }, '*');
+    }
+    
     function loadPage(forceReload = false) {
         const url = buildPageUrl(currentMap, currentGrenade);
         
@@ -272,7 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
             pageFrame.src = url;
             pageFrame.onload = () => {
                 pageFrame.style.opacity = '1';
-                frameReady = true;
             };
         }
     }
@@ -281,6 +327,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!event.data || !event.data.type) return;
         
         switch(event.data.type) {
+            case 'frameReady':
+                frameReady = true;
+                sendMapDataToFrame();
+                break;
+                
             case 'updatePagination':
                 currentPositionsCount = event.data.positionsCount;
                 currentIndex = event.data.currentIndex;
@@ -305,10 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 renderPaginationButtons(currentPositionsCount, currentIndex, currentShortTitles);
-                break;
-                
-            case 'frameReady':
-                frameReady = true;
                 break;
                 
             case 'contentHeight':
