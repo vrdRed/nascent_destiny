@@ -7,9 +7,10 @@
     let currentSmokeType = 'regular';
     let allSmokePositions = [];
     
-    // Throttle для sendContentHeight
     let heightSendScheduled = false;
     let lastSentHeight = 0;
+    
+    const preloadedImages = new Set();
     
     function getUrlParam(param) {
         return new URLSearchParams(window.location.search).get(param);
@@ -62,6 +63,36 @@
         return positions.filter(pos => (pos.smokeType || 'regular') === smokeType);
     }
     
+    function preloadPositionImages(positions) {
+        if (!positions || positions.length === 0) return;
+        
+        positions.forEach(pos => {
+            if (!pos.images) return;
+            pos.images.forEach(src => {
+                if (preloadedImages.has(src)) return;
+                preloadedImages.add(src);
+                
+                const img = new Image();
+                img.decoding = 'async';
+                img.src = src;
+            });
+        });
+    }
+    
+    function preloadFirstImage(position) {
+        // Удаляем все прошлые preload-теги, которые мы добавили
+        document.querySelectorAll('link[data-img-preload]').forEach(el => el.remove());
+        
+        if (!position || !position.images || !position.images[0]) return;
+        
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = position.images[0];
+        link.setAttribute('data-img-preload', 'true');
+        document.head.appendChild(link);
+    }
+    
     function updateParentPagination() {
         if (window.parent && window.parent !== window) {
             const titles = currentPositions.map(p => p.shortTitle || p.title.substring(0, 15) + '...');
@@ -88,7 +119,6 @@
         }
     }
     
-    // Throttled отправка высоты
     function sendContentHeight() {
         if (heightSendScheduled) return;
         heightSendScheduled = true;
@@ -153,6 +183,8 @@
         if (position.smokeType === 'instant') {
             smokeTypeBadge = '<span class="position-badge instant-badge">⚡ Instant</span>';
         }
+        
+        preloadFirstImage(position);
         
         container.innerHTML = `
             <div class="position-card" data-id="${position.id}">
@@ -221,6 +253,21 @@
         }
         
         renderSinglePosition(currentPositions[0]);
+        
+        preloadPositionImages(currentPositions);
+        
+        if (grenadeType === 'smoke' && allSmokePositions.length > 0) {
+            const otherTab = currentSmokeType === 'regular' ? 'instant' : 'regular';
+            const otherPositions = filterSmokesByType(allSmokePositions, otherTab);
+            if (otherPositions.length > 0) {
+                // Отложенная предзагрузка — не конкурирует с текущими картинками за канал
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(() => preloadPositionImages(otherPositions), { timeout: 3000 });
+                } else {
+                    setTimeout(() => preloadPositionImages(otherPositions), 1500);
+                }
+            }
+        }
     }
     
     function initMapPage(mapName, mapKey) {
@@ -257,12 +304,25 @@
             sendContentHeight();
         }
         
+        // Сообщаем родителю, что iframe загрузился и готов принимать postMessage
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'frameReady' }, '*');
+        }
+        
         window.addEventListener('message', function(event) {
             if (!event.data || !event.data.type) return;
             
             switch(event.data.type) {
                 case 'changePosition':
                     showPosition(event.data.index);
+                    break;
+                    
+                case 'preloadTab':
+                    // Предзагрузка картинок таба, на который пользователь собирается переключиться
+                    if (currentGrenadeType === 'smoke' && allSmokePositions.length > 0) {
+                        const tabPositions = filterSmokesByType(allSmokePositions, event.data.tab);
+                        preloadPositionImages(tabPositions);
+                    }
                     break;
                     
                 case 'changeGrenade':
@@ -295,6 +355,8 @@
                         
                         if (currentPositions.length > 0) {
                             renderSinglePosition(currentPositions[0]);
+                            // На всякий случай догружаем (вдруг preloadTab не успел)
+                            preloadPositionImages(currentPositions);
                         } else {
                             container.innerHTML = `
                                 <div class="no-positions">
@@ -321,8 +383,6 @@
         }
     }
     
-    // Убираем дублирование fullscreen — используем версию из main.js,
-    // но оставляем fallback для прямого открытия страницы карты
     function openFullscreen(imageSrc, imageAlt) {
         const modal = document.createElement('div');
         modal.className = 'fullscreen-modal';
