@@ -8,9 +8,9 @@ const positionsData = {
                 shortTitle: "Window Mid",
                 title: "Смок в Window Mid (T-Spawn)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/window_mid_tspawn_metka.png",
-                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/window_mid_tspawn_smoke.png"
+                    "../img/Mirage_Smoke/Metka/window_mid_tspawn_metka.webp",
+                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/window_mid_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -20,9 +20,9 @@ const positionsData = {
                 shortTitle: "Start Mid",
                 title: "Смок на Start Mid (T-Spawn)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/start_mid_tspawn_metka.png",
-                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos2.png",
-                    "../img/Mirage_Smoke/Smoke/start_mid_tspawn_smoke.png"
+                    "../img/Mirage_Smoke/Metka/start_mid_tspawn_metka.webp",
+                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos2.webp",
+                    "../img/Mirage_Smoke/Smoke/start_mid_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -32,9 +32,9 @@ const positionsData = {
                 shortTitle: "Connector Mid",
                 title: "Смок в Connector Mid (T-Spawn)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/connector_mid_tspawn_metka.png",
-                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/connector_mid_tspawn_smoke.png"
+                    "../img/Mirage_Smoke/Metka/connector_mid_tspawn_metka.webp",
+                    "../img/Mirage_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/connector_mid_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -44,9 +44,9 @@ const positionsData = {
                 shortTitle: "Ticket A",
                 title: "Смок в Ticket/CT-Spawn A (Ramp)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/ct_aplant_ramp_metka.png",
-                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.png",
-                    "../img/Mirage_Smoke/Smoke/ct_aplant_ramp_smoke.png"
+                    "../img/Mirage_Smoke/Metka/ct_aplant_ramp_metka.webp",
+                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/ct_aplant_ramp_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -56,9 +56,9 @@ const positionsData = {
                 shortTitle: "Jungle A",
                 title: "Смок в Jungle/Connector A (Ramp)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/jungle_aplant_ramp_metka.png",
-                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.png",
-                    "../img/Mirage_Smoke/Smoke/jungle_aplant_ramp_smoke.png"
+                    "../img/Mirage_Smoke/Metka/jungle_aplant_ramp_metka.webp",
+                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/jungle_aplant_ramp_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -68,9 +68,9 @@ const positionsData = {
                 shortTitle: "Stairs A",
                 title: "Смок на Stairs A (Ramp)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/stairs_aplant_ramp_metka.png",
-                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.png",
-                    "../img/Mirage_Smoke/Smoke/stairs_aplant_ramp_smoke.png"
+                    "../img/Mirage_Smoke/Metka/stairs_aplant_ramp_metka.webp",
+                    "../img/Mirage_Smoke/Pos/aplant_ramp_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/stairs_aplant_ramp_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -80,9 +80,9 @@ const positionsData = {
                 shortTitle: "Car B",
                 title: "Смок на Car B (House)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/car_bplant_house_metka.png",
-                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
-                    "../img/Mirage_Smoke/Smoke/car_bplant_house_smoke.png"
+                    "../img/Mirage_Smoke/Metka/car_bplant_house_metka.webp",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/car_bplant_house_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -92,9 +92,9 @@ const positionsData = {
                 shortTitle: "Forest B",
                 title: "Смок на Forest B (House)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/forest_bplant_house_metka.png",
-                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
-                    "../img/Mirage_Smoke/Smoke/forest_bplant_house_smoke.png"
+                    "../img/Mirage_Smoke/Metka/forest_bplant_house_metka.webp",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/forest_bplant_house_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -104,9 +104,9 @@ const positionsData = {
                 shortTitle: "Kitchen Main B",
                 title: "Смок на Main Kitchen B (House)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/main_bplant_house_metka.png",
-                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
-                    "../img/Mirage_Smoke/Smoke/main_bplant_house_smoke.png"
+                    "../img/Mirage_Smoke/Metka/main_bplant_house_metka.webp",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/main_bplant_house_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -116,9 +116,9 @@ const positionsData = {
                 shortTitle: "Kitchen Window B",
                 title: "Смок на Window Kitchen B (House)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/window_bplant_house_metka.png",
-                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
-                    "../img/Mirage_Smoke/Smoke/window_bplant_house_smoke.png"
+                    "../img/Mirage_Smoke/Metka/window_bplant_house_metka.webp",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/window_bplant_house_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -128,9 +128,9 @@ const positionsData = {
                 shortTitle: "Short B",
                 title: "Смок на Short B (House)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/short_bplant_house_metka.png",
-                    "../img/Mirage_Smoke/Pos/bplant_house_pos.png",
-                    "../img/Mirage_Smoke/Smoke/short_bplant_house_smoke.png"
+                    "../img/Mirage_Smoke/Metka/short_bplant_house_metka.webp",
+                    "../img/Mirage_Smoke/Pos/bplant_house_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/short_bplant_house_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -140,9 +140,9 @@ const positionsData = {
                 shortTitle: "Window (Поз. 1)",
                 title: "Инста Смок в Window Mid (Позиция 1)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka1.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke1.png"
+                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka1.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -152,9 +152,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 1)",
                 title: "Инста Смок на Start Mid (Позиция 1)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka1.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke1.png"
+                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka1.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -164,9 +164,9 @@ const positionsData = {
                 shortTitle: "Window (Поз. 2)",
                 title: "Инста Смок в Window Mid (Позиция 2)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka2.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke2.png"
+                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka2.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -176,9 +176,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 2)",
                 title: "Инста Смок на Start Mid (Позиция 2)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka2.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke2.png"
+                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka2.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -188,9 +188,9 @@ const positionsData = {
                 shortTitle: "Window (Поз. 3)",
                 title: "Инста Смок в Window Mid (Позиция 3)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka3.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke3.png"
+                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka3.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -200,9 +200,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 3)",
                 title: "Инста Смок на Start Mid (Позиция 3)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka3.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke3.png"
+                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka3.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -212,9 +212,9 @@ const positionsData = {
                 shortTitle: "Window (Поз. 4)",
                 title: "Инста Смок в Window Mid (Позиция 4)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka4.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke4.png"
+                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka4.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -224,9 +224,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 4)",
                 title: "Инста Смок на Start Mid (Позиция 4)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka4.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke4.png"
+                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka4.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -236,9 +236,9 @@ const positionsData = {
                 shortTitle: "Window (Поз. 5)",
                 title: "Инста Смок в Window Mid (Позиция 5)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka5.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke5.png"
+                    "../img/Mirage_Smoke/Metka/insta_window_tspawn_metka5.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_window_tspawn_smoke5.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -248,9 +248,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 5)",
                 title: "Инста Смок на Start Mid (Позиция 5)",
                 images: [
-                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka5.png",
-                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke5.png"
+                    "../img/Mirage_Smoke/Metka/insta_start_tspawn_metka5.webp",
+                    "../img/Mirage_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Mirage_Smoke/Smoke/insta_start_tspawn_smoke5.webp"
                 ],
                 tips: "Левая кнопка мыши."
             }
@@ -261,8 +261,8 @@ const positionsData = {
                 shortTitle: "Mid (TV)",
                 title: "Флешка на выход Mid за T-сторону (TV-room)",
                 images: [
-                    "../img/Mirage_Flash/Metka/mid_tv_metka.png",
-                    "../img/Mirage_Flash/Pos/tv_mid_pos.png"
+                    "../img/Mirage_Flash/Metka/mid_tv_metka.webp",
+                    "../img/Mirage_Flash/Pos/tv_mid_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до конца платформы), Прыжок."
             },
@@ -271,8 +271,8 @@ const positionsData = {
                 shortTitle: "A-Plant (Ramp)",
                 title: "Флешка на выход A-Plant за T-сторону (Ramp)",
                 images: [
-                    "../img/Mirage_Flash/Metka/aplant_ramp_metka.png",
-                    "../img/Mirage_Flash/Pos/ramp_aplant_pos.png"
+                    "../img/Mirage_Flash/Metka/aplant_ramp_metka.webp",
+                    "../img/Mirage_Flash/Pos/ramp_aplant_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -281,8 +281,8 @@ const positionsData = {
                 shortTitle: "B-Plant (House)",
                 title: "Флешка на выход B-Plant за T-сторону (House)",
                 images: [
-                    "../img/Mirage_Flash/Metka/bplant_house_metka.png",
-                    "../img/Mirage_Flash/Pos/house_bplant_pos.png"
+                    "../img/Mirage_Flash/Metka/bplant_house_metka.webp",
+                    "../img/Mirage_Flash/Pos/house_bplant_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
             },
@@ -291,8 +291,8 @@ const positionsData = {
                 shortTitle: "Mid (Ticket)",
                 title: "Флешка на Mid далеко за СT-сторону (Ticket)",
                 images: [
-                    "../img/Mirage_Flash/Metka/mid_ticket_metka.png",
-                    "../img/Mirage_Flash/Pos/ticket_mid_pos.png"
+                    "../img/Mirage_Flash/Metka/mid_ticket_metka.webp",
+                    "../img/Mirage_Flash/Pos/ticket_mid_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до угла левой стены), Прыжок."
             },
@@ -301,8 +301,8 @@ const positionsData = {
                 shortTitle: "Mid (FireBox)",
                 title: "Флешка на Mid близко за СT-сторону (FireBox)",
                 images: [
-                    "../img/Mirage_Flash/Metka/mid_firebox_metka.png",
-                    "../img/Mirage_Flash/Pos/firebox_mid_pos.png"
+                    "../img/Mirage_Flash/Metka/mid_firebox_metka.webp",
+                    "../img/Mirage_Flash/Pos/firebox_mid_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
             },
@@ -311,8 +311,8 @@ const positionsData = {
                 shortTitle: "Ramp (Jungle)",
                 title: "Флешка в Ramp за CT-сторону (Jungle)",
                 images: [
-                    "../img/Mirage_Flash/Metka/ramp_jungle_metka.png",
-                    "../img/Mirage_Flash/Pos/jungle_ramp_pos.png"
+                    "../img/Mirage_Flash/Metka/ramp_jungle_metka.webp",
+                    "../img/Mirage_Flash/Pos/jungle_ramp_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (до конца квадрата), Прыжок."
             },
@@ -321,8 +321,8 @@ const positionsData = {
                 shortTitle: "Apartments (Car)",
                 title: "Флешка на выход Apartments за CT-сторону (Car/Forest)",
                 images: [
-                    "../img/Mirage_Flash/Metka/apartments_car_metka.png",
-                    "../img/Mirage_Flash/Pos/car_apartments_pos.png"
+                    "../img/Mirage_Flash/Metka/apartments_car_metka.webp",
+                    "../img/Mirage_Flash/Pos/car_apartments_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             }
@@ -333,9 +333,9 @@ const positionsData = {
                 shortTitle: "Stairs A",
                 title: "Молик на Stairs (Ramp)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/stairs_ramp_metka.png",
-                    "../img/Mirage_Molotov/Pos/stairs_ramp_pos.png",
-                    "../img/Mirage_Molotov/Molotov/stairs_ramp_molotov.png"
+                    "../img/Mirage_Molotov/Metka/stairs_ramp_metka.webp",
+                    "../img/Mirage_Molotov/Pos/stairs_ramp_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/stairs_ramp_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -344,9 +344,9 @@ const positionsData = {
                 shortTitle: "Under Palace A (Ramp)",
                 title: "Молик в Under Palace (Ramp)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/underpalace_ramp_metka.png",
-                    "../img/Mirage_Molotov/Pos/underpalace_ramp_pos.png",
-                    "../img/Mirage_Molotov/Molotov/underpalace_ramp_molotov.png"
+                    "../img/Mirage_Molotov/Metka/underpalace_ramp_metka.webp",
+                    "../img/Mirage_Molotov/Pos/underpalace_ramp_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/underpalace_ramp_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (2 шага)."
             },
@@ -355,9 +355,9 @@ const positionsData = {
                 shortTitle: "FireBox A",
                 title: "Молик за FireBox (Tetris)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/firebox_tetris_metka.png",
-                    "../img/Mirage_Molotov/Pos/firebox_tetris_pos.png",
-                    "../img/Mirage_Molotov/Molotov/firebox_tetris_molotov.png"
+                    "../img/Mirage_Molotov/Metka/firebox_tetris_metka.webp",
+                    "../img/Mirage_Molotov/Pos/firebox_tetris_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/firebox_tetris_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -366,9 +366,9 @@ const positionsData = {
                 shortTitle: "Under Palace A (Palace)",
                 title: "Молик в Under Palace (Palace)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/underpalace_palace_metka.png",
-                    "../img/Mirage_Molotov/Pos/underpalace_palace_pos.png",
-                    "../img/Mirage_Molotov/Molotov/underpalace_palace_molotov.png"
+                    "../img/Mirage_Molotov/Metka/underpalace_palace_metka.webp",
+                    "../img/Mirage_Molotov/Pos/underpalace_palace_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/underpalace_palace_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до конца правой колонны)."
             },
@@ -377,9 +377,9 @@ const positionsData = {
                 shortTitle: "Balcony A",
                 title: "Молик на Balcony (Palace)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/balcony_palace_metka.png",
-                    "../img/Mirage_Molotov/Pos/balcony_palace_pos.png",
-                    "../img/Mirage_Molotov/Molotov/balcony_palace_molotov.png"
+                    "../img/Mirage_Molotov/Metka/balcony_palace_metka.webp",
+                    "../img/Mirage_Molotov/Pos/balcony_palace_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/balcony_palace_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (с Позиции 1 до Позиции 2)."
             },
@@ -388,9 +388,9 @@ const positionsData = {
                 shortTitle: "Car B",
                 title: "Молик на Car (Apartments)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/car_apartments_metka.png",
-                    "../img/Mirage_Molotov/Pos/car_apartments_pos.png",
-                    "../img/Mirage_Molotov/Molotov/car_apartments_molotov.png"
+                    "../img/Mirage_Molotov/Metka/car_apartments_metka.webp",
+                    "../img/Mirage_Molotov/Pos/car_apartments_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/car_apartments_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -399,9 +399,9 @@ const positionsData = {
                 shortTitle: "Forest B",
                 title: "Молик в Forest (Apartments)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/forest_apartments_metka.png",
-                    "../img/Mirage_Molotov/Pos/forest_apartments_pos.png",
-                    "../img/Mirage_Molotov/Molotov/forest_apartments_molotov.png"
+                    "../img/Mirage_Molotov/Metka/forest_apartments_metka.webp",
+                    "../img/Mirage_Molotov/Pos/forest_apartments_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/forest_apartments_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -410,9 +410,9 @@ const positionsData = {
                 shortTitle: "Edward B",
                 title: "Молик на Edward (Apartments)",
                 images: [
-                    "../img/Mirage_Molotov/Metka/edward_apartments_metka.png",
-                    "../img/Mirage_Molotov/Pos/edward_apartments_pos.png",
-                    "../img/Mirage_Molotov/Molotov/edward_apartments_molotov.png"
+                    "../img/Mirage_Molotov/Metka/edward_apartments_metka.webp",
+                    "../img/Mirage_Molotov/Pos/edward_apartments_pos.webp",
+                    "../img/Mirage_Molotov/Molotov/edward_apartments_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд)."
             }
@@ -429,9 +429,9 @@ const positionsData = {
                 shortTitle: "X-Box Mid",
                 title: "Смок на X-Box Mid (T-Spawn)",
                 images: [
-                    "../img/Dust_Smoke/Metka/mid_tspawn_metka.png",
-                    "../img/Dust_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/mid_tspawn_smoke.png"
+                    "../img/Dust_Smoke/Metka/mid_tspawn_metka.webp",
+                    "../img/Dust_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/mid_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -441,9 +441,9 @@ const positionsData = {
                 shortTitle: "Doors Mid",
                 title: "Смок в Doors Mid (T-Spawn)",
                 images: [
-                    "../img/Dust_Smoke/Metka/mid_tspawn_metka2.png",
-                    "../img/Dust_Smoke/Pos/mid_tspawn_pos2.png",
-                    "../img/Dust_Smoke/Smoke/mid_tspawn_smoke2.png"
+                    "../img/Dust_Smoke/Metka/mid_tspawn_metka2.webp",
+                    "../img/Dust_Smoke/Pos/mid_tspawn_pos2.webp",
+                    "../img/Dust_Smoke/Smoke/mid_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -453,9 +453,9 @@ const positionsData = {
                 shortTitle: "Doors Mid",
                 title: "Смок в Doors Mid (Taxi)",
                 images: [
-                    "../img/Dust_Smoke/Metka/mid_taxi_metka.png",
-                    "../img/Dust_Smoke/Pos/mid_taxi_pos.png",
-                    "../img/Dust_Smoke/Smoke/mid_taxi_smoke.png"
+                    "../img/Dust_Smoke/Metka/mid_taxi_metka.webp",
+                    "../img/Dust_Smoke/Pos/mid_taxi_pos.webp",
+                    "../img/Dust_Smoke/Smoke/mid_taxi_smoke.webp"
                 ],
                 tips: "Присесть, Левая кнопка мыши, Прыжок."
             },
@@ -465,9 +465,9 @@ const positionsData = {
                 shortTitle: "Doors Mid",
                 title: "Смок в Doors Mid (Suicide)",
                 images: [
-                    "../img/Dust_Smoke/Metka/mid_suicide_metka.png",
-                    "../img/Dust_Smoke/Pos/mid_suicide_pos.png",
-                    "../img/Dust_Smoke/Smoke/mid_suicide_smoke.png"
+                    "../img/Dust_Smoke/Metka/mid_suicide_metka.webp",
+                    "../img/Dust_Smoke/Pos/mid_suicide_pos.webp",
+                    "../img/Dust_Smoke/Smoke/mid_suicide_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -477,9 +477,9 @@ const positionsData = {
                 shortTitle: "Long A",
                 title: "Смок на Long A (T-Spawn)",
                 images: [
-                    "../img/Dust_Smoke/Metka/long_tspawn_metka.png",
-                    "../img/Dust_Smoke/Pos/long_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/long_tspawn_smoke.png"
+                    "../img/Dust_Smoke/Metka/long_tspawn_metka.webp",
+                    "../img/Dust_Smoke/Pos/long_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/long_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -489,9 +489,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn A",
                 title: "Смок в CT-Spawn A (Long)",
                 images: [
-                    "../img/Dust_Smoke/Metka/aplant_long_metka.png",
-                    "../img/Dust_Smoke/Pos/aplant_long_pos.png",
-                    "../img/Dust_Smoke/Smoke/aplant_long_smoke.png"
+                    "../img/Dust_Smoke/Metka/aplant_long_metka.webp",
+                    "../img/Dust_Smoke/Pos/aplant_long_pos.webp",
+                    "../img/Dust_Smoke/Smoke/aplant_long_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -501,9 +501,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn Mid",
                 title: "Смок в CT-Spawn Mid (Mid)",
                 images: [
-                    "../img/Dust_Smoke/Metka/ct_mid_metka.png",
-                    "../img/Dust_Smoke/Pos/ct_mid_pos.png",
-                    "../img/Dust_Smoke/Smoke/ct_mid_smoke.png"
+                    "../img/Dust_Smoke/Metka/ct_mid_metka.webp",
+                    "../img/Dust_Smoke/Pos/ct_mid_pos.webp",
+                    "../img/Dust_Smoke/Smoke/ct_mid_smoke.webp"
                 ],
                 tips: "Присесть, Левая кнопка мыши, Прыжок."
             },
@@ -513,9 +513,9 @@ const positionsData = {
                 shortTitle: "Doors B",
                 title: "Смок в Doors B (Outside Tunnels)",
                 images: [
-                    "../img/Dust_Smoke/Metka/door_tunnels_metka.png",
-                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.png",
-                    "../img/Dust_Smoke/Smoke/door_tunnels_smoke.png"
+                    "../img/Dust_Smoke/Metka/door_tunnels_metka.webp",
+                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.webp",
+                    "../img/Dust_Smoke/Smoke/door_tunnels_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -525,9 +525,9 @@ const positionsData = {
                 shortTitle: "Window B",
                 title: "Смок в Window B (Outside Tunnels)",
                 images: [
-                    "../img/Dust_Smoke/Metka/window_tunnels_metka.png",
-                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.png",
-                    "../img/Dust_Smoke/Smoke/window_tunnels_smoke.png"
+                    "../img/Dust_Smoke/Metka/window_tunnels_metka.webp",
+                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.webp",
+                    "../img/Dust_Smoke/Smoke/window_tunnels_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -537,9 +537,9 @@ const positionsData = {
                 shortTitle: "B-Plant",
                 title: "Смок на выход B-Plant (Outside Tunnels)",
                 images: [
-                    "../img/Dust_Smoke/Metka/bplant_tunnels_metka.png",
-                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.png",
-                    "../img/Dust_Smoke/Smoke/bplant_tunnels_smoke.png"
+                    "../img/Dust_Smoke/Metka/bplant_tunnels_metka.webp",
+                    "../img/Dust_Smoke/Pos/bplant_tunnels_pos.webp",
+                    "../img/Dust_Smoke/Smoke/bplant_tunnels_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -549,9 +549,9 @@ const positionsData = {
                 shortTitle: "X-Box (Поз. 1)",
                 title: "Инста Смок на X-Box Mid (Позиция 1)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka1.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke1.png"
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka1.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -561,9 +561,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 2)",
                 title: "Инста Смок в Doors Mid (Позиция 2)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka2.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke2.png"
+                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka2.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -573,9 +573,9 @@ const positionsData = {
                 shortTitle: "X-Box (Поз. 2)",
                 title: "Инста Смок на X-Box Mid (Позиция 2)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka2.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke2.png"
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka2.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -585,9 +585,9 @@ const positionsData = {
                 shortTitle: "Long (Поз. 2)",
                 title: "Инста Смок на Long A (Позиция 2)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka2.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke2.png"
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka2.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -597,9 +597,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 3)",
                 title: "Инста Смок в Doors Mid (Позиция 3)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka3.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke3.png"
+                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka3.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок"
             },
@@ -609,9 +609,9 @@ const positionsData = {
                 shortTitle: "X-Box (Поз. 3)",
                 title: "Инста Смок на X-Box Mid (Позиция 3)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka3.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke3.png"
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka3.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -621,9 +621,9 @@ const positionsData = {
                 shortTitle: "Long (Поз. 3)",
                 title: "Инста Смок на Long A (Позиция 3)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka3.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke3.png"
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka3.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -633,9 +633,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 4)",
                 title: "Инста Смок в Doors Mid (Позиция 4)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka4.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke4.png"
+                    "../img/Dust_Smoke/Metka/insta_doors_tspawn_metka4.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_doors_tspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -645,9 +645,9 @@ const positionsData = {
                 shortTitle: "X-Box (Поз. 4)",
                 title: "Инста Смок на X-Box Mid (Позиция 4)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka4.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke4.png"
+                    "../img/Dust_Smoke/Metka/insta_xbox_tspawn_metka4.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_xbox_tspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -657,9 +657,9 @@ const positionsData = {
                 shortTitle: "Long (Поз. 4)",
                 title: "Инста Смок на Long A (Позиция 4)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka4.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke4.png"
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka4.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -669,9 +669,9 @@ const positionsData = {
                 shortTitle: "Long (Поз. 5)",
                 title: "Инста Смок на Long A (Позиция 5)",
                 images: [
-                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka5.png",
-                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke5.png"
+                    "../img/Dust_Smoke/Metka/insta_long_tspawn_metka5.webp",
+                    "../img/Dust_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Dust_Smoke/Smoke/insta_long_tspawn_smoke5.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -682,8 +682,8 @@ const positionsData = {
                 shortTitle: "Long (Box)",
                 title: "Флешка на выход Long за T-сторону (Outside Box)",
                 images: [
-                    "../img/Dust_Flash/Metka/long_box_metka.png",
-                    "../img/Dust_Flash/Pos/long_box_pos.png"
+                    "../img/Dust_Flash/Metka/long_box_metka.webp",
+                    "../img/Dust_Flash/Pos/long_box_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -692,8 +692,8 @@ const positionsData = {
                 shortTitle: "B-Plant (Upper)",
                 title: "Флешка на выход B-Plant за T-сторону (Upper)",
                 images: [
-                    "../img/Dust_Flash/Metka/bplant_tunnels_metka.png",
-                    "../img/Dust_Flash/Pos/bplant_tunnels_pos.png"
+                    "../img/Dust_Flash/Metka/bplant_tunnels_metka.webp",
+                    "../img/Dust_Flash/Pos/bplant_tunnels_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -702,8 +702,8 @@ const positionsData = {
                 shortTitle: "B-Plant (Box)",
                 title: "Флешка под выход на B-Plant за CT-сторону (B-plant)",
                 images: [
-                    "../img/Dust_Flash/Metka/bplant_box_metka.png",
-                    "../img/Dust_Flash/Pos/bplant_box_pos.png"
+                    "../img/Dust_Flash/Metka/bplant_box_metka.webp",
+                    "../img/Dust_Flash/Pos/bplant_box_pos.webp"
                 ],
                 tips: "Правая кнопка мыши."
             },
@@ -712,8 +712,8 @@ const positionsData = {
                 shortTitle: "B-Plant (Car)",
                 title: "Флешка под выход на B-plant за CT-сторону (Car B)",
                 images: [
-                    "../img/Dust_Flash/Metka/bplant_car_metka.png",
-                    "../img/Dust_Flash/Pos/bplant_car_pos.png"
+                    "../img/Dust_Flash/Metka/bplant_car_metka.webp",
+                    "../img/Dust_Flash/Pos/bplant_car_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -722,8 +722,8 @@ const positionsData = {
                 shortTitle: "B-Plant (Doors)",
                 title: "Флешка на выход на B-plant в Doors за CT-сторону (Doors)",
                 images: [
-                    "../img/Dust_Flash/Metka/bplant_ct_metka.png",
-                    "../img/Dust_Flash/Pos/bplant_ct_pos.png"
+                    "../img/Dust_Flash/Metka/bplant_ct_metka.webp",
+                    "../img/Dust_Flash/Pos/bplant_ct_pos.webp"
                 ],
                 tips: "Правая кнопка мыши, Прыжок."
             },
@@ -732,8 +732,8 @@ const positionsData = {
                 shortTitle: "Mid (CT-Spawn)",
                 title: "Флешка на Mid за CT-сторону (CT-Spawn)",
                 images: [
-                    "../img/Dust_Flash/Metka/mid_ct_metka.png",
-                    "../img/Dust_Flash/Pos/mid_ct_pos.png"
+                    "../img/Dust_Flash/Metka/mid_ct_metka.webp",
+                    "../img/Dust_Flash/Pos/mid_ct_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -742,8 +742,8 @@ const positionsData = {
                 shortTitle: "Box (Long)",
                 title: "Флешка под выход из Box Long за CT-сторону (Long)",
                 images: [
-                    "../img/Dust_Flash/Metka/long_ct_metka.png",
-                    "../img/Dust_Flash/Pos/long_ct_pos.png"
+                    "../img/Dust_Flash/Metka/long_ct_metka.webp",
+                    "../img/Dust_Flash/Pos/long_ct_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -752,8 +752,8 @@ const positionsData = {
                 shortTitle: "Box (Long)",
                 title: "Флешка под выход из Box Long за CT-сторону (Long)",
                 images: [
-                    "../img/Dust_Flash/Metka/long_ct_metka2.png",
-                    "../img/Dust_Flash/Pos/long_ct_pos.png"
+                    "../img/Dust_Flash/Metka/long_ct_metka2.webp",
+                    "../img/Dust_Flash/Pos/long_ct_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -762,8 +762,8 @@ const positionsData = {
                 shortTitle: "Long (Car)",
                 title: "Флешка на Long за CT-сторону (Car A)",
                 images: [
-                    "../img/Dust_Flash/Metka/long_car_metka.png",
-                    "../img/Dust_Flash/Pos/long_car_pos.png"
+                    "../img/Dust_Flash/Metka/long_car_metka.webp",
+                    "../img/Dust_Flash/Pos/long_car_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -772,8 +772,8 @@ const positionsData = {
                 shortTitle: "A-Plant (Ramp)",
                 title: "Флешка на A-Plant за CT-сторону (Ramp)",
                 images: [
-                    "../img/Dust_Flash/Metka/aplant_ramp_metka.png",
-                    "../img/Dust_Flash/Pos/aplant_ramp_pos.png"
+                    "../img/Dust_Flash/Metka/aplant_ramp_metka.webp",
+                    "../img/Dust_Flash/Pos/aplant_ramp_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -782,8 +782,8 @@ const positionsData = {
                 shortTitle: "CT-Spawn Mid (Mid)",
                 title: "Флешка за дверь на CT-Spawn Mid за T-сторону (Mid)",
                 images: [
-                    "../img/Dust_Flash/Metka/ct_mid_metka.png",
-                    "../img/Dust_Flash/Pos/ct_mid_pos.png"
+                    "../img/Dust_Flash/Metka/ct_mid_metka.webp",
+                    "../img/Dust_Flash/Pos/ct_mid_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -792,8 +792,8 @@ const positionsData = {
                 shortTitle: "CT-Spawn Mid (Mid)",
                 title: "Флешка за дверь на CT-Spawn Mid за T-сторону (Mid)",
                 images: [
-                    "../img/Dust_Flash/Metka/ct_mid_metka2.png",
-                    "../img/Dust_Flash/Pos/ct_mid_pos2.png"
+                    "../img/Dust_Flash/Metka/ct_mid_metka2.webp",
+                    "../img/Dust_Flash/Pos/ct_mid_pos2.webp"
                 ],
                 tips: "Левая + Правая кнопка мыши, Прыжок."
             },
@@ -804,9 +804,9 @@ const positionsData = {
                 shortTitle: "Car A",
                 title: "Молик на Car A (Long)",
                 images: [
-                    "../img/Dust_Molotov/Metka/car_long_metka.png",
-                    "../img/Dust_Molotov/Pos/car_long_pos.png",
-                    "../img/Dust_Molotov/Molotov/car_long_molotov.png"
+                    "../img/Dust_Molotov/Metka/car_long_metka.webp",
+                    "../img/Dust_Molotov/Pos/car_long_pos.webp",
+                    "../img/Dust_Molotov/Molotov/car_long_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -815,9 +815,9 @@ const positionsData = {
                 shortTitle: "Short A",
                 title: "Молик на Short (Catwalk)",
                 images: [
-                    "../img/Dust_Molotov/Metka/short_catwalk_metka.png",
-                    "../img/Dust_Molotov/Pos/short_catwalk_pos.png",
-                    "../img/Dust_Molotov/Molotov/short_catwalk_molotov.png"
+                    "../img/Dust_Molotov/Metka/short_catwalk_metka.webp",
+                    "../img/Dust_Molotov/Pos/short_catwalk_pos.webp",
+                    "../img/Dust_Molotov/Molotov/short_catwalk_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до козырька на прицеле), Прыжок."
             },
@@ -826,9 +826,9 @@ const positionsData = {
                 shortTitle: "Goose A",
                 title: "Молик на Goose (Short)",
                 images: [
-                    "../img/Dust_Molotov/Metka/goose_short_metka.png",
-                    "../img/Dust_Molotov/Pos/goose_short_pos.png",
-                    "../img/Dust_Molotov/Molotov/goose_short_molotov.png"
+                    "../img/Dust_Molotov/Metka/goose_short_metka.webp",
+                    "../img/Dust_Molotov/Pos/goose_short_pos.webp",
+                    "../img/Dust_Molotov/Molotov/goose_short_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -837,9 +837,9 @@ const positionsData = {
                 shortTitle: "A-Plant",
                 title: "Молик на A-Plant (CT-Spawn)",
                 images: [
-                    "../img/Dust_Molotov/Metka/aplant_ct_metka.png",
-                    "../img/Dust_Molotov/Pos/aplant_ct_pos.png",
-                    "../img/Dust_Molotov/Molotov/aplant_ct_molotov.png"
+                    "../img/Dust_Molotov/Metka/aplant_ct_metka.webp",
+                    "../img/Dust_Molotov/Pos/aplant_ct_pos.webp",
+                    "../img/Dust_Molotov/Molotov/aplant_ct_molotov.webp"
                 ],
                 tips: "Правая кнопка мыши, Прыжок."
             },
@@ -848,9 +848,9 @@ const positionsData = {
                 shortTitle: "B-Plant",
                 title: "Молик на B-Plant (Window)",
                 images: [
-                    "../img/Dust_Molotov/Metka/bplant_window_metka.png",
-                    "../img/Dust_Molotov/Pos/bplant_window_pos.png",
-                    "../img/Dust_Molotov/Molotov/bplant_window_molotov.png"
+                    "../img/Dust_Molotov/Metka/bplant_window_metka.webp",
+                    "../img/Dust_Molotov/Pos/bplant_window_pos.webp",
+                    "../img/Dust_Molotov/Molotov/bplant_window_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -859,9 +859,9 @@ const positionsData = {
                 shortTitle: "Car B",
                 title: "Молик за Car (Doors B)",
                 images: [
-                    "../img/Dust_Molotov/Metka/car_doors_metka.png",
-                    "../img/Dust_Molotov/Pos/car_doors_pos.png",
-                    "../img/Dust_Molotov/Molotov/car_doors_molotov.png"
+                    "../img/Dust_Molotov/Metka/car_doors_metka.webp",
+                    "../img/Dust_Molotov/Pos/car_doors_pos.webp",
+                    "../img/Dust_Molotov/Molotov/car_doors_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (1.5 шага), Прыжок."
             },
@@ -870,9 +870,9 @@ const positionsData = {
                 shortTitle: "Дальний B",
                 title: "Молик за Дальний (Doors B)",
                 images: [
-                    "../img/Dust_Molotov/Metka/dal_doors_metka.png",
-                    "../img/Dust_Molotov/Pos/dal_doors_pos.png",
-                    "../img/Dust_Molotov/Molotov/dal_doors_molotov.png"
+                    "../img/Dust_Molotov/Metka/dal_doors_metka.webp",
+                    "../img/Dust_Molotov/Pos/dal_doors_pos.webp",
+                    "../img/Dust_Molotov/Molotov/dal_doors_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
@@ -889,9 +889,9 @@ const positionsData = {
                 shortTitle: "Mid",
                 title: "Смок в Mid (T-Spawn)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/mid_tspawn_metka.png",
-                    "../img/Anubis_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Anubis_Smoke/Smoke/mid_tspawn_smoke.png"
+                    "../img/Anubis_Smoke/Metka/mid_tspawn_metka.webp",
+                    "../img/Anubis_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/mid_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -901,9 +901,9 @@ const positionsData = {
                 shortTitle: "Doors Mid",
                 title: "Смок в Doors Mid (T-Spawn)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/door_tspawn_metka.png",
-                    "../img/Anubis_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Anubis_Smoke/Smoke/door_tspawn_smoke.png"
+                    "../img/Anubis_Smoke/Metka/door_tspawn_metka.webp",
+                    "../img/Anubis_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/door_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -913,9 +913,9 @@ const positionsData = {
                 shortTitle: "Connector Water",
                 title: "Смок в Connector Water (T-Spawn)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/connector_tspawn_metka.png",
-                    "../img/Anubis_Smoke/Pos/connector_tspawn_pos.png",
-                    "../img/Anubis_Smoke/Smoke/connector_tspawn_smoke.png"
+                    "../img/Anubis_Smoke/Metka/connector_tspawn_metka.webp",
+                    "../img/Anubis_Smoke/Pos/connector_tspawn_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/connector_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -925,9 +925,9 @@ const positionsData = {
                 shortTitle: "Heaven A",
                 title: "Смок на Heaven A (Upper/Boat)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/heaven_upper_metka.png",
-                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
-                    "../img/Anubis_Smoke/Smoke/9_upper_smoke.png"
+                    "../img/Anubis_Smoke/Metka/heaven_upper_metka.webp",
+                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/9_upper_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -937,9 +937,9 @@ const positionsData = {
                 shortTitle: "8 A",
                 title: "Смок на 8 A (Upper/Boat)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/8_upper_metka.png",
-                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
-                    "../img/Anubis_Smoke/Smoke/8_upper_smoke.png"
+                    "../img/Anubis_Smoke/Metka/8_upper_metka.webp",
+                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/8_upper_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -949,9 +949,9 @@ const positionsData = {
                 shortTitle: "Camera A",
                 title: "Смок в Camera A (Upper/Boat)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/camera_upper_metka.png",
-                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.png",
-                    "../img/Anubis_Smoke/Smoke/camera_upper_smoke.png"
+                    "../img/Anubis_Smoke/Metka/camera_upper_metka.webp",
+                    "../img/Anubis_Smoke/Pos/aplant_upper_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/camera_upper_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -961,9 +961,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn B",
                 title: "Смок в CT-Spawn B (Long)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/ct_long_metka.png",
-                    "../img/Anubis_Smoke/Pos/bplant_long_pos.png",
-                    "../img/Anubis_Smoke/Smoke/ct_long_smoke.png"
+                    "../img/Anubis_Smoke/Metka/ct_long_metka.webp",
+                    "../img/Anubis_Smoke/Pos/bplant_long_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/ct_long_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -973,9 +973,9 @@ const positionsData = {
                 shortTitle: "Ninja B",
                 title: "Смок в Ninja B (Long)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/ninja_long_metka.png",
-                    "../img/Anubis_Smoke/Pos/bplant_long_pos.png",
-                    "../img/Anubis_Smoke/Smoke/ninja_long_smoke.png"
+                    "../img/Anubis_Smoke/Metka/ninja_long_metka.webp",
+                    "../img/Anubis_Smoke/Pos/bplant_long_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/ninja_long_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -985,9 +985,9 @@ const positionsData = {
                 shortTitle: "Connector B",
                 title: "Смок в Connector B (Long)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/connector_long_metka.png",
-                    "../img/Anubis_Smoke/Pos/bplant_long_pos.png",
-                    "../img/Anubis_Smoke/Smoke/connector_long_smoke.png"
+                    "../img/Anubis_Smoke/Metka/connector_long_metka.webp",
+                    "../img/Anubis_Smoke/Pos/bplant_long_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/connector_long_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -997,9 +997,9 @@ const positionsData = {
                 shortTitle: "Stairs (Поз. 1)",
                 title: "Инста Смок на Stairs Water (Позиция 1)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka1.png",
-                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke1.png"
+                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka1.webp",
+                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1009,9 +1009,9 @@ const positionsData = {
                 shortTitle: "Stairs (Поз. 2)",
                 title: "Инста Смок на Stairs Water (Позиция 2)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka2.png",
-                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke2.png"
+                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka2.webp",
+                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1021,9 +1021,9 @@ const positionsData = {
                 shortTitle: "Stairs (Поз. 3)",
                 title: "Инста Смок на Stairs Water (Позиция 3)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka3.png",
-                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke3.png"
+                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka3.webp",
+                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1033,9 +1033,9 @@ const positionsData = {
                 shortTitle: "Stairs (Поз. 4)",
                 title: "Инста Смок на Stairs Water (Позиция 4)",
                 images: [
-                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka4.png",
-                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke4.png"
+                    "../img/Anubis_Smoke/Metka/insta_stairs_ctspawn_metka4.webp",
+                    "../img/Anubis_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Anubis_Smoke/Smoke/insta_stairs_ctspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             }
@@ -1046,8 +1046,8 @@ const positionsData = {
                 shortTitle: "Main A (Upper)",
                 title: "Флешка на выход Main A за T-сторону (Upper)",
                 images: [
-                    "../img/Anubis_Flash/Metka/main_upper_metka.png",
-                    "../img/Anubis_Flash/Pos/main_upper_pos.png"
+                    "../img/Anubis_Flash/Metka/main_upper_metka.webp",
+                    "../img/Anubis_Flash/Pos/main_upper_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1056,8 +1056,8 @@ const positionsData = {
                 shortTitle: "A-Plant (Boat)",
                 title: "Флешка на выход A-Plant за T-сторону (Boat)",
                 images: [
-                    "../img/Anubis_Flash/Metka/aplant_boat_metka.png",
-                    "../img/Anubis_Flash/Pos/aplant_boat_pos.png"
+                    "../img/Anubis_Flash/Metka/aplant_boat_metka.webp",
+                    "../img/Anubis_Flash/Pos/aplant_boat_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1066,8 +1066,8 @@ const positionsData = {
                 shortTitle: "B-Plant (Main B)",
                 title: "Флешка на выход B-Plant за T-сторону (Main B)",
                 images: [
-                    "../img/Anubis_Flash/Metka/bplant_main_metka.png",
-                    "../img/Anubis_Flash/Pos/bplant_main_pos.png"
+                    "../img/Anubis_Flash/Metka/bplant_main_metka.webp",
+                    "../img/Anubis_Flash/Pos/bplant_main_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1076,8 +1076,8 @@ const positionsData = {
                 shortTitle: "B-Plant (Main B)",
                 title: "Флешка на выход B-Plant за T-сторону (Main B)",
                 images: [
-                    "../img/Anubis_Flash/Metka/bplant_main_metka2.png",
-                    "../img/Anubis_Flash/Pos/bplant_main_pos2.png"
+                    "../img/Anubis_Flash/Metka/bplant_main_metka2.webp",
+                    "../img/Anubis_Flash/Pos/bplant_main_pos2.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1086,8 +1086,8 @@ const positionsData = {
                 shortTitle: "Mid (T-Spawn/Mid)",
                 title: "Флешка на Mid за T-сторону (T-Spawn/Mid)",
                 images: [
-                    "../img/Anubis_Flash/Metka/mid_tspawn_metka.png",
-                    "../img/Anubis_Flash/Pos/mid_tspawn_pos.png"
+                    "../img/Anubis_Flash/Metka/mid_tspawn_metka.webp",
+                    "../img/Anubis_Flash/Pos/mid_tspawn_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1096,8 +1096,8 @@ const positionsData = {
                 shortTitle: "Connector (Water)",
                 title: "Флешка в Connector за T-сторону (Water)",
                 images: [
-                    "../img/Anubis_Flash/Metka/connector_water_metka.png",
-                    "../img/Anubis_Flash/Pos/connector_water_pos.png"
+                    "../img/Anubis_Flash/Metka/connector_water_metka.webp",
+                    "../img/Anubis_Flash/Pos/connector_water_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (2 шага)."
             },
@@ -1106,8 +1106,8 @@ const positionsData = {
                 shortTitle: "A-Plant (Heaven)",
                 title: "Флешка на A-Plant за СT-сторону (Heaven)",
                 images: [
-                    "../img/Anubis_Flash/Metka/aplant_heaven_metka.png",
-                    "../img/Anubis_Flash/Pos/aplant_heaven_pos.png"
+                    "../img/Anubis_Flash/Metka/aplant_heaven_metka.webp",
+                    "../img/Anubis_Flash/Pos/aplant_heaven_pos.webp"
                 ],
                 tips: "Правая кнопка мыши, Прыжок."
             },
@@ -1116,8 +1116,8 @@ const positionsData = {
                 shortTitle: "Boat (A-Plant)",
                 title: "Флешка на Boat за СT-сторону (A-Plant)",
                 images: [
-                    "../img/Anubis_Flash/Metka/boat_aplant_metka.png",
-                    "../img/Anubis_Flash/Pos/boat_aplant_pos.png"
+                    "../img/Anubis_Flash/Metka/boat_aplant_metka.webp",
+                    "../img/Anubis_Flash/Pos/boat_aplant_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1126,8 +1126,8 @@ const positionsData = {
                 shortTitle: "Main B (B-Plant)",
                 title: "Флешка в Main B за СT-сторону (B-Plant)",
                 images: [
-                    "../img/Anubis_Flash/Metka/main_bplant_metka.png",
-                    "../img/Anubis_Flash/Pos/main_bplant_pos.png"
+                    "../img/Anubis_Flash/Metka/main_bplant_metka.webp",
+                    "../img/Anubis_Flash/Pos/main_bplant_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1136,8 +1136,8 @@ const positionsData = {
                 shortTitle: "Mid (Camera)",
                 title: "Флешка на Mid за СT-сторону (Camera)",
                 images: [
-                    "../img/Anubis_Flash/Metka/mid_camera_metka.png",
-                    "../img/Anubis_Flash/Pos/mid_camera_pos.png"
+                    "../img/Anubis_Flash/Metka/mid_camera_metka.webp",
+                    "../img/Anubis_Flash/Pos/mid_camera_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1146,8 +1146,8 @@ const positionsData = {
                 shortTitle: "Water (Connector)",
                 title: "Флешка на Water за СT-сторону (Connector)",
                 images: [
-                    "../img/Anubis_Flash/Metka/water_connector_metka.png",
-                    "../img/Anubis_Flash/Pos/water_connector_pos.png"
+                    "../img/Anubis_Flash/Metka/water_connector_metka.webp",
+                    "../img/Anubis_Flash/Pos/water_connector_pos.webp"
                 ],
                 tips: "Правая кнопка мыши, Прыжок."
             }
@@ -1158,9 +1158,9 @@ const positionsData = {
                 shortTitle: "Camera A",
                 title: "Молик в Camera A (Upper)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/camera_upper_metka.png",
-                    "../img/Anubis_Molotov/Pos/camera_upper_pos.png",
-                    "../img/Anubis_Molotov/Molotov/camera_upper_molotov.png"
+                    "../img/Anubis_Molotov/Metka/camera_upper_metka.webp",
+                    "../img/Anubis_Molotov/Pos/camera_upper_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/camera_upper_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1169,9 +1169,9 @@ const positionsData = {
                 shortTitle: "A-Plant (Boat)",
                 title: "Молик в A-Plant (Boat)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/aplant_boat_metka.png",
-                    "../img/Anubis_Molotov/Pos/aplant_boat_pos.png",
-                    "../img/Anubis_Molotov/Molotov/aplant_boat_molotov.png"
+                    "../img/Anubis_Molotov/Metka/aplant_boat_metka.webp",
+                    "../img/Anubis_Molotov/Pos/aplant_boat_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/aplant_boat_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1180,9 +1180,9 @@ const positionsData = {
                 shortTitle: "8 A (Boat)",
                 title: "Молик на 8 A (Boat)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/8_boat_metka.png",
-                    "../img/Anubis_Molotov/Pos/8_boat_pos.png",
-                    "../img/Anubis_Molotov/Molotov/8_boat_molotov.png"
+                    "../img/Anubis_Molotov/Metka/8_boat_metka.webp",
+                    "../img/Anubis_Molotov/Pos/8_boat_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/8_boat_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1191,9 +1191,9 @@ const positionsData = {
                 shortTitle: "8 A (Main A)",
                 title: "Молик на 8 A (Main A)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/8_main_metka.png",
-                    "../img/Anubis_Molotov/Pos/8_main_pos.png",
-                    "../img/Anubis_Molotov/Molotov/8_main_molotov.png"
+                    "../img/Anubis_Molotov/Metka/8_main_metka.webp",
+                    "../img/Anubis_Molotov/Pos/8_main_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/8_main_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до угла левой стены), Прыжок."
             },
@@ -1202,9 +1202,9 @@ const positionsData = {
                 shortTitle: "A-Plant (Heaven)",
                 title: "Молик в A-Plant (Heaven)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/aplant_heaven_metka.png",
-                    "../img/Anubis_Molotov/Pos/aplant_heaven_pos.png",
-                    "../img/Anubis_Molotov/Molotov/aplant_heaven_molotov.png"
+                    "../img/Anubis_Molotov/Metka/aplant_heaven_metka.webp",
+                    "../img/Anubis_Molotov/Pos/aplant_heaven_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/aplant_heaven_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1213,9 +1213,9 @@ const positionsData = {
                 shortTitle: "Connector B",
                 title: "Молик в Connector B (Main B)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/connector_main_metka.png",
-                    "../img/Anubis_Molotov/Pos/connector_main_pos.png",
-                    "../img/Anubis_Molotov/Molotov/connector_main_molotov.png"
+                    "../img/Anubis_Molotov/Metka/connector_main_metka.webp",
+                    "../img/Anubis_Molotov/Pos/connector_main_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/connector_main_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1224,9 +1224,9 @@ const positionsData = {
                 shortTitle: "Connector B",
                 title: "Молик глубоко в Connector B (Main B)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/connector_main_metka2.png",
-                    "../img/Anubis_Molotov/Pos/connector_main_pos2.png",
-                    "../img/Anubis_Molotov/Molotov/connector_main_molotov2.png"
+                    "../img/Anubis_Molotov/Metka/connector_main_metka2.webp",
+                    "../img/Anubis_Molotov/Pos/connector_main_pos2.webp",
+                    "../img/Anubis_Molotov/Molotov/connector_main_molotov2.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1235,9 +1235,9 @@ const positionsData = {
                 shortTitle: "Ninja B",
                 title: "Молик в Ninja B (Connector B)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/ninja_connector_metka.png",
-                    "../img/Anubis_Molotov/Pos/ninja_connector_pos.png",
-                    "../img/Anubis_Molotov/Molotov/ninja_connector_molotov.png"
+                    "../img/Anubis_Molotov/Metka/ninja_connector_metka.webp",
+                    "../img/Anubis_Molotov/Pos/ninja_connector_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/ninja_connector_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1246,9 +1246,9 @@ const positionsData = {
                 shortTitle: "Window Mid (T-Spawn)",
                 title: "Молик в Window Mid (T-Spawn)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/window_tspawn_metka.png",
-                    "../img/Anubis_Molotov/Pos/window_tspawn_pos.png",
-                    "../img/Anubis_Molotov/Molotov/window_tspawn_molotov.png"
+                    "../img/Anubis_Molotov/Metka/window_tspawn_metka.webp",
+                    "../img/Anubis_Molotov/Pos/window_tspawn_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/window_tspawn_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до подъёма по ступенькам)."
             },
@@ -1257,9 +1257,9 @@ const positionsData = {
                 shortTitle: "Window Mid (T-Spawn/Mid)",
                 title: "Молик в Window Mid (T-Spawn/Mid)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/window_tspawn_metka2.png",
-                    "../img/Anubis_Molotov/Pos/window_tspawn_pos2.png",
-                    "../img/Anubis_Molotov/Molotov/window_tspawn_molotov2.png"
+                    "../img/Anubis_Molotov/Metka/window_tspawn_metka2.webp",
+                    "../img/Anubis_Molotov/Pos/window_tspawn_pos2.webp",
+                    "../img/Anubis_Molotov/Molotov/window_tspawn_molotov2.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1268,9 +1268,9 @@ const positionsData = {
                 shortTitle: "Mid",
                 title: "Молик в Mid (T-Spawn/Mid)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/mid_tspawn_metka.png",
-                    "../img/Anubis_Molotov/Pos/mid_tspawn_pos.png",
-                    "../img/Anubis_Molotov/Molotov/mid_tspawn_molotov.png"
+                    "../img/Anubis_Molotov/Metka/mid_tspawn_metka.webp",
+                    "../img/Anubis_Molotov/Pos/mid_tspawn_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/mid_tspawn_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1279,9 +1279,9 @@ const positionsData = {
                 shortTitle: "Window Mid (Stairs)",
                 title: "Молик в Window Mid (Stairs)",
                 images: [
-                    "../img/Anubis_Molotov/Metka/window_stairs_metka.png",
-                    "../img/Anubis_Molotov/Pos/window_stairs_pos.png",
-                    "../img/Anubis_Molotov/Molotov/window_stairs_molotov.png"
+                    "../img/Anubis_Molotov/Metka/window_stairs_metka.webp",
+                    "../img/Anubis_Molotov/Pos/window_stairs_pos.webp",
+                    "../img/Anubis_Molotov/Molotov/window_stairs_molotov.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
             },
@@ -1298,9 +1298,9 @@ const positionsData = {
                 shortTitle: "Red Room Mid",
                 title: "Смок в Red Room Mid (T-Spawn)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/redroom_tspawn_metka.png",
-                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/redroom_tspawn_smoke.png"
+                    "../img/Ancient_Smoke/Metka/redroom_tspawn_metka.webp",
+                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/redroom_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1310,9 +1310,9 @@ const positionsData = {
                 shortTitle: "Heaven Mid",
                 title: "Смок на Heaven Mid (T-Spawn)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/9_tspawn_metka.png",
-                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/9_tspawn_smoke.png"
+                    "../img/Ancient_Smoke/Metka/9_tspawn_metka.webp",
+                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/9_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1322,9 +1322,9 @@ const positionsData = {
                 shortTitle: "Donut Mid",
                 title: "Смок в Donut Mid (T-Spawn)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/donut_tspawn_metka.png",
-                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/donut_tspawn_smoke.png"
+                    "../img/Ancient_Smoke/Metka/donut_tspawn_metka.webp",
+                    "../img/Ancient_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/donut_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1334,9 +1334,9 @@ const positionsData = {
                 shortTitle: "Светлая B",
                 title: "Смок в Светлую B (Ruins)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/svet_ruins_metka.png",
-                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.png",
-                    "../img/Ancient_Smoke/Smoke/svet_ruins_smoke.png"
+                    "../img/Ancient_Smoke/Metka/svet_ruins_metka.webp",
+                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/svet_ruins_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1346,9 +1346,9 @@ const positionsData = {
                 shortTitle: "Тёмная B",
                 title: "Смок в Тёмную B (Ruins)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/dark_ruins_metka.png",
-                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.png",
-                    "../img/Ancient_Smoke/Smoke/dark_ruins_smoke.png"
+                    "../img/Ancient_Smoke/Metka/dark_ruins_metka.webp",
+                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/dark_ruins_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1358,9 +1358,9 @@ const positionsData = {
                 shortTitle: "Cave B",
                 title: "Смок в Cave B (Ruins)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/cave_ruins_metka.png",
-                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.png",
-                    "../img/Ancient_Smoke/Smoke/cave_ruins_smoke.png"
+                    "../img/Ancient_Smoke/Metka/cave_ruins_metka.webp",
+                    "../img/Ancient_Smoke/Pos/bplant_ruins_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/cave_ruins_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1370,9 +1370,9 @@ const positionsData = {
                 shortTitle: "Donut A",
                 title: "Смок в Donut A (Jungle)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/donut_jungle_metka.png",
-                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.png",
-                    "../img/Ancient_Smoke/Smoke/donut_jungle_smoke.png"
+                    "../img/Ancient_Smoke/Metka/donut_jungle_metka.webp",
+                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/donut_jungle_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1382,9 +1382,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn A",
                 title: "Смок в CT-Spawn A (Jungle)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/ct_jungle_metka.png",
-                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.png",
-                    "../img/Ancient_Smoke/Smoke/ct_jungle_smoke.png"
+                    "../img/Ancient_Smoke/Metka/ct_jungle_metka.webp",
+                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/ct_jungle_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1394,9 +1394,9 @@ const positionsData = {
                 shortTitle: "Temple A",
                 title: "Смок в Temple A (Jungle)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/temple_jungle_metka.png",
-                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.png",
-                    "../img/Ancient_Smoke/Smoke/temple_jungle_smoke.png"
+                    "../img/Ancient_Smoke/Metka/temple_jungle_metka.webp",
+                    "../img/Ancient_Smoke/Pos/aplant_jungle_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/temple_jungle_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1406,9 +1406,9 @@ const positionsData = {
                 shortTitle: "Red Room (Поз. 1)",
                 title: "Инста Смок в Red Room Mid (Позиция 1)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka1.png",
-                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke1.png"
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka1.webp",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -1418,9 +1418,9 @@ const positionsData = {
                 shortTitle: "Heaven (Поз. 1)",
                 title: "Инста Смок на Heaven Mid (Позиция 1)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_heaven_tspawn_metka1.png",
-                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_heaven_tspawn_smoke1.png"
+                    "../img/Ancient_Smoke/Metka/insta_heaven_tspawn_metka1.webp",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_heaven_tspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1430,9 +1430,9 @@ const positionsData = {
                 shortTitle: "Red Room (Поз. 2)",
                 title: "Инста Смок в Red Room Mid (Позиция 2)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka2.png",
-                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke2.png"
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka2.webp",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -1442,9 +1442,9 @@ const positionsData = {
                 shortTitle: "Heaven (Поз. 2)",
                 title: "Инста Смок на Heaven Mid (Позиция 2)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_heaven_tspawn_metka2.png",
-                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_heaven_tspawn_smoke2.png"
+                    "../img/Ancient_Smoke/Metka/insta_heaven_tspawn_metka2.webp",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_heaven_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1454,9 +1454,9 @@ const positionsData = {
                 shortTitle: "Red Room (Поз. 3)",
                 title: "Инста Смок в Red Room Mid (Позиция 3)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka3.png",
-                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke3.png"
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka3.webp",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Пройти вправо до точки, Шаг (вперёд), Прыжок."
             },
@@ -1466,9 +1466,9 @@ const positionsData = {
                 shortTitle: "Red Room (Поз. 4)",
                 title: "Инста Смок в Red Room Mid (Позиция 4)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka4.png",
-                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke4.png"
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka4.webp",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Пройти влево до точки, Шаг (вперёд), Прыжок."
             },
@@ -1478,9 +1478,9 @@ const positionsData = {
                 shortTitle: "Red Room (Поз. 5)",
                 title: "Инста Смок в Red Room Mid (Позиция 5)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka5.png",
-                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke5.png"
+                    "../img/Ancient_Smoke/Metka/insta_redroom_tspawn_metka5.webp",
+                    "../img/Ancient_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_redroom_tspawn_smoke5.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -1490,9 +1490,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 1)",
                 title: "Инста Смок на Start Mid (Позиция 1)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka1.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke1.png"
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka1.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
             },
@@ -1502,9 +1502,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 1)",
                 title: "Инста Смок на Doors Ruins (Позиция 1)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka1.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke1.png"
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka1.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до нижнего угла камня на прицеле), Прыжок."
             },
@@ -1514,9 +1514,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 2)",
                 title: "Инста Смок на Start Mid (Позиция 2)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka2.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke2.png"
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka2.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
             },
@@ -1526,9 +1526,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 2)",
                 title: "Инста Смок на Doors Ruins (Позиция 2)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka2.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke2.png"
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka2.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до листа на прицеле), Прыжок."
             },
@@ -1538,9 +1538,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 3)",
                 title: "Инста Смок на Start Mid (Позиция 3)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka3.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke3.png"
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka3.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
             },
@@ -1550,9 +1550,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 3)",
                 title: "Инста Смок на Doors Ruins (Позиция 3)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka3.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke3.png"
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka3.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (2 шага), Прыжок."
             },
@@ -1562,9 +1562,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 4)",
                 title: "Инста Смок на Start Mid (Позиция 4)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka4.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke4.png"
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka4.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
             },
@@ -1574,9 +1574,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 4)",
                 title: "Инста Смок на Doors Ruins (Позиция 4)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka4.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke4.png"
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka4.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до карниза на прицеле), Прыжок."
             },
@@ -1586,9 +1586,9 @@ const positionsData = {
                 shortTitle: "Start (Поз. 5)",
                 title: "Инста Смок на Start Mid (Позиция 5)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka5.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke5.png"
+                    "../img/Ancient_Smoke/Metka/insta_start_ctspawn_metka5.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_start_ctspawn_smoke5.webp"
                 ],
                 tips: "Левая кнопка мыши, Ходьба на shift (2 шага), Прыжок."
             },
@@ -1598,9 +1598,9 @@ const positionsData = {
                 shortTitle: "Doors (Поз. 5)",
                 title: "Инста Смок на Doors Ruins (Позиция 5)",
                 images: [
-                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka5.png",
-                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.png",
-                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke5.png"
+                    "../img/Ancient_Smoke/Metka/insta_doors_ctspawn_metka5.webp",
+                    "../img/Ancient_Smoke/Pos/insta_ctspawn_pos.webp",
+                    "../img/Ancient_Smoke/Smoke/insta_doors_ctspawn_smoke5.webp"
                 ],
                 tips: "Левая кнопка мыши, Разбег (до карниза на прицеле), Прыжок."
             },
@@ -1611,8 +1611,8 @@ const positionsData = {
                 shortTitle: "Mid (T-Spawn)",
                 title: "Флешка на выход Mid за T-сторону (T-Spawn)",
                 images: [
-                    "../img/Ancient_Flash/Metka/mid_tspawn_metka.png",
-                    "../img/Ancient_Flash/Pos/mid_tspawn_pos.png"
+                    "../img/Ancient_Flash/Metka/mid_tspawn_metka.webp",
+                    "../img/Ancient_Flash/Pos/mid_tspawn_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1621,8 +1621,8 @@ const positionsData = {
                 shortTitle: "Mid (Jungle)",
                 title: "Флешка на выход Mid за T-сторону (Jungle)",
                 images: [
-                    "../img/Ancient_Flash/Metka/mid_jungle_metka.png",
-                    "../img/Ancient_Flash/Pos/mid_jungle_pos.png"
+                    "../img/Ancient_Flash/Metka/mid_jungle_metka.webp",
+                    "../img/Ancient_Flash/Pos/mid_jungle_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1631,8 +1631,8 @@ const positionsData = {
                 shortTitle: "B-Plant (Ruins)",
                 title: "Флешка на выход B-Plant за T-сторону (Ruins)",
                 images: [
-                    "../img/Ancient_Flash/Metka/bplant_ruins_metka.png",
-                    "../img/Ancient_Flash/Pos/bplant_ruins_pos.png"
+                    "../img/Ancient_Flash/Metka/bplant_ruins_metka.webp",
+                    "../img/Ancient_Flash/Pos/bplant_ruins_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1641,8 +1641,8 @@ const positionsData = {
                 shortTitle: "Cave (Heaven)",
                 title: "Флешка в Cave за T-сторону (Heaven)",
                 images: [
-                    "../img/Ancient_Flash/Metka/cave_heaven_metka.png",
-                    "../img/Ancient_Flash/Pos/cave_heaven_pos.png"
+                    "../img/Ancient_Flash/Metka/cave_heaven_metka.webp",
+                    "../img/Ancient_Flash/Pos/cave_heaven_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1651,8 +1651,8 @@ const positionsData = {
                 shortTitle: "Cave (Cave)",
                 title: "Флешка глубоко в Cave за T-сторону (Cave)",
                 images: [
-                    "../img/Ancient_Flash/Metka/cave_cave_metka.png",
-                    "../img/Ancient_Flash/Pos/cave_cave_pos.png"
+                    "../img/Ancient_Flash/Metka/cave_cave_metka.webp",
+                    "../img/Ancient_Flash/Pos/cave_cave_pos.webp"
                 ],
                 tips: "Правая кнопка мыши, Прыжок."
             },
@@ -1661,8 +1661,8 @@ const positionsData = {
                 shortTitle: "Cave (B-Plant)",
                 title: "Флешка в Cave за CT-сторону (B-Plant)",
                 images: [
-                    "../img/Ancient_Flash/Metka/cave_bplant_metka.png",
-                    "../img/Ancient_Flash/Pos/cave_bplant_pos.png"
+                    "../img/Ancient_Flash/Metka/cave_bplant_metka.webp",
+                    "../img/Ancient_Flash/Pos/cave_bplant_pos.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1671,8 +1671,8 @@ const positionsData = {
                 shortTitle: "Mid (Donut)",
                 title: "Флешка на Mid за CT-сторону (Donut)",
                 images: [
-                    "../img/Ancient_Flash/Metka/mid_donut_metka.png",
-                    "../img/Ancient_Flash/Pos/mid_donut_pos.png"
+                    "../img/Ancient_Flash/Metka/mid_donut_metka.webp",
+                    "../img/Ancient_Flash/Pos/mid_donut_pos.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1681,8 +1681,8 @@ const positionsData = {
                 shortTitle: "A-Plant (Donut)",
                 title: "Флешка в A-Plant за CT-сторону (Donut)",
                 images: [
-                    "../img/Ancient_Flash/Metka/aplant_donut_metka.png",
-                    "../img/Ancient_Flash/Pos/aplant_donut_pos.png"
+                    "../img/Ancient_Flash/Metka/aplant_donut_metka.webp",
+                    "../img/Ancient_Flash/Pos/aplant_donut_pos.webp"
                 ],
                 tips: "Правая кнопка мыши, Прыжок."
             }
@@ -1752,9 +1752,9 @@ const positionsData = {
                 shortTitle: "Connector Mid",
                 title: "Смок в Connector Mid (T-Spawn)",
                 images: [
-                    "../img/Cache_Smoke/Metka/connector_tspawn_metka.png",
-                    "../img/Cache_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Cache_Smoke/Smoke/connector_tspawn_smoke.png"
+                    "../img/Cache_Smoke/Metka/connector_tspawn_metka.webp",
+                    "../img/Cache_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Cache_Smoke/Smoke/connector_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1764,9 +1764,9 @@ const positionsData = {
                 shortTitle: "Short Mid",
                 title: "Смок на Short Mid (T-Spawn)",
                 images: [
-                    "../img/Cache_Smoke/Metka/catwalk_tspawn_metka.png",
-                    "../img/Cache_Smoke/Pos/mid_tspawn_pos.png",
-                    "../img/Cache_Smoke/Smoke/catwalk_tspawn_smoke.png"
+                    "../img/Cache_Smoke/Metka/catwalk_tspawn_metka.webp",
+                    "../img/Cache_Smoke/Pos/mid_tspawn_pos.webp",
+                    "../img/Cache_Smoke/Smoke/catwalk_tspawn_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1776,9 +1776,9 @@ const positionsData = {
                 shortTitle: "CT-Spawn A",
                 title: "Смок в CT-Spawn A (Long)",
                 images: [
-                    "../img/Cache_Smoke/Metka/ct_long_metka.png",
-                    "../img/Cache_Smoke/Pos/aplant_long_pos.png",
-                    "../img/Cache_Smoke/Smoke/ct_long_smoke.png"
+                    "../img/Cache_Smoke/Metka/ct_long_metka.webp",
+                    "../img/Cache_Smoke/Pos/aplant_long_pos.webp",
+                    "../img/Cache_Smoke/Smoke/ct_long_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1788,9 +1788,9 @@ const positionsData = {
                 shortTitle: "Short A",
                 title: "Смок на Short A (Long)",
                 images: [
-                    "../img/Cache_Smoke/Metka/catwalk_long_metka.png",
-                    "../img/Cache_Smoke/Pos/aplant_long_pos.png",
-                    "../img/Cache_Smoke/Smoke/catwalk_long_smoke.png"
+                    "../img/Cache_Smoke/Metka/catwalk_long_metka.webp",
+                    "../img/Cache_Smoke/Pos/aplant_long_pos.webp",
+                    "../img/Cache_Smoke/Smoke/catwalk_long_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
@@ -1800,69 +1800,45 @@ const positionsData = {
                 shortTitle: "A-Plant",
                 title: "Смок за контейнер на A-Plant (Garage)",
                 images: [
-                    "../img/Cache_Smoke/Metka/aplant_garage_metka.png",
-                    "../img/Cache_Smoke/Pos/aplant_garage_pos.png",
-                    "../img/Cache_Smoke/Smoke/aplant_garage_smoke.png"
+                    "../img/Cache_Smoke/Metka/aplant_garage_metka.webp",
+                    "../img/Cache_Smoke/Pos/aplant_garage_pos.webp",
+                    "../img/Cache_Smoke/Smoke/aplant_garage_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
             {
                 id: 6,
                 smokeType: "regular",
-                shortTitle: "A-Plant",
-                title: "Смок за контейнер на A-Plant (Long)",
+                shortTitle: "Погрузчик A",
+                title: "Смок на Погрузчик A (Garage)",
                 images: [
-                    "../img/Cache_Smoke/Metka/aplant_long_metka.png",
-                    "../img/Cache_Smoke/Pos/aplant_long_pos2.png",
-                    "../img/Cache_Smoke/Smoke/aplant_long_smoke.png"
+                    "../img/Cache_Smoke/Metka/pogruz_garage_metka.webp",
+                    "../img/Cache_Smoke/Pos/aplant_garage_pos.webp",
+                    "../img/Cache_Smoke/Smoke/pogruz_garage_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши, Прыжок."
             },
             {
                 id: 7,
                 smokeType: "regular",
-                shortTitle: "Погрузчик A",
-                title: "Смок на Погрузчик A (Garage)",
-                images: [
-                    "../img/Cache_Smoke/Metka/pogruz_garage_metka.png",
-                    "../img/Cache_Smoke/Pos/aplant_garage_pos.png",
-                    "../img/Cache_Smoke/Smoke/pogruz_garage_smoke.png"
-                ],
-                tips: "Левая кнопка мыши, Прыжок."
-            },
-            {
-                id: 8,
-                smokeType: "regular",
-                shortTitle: "Погрузчик A",
-                title: "Смок на Погрузчик A (Long)",
-                images: [
-                    "../img/Cache_Smoke/Metka/pogruz_Long_metka.png",
-                    "../img/Cache_Smoke/Pos/aplant_Long_pos2.png",
-                    "../img/Cache_Smoke/Smoke/pogruz_Long_smoke.png"
-                ],
-                tips: "Левая кнопка мыши, Прыжок."
-            },
-            {
-                id: 9,
-                smokeType: "regular",
                 shortTitle: "CT-Spawn B",
                 title: "Смок в CT-Spawn B (Toxic)",
                 images: [
-                    "../img/Cache_Smoke/Metka/hell_toxic_metka.png",
-                    "../img/Cache_Smoke/Pos/bplant_toxic_pos.png",
-                    "../img/Cache_Smoke/Smoke/hell_toxic_smoke.png"
+                    "../img/Cache_Smoke/Metka/hell_toxic_metka.webp",
+                    "../img/Cache_Smoke/Pos/bplant_toxic_pos.webp",
+                    "../img/Cache_Smoke/Smoke/hell_toxic_smoke.webp"
                 ],
                 tips: "Левая + Правая кнопка мыши, Прыжок."
             },
             {
-                id: 10,
+                id: 8,
                 smokeType: "regular",
                 shortTitle: "Heaven B",
                 title: "Смок на Heaven B (Toxic)",
                 images: [
-                    "../img/Cache_Smoke/Metka/heaven_toxic_metka.png",
-                    "../img/Cache_Smoke/Pos/bplant_toxic_pos.png",
-                    "../img/Cache_Smoke/Smoke/heaven_toxic_smoke.png"
+                    "../img/Cache_Smoke/Metka/heaven_toxic_metka.webp",
+                    "../img/Cache_Smoke/Pos/bplant_toxic_pos.webp",
+                    "../img/Cache_Smoke/Smoke/heaven_toxic_smoke.webp"
                 ],
                 tips: "Левая кнопка мыши."
             },
@@ -1873,9 +1849,9 @@ const positionsData = {
                 shortTitle: "Connector (Поз. 1)",
                 title: "Инста Смок в Connector Mid (Позиция 1)",
                 images: [
-                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka1.png",
-                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke1.png"
+                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka1.webp",
+                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke1.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -1885,9 +1861,9 @@ const positionsData = {
                 shortTitle: "Connector (Поз. 2)",
                 title: "Инста Смок в Connector Mid (Позиция 2)",
                 images: [
-                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka2.png",
-                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke2.png"
+                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka2.webp",
+                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke2.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -1897,9 +1873,9 @@ const positionsData = {
                 shortTitle: "Connector (Поз. 3)",
                 title: "Инста Смок в Connector Mid (Позиция 3)",
                 images: [
-                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka3.png",
-                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke3.png"
+                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka3.webp",
+                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke3.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -1909,9 +1885,9 @@ const positionsData = {
                 shortTitle: "Connector (Поз. 4)",
                 title: "Инста Смок в Connector Mid (Позиция 4)",
                 images: [
-                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka4.png",
-                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke4.png"
+                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka4.webp",
+                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke4.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },
@@ -1921,9 +1897,9 @@ const positionsData = {
                 shortTitle: "Connector (Поз. 5)",
                 title: "Инста Смок в Connector Mid (Позиция 5)",
                 images: [
-                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka5.png",
-                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.png",
-                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke5.png"
+                    "../img/Cache_Smoke/Metka/insta_connector_tspawn_metka5.webp",
+                    "../img/Cache_Smoke/Pos/insta_tspawn_pos.webp",
+                    "../img/Cache_Smoke/Smoke/insta_connector_tspawn_smoke5.webp"
                 ],
                 tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
             },*/
