@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mapDisplayNames = {
         mirage: 'Mirage', dust2: 'Dust II', anubis: 'Anubis', ancient: 'Ancient',
         overpass: 'Overpass', nuke: 'Nuke', inferno: 'Inferno',
-        train: 'Train', vertigo: 'Vertigo', cache: 'Cache'
+        train: 'Train', vertigo: 'Vertigo', cache: 'Cache', cobblestone: 'Cobblestone'
     };
     
     function createCustomSelect(wrapperId, nativeSelect, iconMap) {
