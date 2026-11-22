@@ -1910,5 +1910,99 @@ const positionsData = {
         ],
         he:[
         ]
+    },
+    cobblestone: {
+        smoke: [
+            {
+                id: 1,
+                smokeType: "regular",
+                shortTitle: "Doors A",
+                title: "Смок в Doors A (Long)",
+                images: [
+                    "../img/Cobblestone_Smoke/Metka/doors_long_metka.webp",
+                    "../img/Cobblestone_Smoke/Pos/aplant_long_pos.webp",
+                    "../img/Cobblestone_Smoke/Smoke/doors_long_smoke.webp"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 2,
+                smokeType: "regular",
+                shortTitle: "Doors A",
+                title: "Смок в Doors A (Long)",
+                images: [
+                    "../img/Cobblestone_Smoke/Metka/doors_long_metka2.webp",
+                    "../img/Cobblestone_Smoke/Pos/aplant_long_pos2.webp",
+                    "../img/Cobblestone_Smoke/Smoke/doors_long_smoke2.webp"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 3,
+                smokeType: "regular",
+                shortTitle: "Balcony A",
+                title: "Смок на Balcony A (Long)",
+                images: [
+                    "../img/Cobblestone_Smoke/Metka/balcony_long_metka.webp",
+                    "../img/Cobblestone_Smoke/Pos/aplant_long_pos.webp",
+                    "../img/Cobblestone_Smoke/Smoke/balcony_long_smoke.webp"
+                ],
+                tips: "Левая кнопка мыши, Шаг (вперёд), Прыжок."
+            },
+            {
+                id: 4,
+                smokeType: "regular",
+                shortTitle: "Balcony A",
+                title: "Смок на Balcony A (Long)",
+                images: [
+                    "../img/Cobblestone_Smoke/Metka/balcony_long_metka2.webp",
+                    "../img/Cobblestone_Smoke/Pos/aplant_long_pos2.webp",
+                    "../img/Cobblestone_Smoke/Smoke/balcony_long_smoke2.webp"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+            {
+                id: 5,
+                smokeType: "regular",
+                shortTitle: "Курятник B",
+                title: "Смок в Курятник B (Main B)",
+                images: [
+                    "../img/Cobblestone_Smoke/Metka/kurat_main_metka.webp",
+                    "../img/Cobblestone_Smoke/Pos/bplant_main_pos.webp",
+                    "../img/Cobblestone_Smoke/Smoke/kurat_main_smoke.webp"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 6,
+                smokeType: "regular",
+                shortTitle: "Stone B",
+                title: "Смок за Stone B (Main B)",
+                images: [
+                    "../img/Cobblestone_Smoke/Metka/stone_main_metka.webp",
+                    "../img/Cobblestone_Smoke/Pos/bplant_main_pos2.webp",
+                    "../img/Cobblestone_Smoke/Smoke/stone_main_smoke.webp"
+                ],
+                tips: "Левая кнопка мыши."
+            },
+            {
+                id: 7,
+                smokeType: "regular",
+                shortTitle: "Under Heaven B",
+                title: "Смок в выход из-под Heaven B (Main B)",
+                images: [
+                    "../img/Cobblestone_Smoke/Metka/undheaven_main_metka.webp",
+                    "../img/Cobblestone_Smoke/Pos/bplant_main_pos2.webp",
+                    "../img/Cobblestone_Smoke/Smoke/undheaven_main_smoke.webp"
+                ],
+                tips: "Левая кнопка мыши, Прыжок."
+            },
+        ],
+        flash: [
+        ],
+        molotov: [
+        ],
+        he:[
+        ]
     }
 };
