@@ -45,7 +45,8 @@
             'inferno': 'inferno_icon.png',
             'train': 'train_icon.png',
             'vertigo': 'vertigo_icon.png',
-            'cache': 'cache_icon.png'
+            'cache': 'cache_icon.png',
+            'cobblestone': 'sobblestone_icon.png'
         };
         return iconMap[mapKey] || `${mapKey}_icon.png`;
     }
